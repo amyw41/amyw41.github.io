@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>new_portfolio</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div class="wave-transition-container">
+      <svg class="wave-svg" viewBox="0 0 1200 180" width="100%" height="160" preserveAspectRatio="none">
+        <path id="wavePath" d="M0,90 Q150,0 300,90 T600,90 T900,90 T1200,90" fill="none" stroke="transparent" />
+      </svg>
+      <svg class="wave-text-svg" viewBox="0 0 1200 180" width="100%" height="160" preserveAspectRatio="none">
+        <text font-size="64" font-family="serif" fill="#222" letter-spacing="4">
+          <textPath id="waveTextPath" href="#wavePath" startOffset="0%">
+            see work below!  see work below!  see work below!  see work below!  see work below!  see work below!  
+          </textPath>
+        </text>
+      </svg>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script src="/src/waveTextAnim.js"></script>
+  </body>
+</html>
