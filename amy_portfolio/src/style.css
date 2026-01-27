@@ -163,6 +163,10 @@ h1 {
   overflow: hidden;
 }
 
+body.page-mode {
+  overflow: hidden;
+}
+
 .section h2 {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 4rem;
