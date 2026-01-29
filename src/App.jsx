@@ -38,9 +38,11 @@ function App() {
           <span>play</span>
         </span>
       </nav>
-      <div className="page-gradient" aria-hidden="true"></div>
       <section className="hero-gradient-container">
-        <div className="center-gradient" aria-hidden="true"></div>
+        <div className="hero-gradients" aria-hidden="true">
+          <div className="page-gradient"></div>
+          <div className="center-gradient"></div>
+        </div>
         <main className="center-content">
           <h1 className="name">amy wang</h1>
           <div className="desc-group">

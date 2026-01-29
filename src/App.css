@@ -16,7 +16,7 @@ html, body {
   align-items: flex-start;
   justify-content: center;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   overflow: visible;
 }
 
@@ -48,11 +48,21 @@ html, body {
   align-items: center;
   justify-content: flex-start;
   overflow: visible;
+  z-index: 2;
+}
+
+/* ===== Gradient wrapper ===== */
+.hero-gradients {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* ===== Full-page gradient (fade out) ===== */
 .page-gradient {
-  position: fixed;
+  position: absolute;
   left: 38%;
   top: 48%;
   transform: translate(-50%, -50%);
