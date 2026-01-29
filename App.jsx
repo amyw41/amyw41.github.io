@@ -34,7 +34,7 @@ function App() {
       <nav className="taskbar">
         <span className="nav-left">home</span>
         <span className="nav-right">
-          <span>me</span>
+          <span>hello</span>
           <span>play</span>
         </span>
       </nav>
