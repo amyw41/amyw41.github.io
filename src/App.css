@@ -5,12 +5,13 @@ html, body {
   margin: 0;
   padding: 0;
   user-select: none;
+  font-size: 2vh;
 }
 
 /* ===== Scrollable section ===== */
 .scrollable-section {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 1.2rem;
   background: var(--bg);
   display: flex;
   align-items: flex-start;
@@ -142,8 +143,8 @@ html, body {
   position: absolute;
   left: 0;
   bottom: -135px;
-  width: 100vw;
-  height: 300px;
+  width: 120rem;
+  height: 21rem;
   pointer-events: none;
   z-index: 3;
   overflow: visible;
@@ -162,7 +163,7 @@ html, body {
 
 .wavy-text-label {
   font-family: 'Playfair Display', serif;
-  font-size: 70px;
+  font-size: 3.4rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   fill: #9b9b9b;
