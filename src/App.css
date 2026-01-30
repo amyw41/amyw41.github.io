@@ -1,3 +1,71 @@
+/* ===== Project Grid Section ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2.5rem 2.5rem;
+  justify-items: center;
+  align-items: start;
+  margin: 4rem 0 0 0;
+  padding: 2rem 0 4rem 0;
+}
+
+.project-card {
+  background: #f6f8fa;
+  border-radius: 2.2rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+  width: 370px;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.2rem 2.2rem 1.7rem 2.2rem;
+  position: relative;
+}
+
+.project-image-placeholder {
+  width: 100%;
+  height: 260px;
+  background: #dbeafe;
+  border-radius: 1.3rem;
+  margin-bottom: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-info {
+  width: 100%;
+}
+
+.project-index {
+  font-size: 1.25rem;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+}
+
+.project-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  margin-left: 0.2em;
+}
+
+.project-desc {
+  font-size: 1.05rem;
+  color: #222;
+  margin-top: 0.2rem;
+  line-height: 1.5;
+}
+
+.project-type {
+  font-weight: 700;
+  font-family: 'Raleway', Arial, sans-serif;
+}
 /* ===== Base ===== */
 html, body {
   width: 100vw;

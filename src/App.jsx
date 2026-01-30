@@ -77,15 +77,18 @@ function App() {
       </section>
       {/* New scrollable section below */}
       <section className="scrollable-section">
-        <div className="scrollable-content">
-          <h2>More about me</h2>
-          <p>
-            This is a new section below the hero area. You can add more content here to make the page scrollable. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, eu consectetur nisl nisi euismod nisi.
-          </p>
-          <p>
-            Add your projects, experience, or anything else you want to showcase here. This section will scroll into view below the fixed hero section.
-          </p>
-          <div style={{height: '60vh'}}></div>
+        <div className="project-grid">
+          {[1,2,3,4].map((i) => (
+            <div className="project-card" key={i}>
+              <div className="project-image-placeholder"></div>
+              <div className="project-info">
+                <div className="project-index">0{i}. <span className="project-title">Break the Ice ↗</span></div>
+                <div className="project-desc">
+                  <span className="project-type">product design</span> — an app to help students make friends by utilizing the sociology concept of “third places”
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </>
