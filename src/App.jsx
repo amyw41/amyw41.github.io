@@ -68,7 +68,7 @@ function App() {
               fill="none"
             />
             <text className="wavy-text-label">
-              <textPath href="#wave-path" startOffset="50">
+              <textPath href="#wave-path" startOffset="100">
                 see my work! see my work! see my work! see my work! see my work!
               </textPath>
             </text>
