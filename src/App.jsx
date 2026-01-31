@@ -75,20 +75,26 @@ function App() {
           </svg>
         </div>
       </section>
-      {/* New scrollable section below */}
-      <section className="scrollable-section">
-        <div className="project-grid">
-          {[1,2,3,4].map((i) => (
-            <div className="project-card" key={i}>
-              <div className="project-image-placeholder"></div>
-              <div className="project-info">
-                <div className="project-index">0{i}. <span className="project-title">Break the Ice ↗</span></div>
-                <div className="project-desc">
-                  <span className="project-type">product design</span> — an app to help students make friends by utilizing the sociology concept of “third places”
-                </div>
-              </div>
+      <section className="project-preview-row">
+        <div className="project-preview-box">
+          <div className="project-preview-square"></div>
+          <div className="project-preview-info">
+            <span className="project-preview-title">Placeholder Name</span>
+            <div className="project-preview-meta">
+              <span className="project-preview-tag project-preview-tag-pink">website</span>
+              <span className="project-preview-date">2025</span>
             </div>
-          ))}
+          </div>
+        </div>
+        <div className="project-preview-box">
+          <div className="project-preview-square"></div>
+          <div className="project-preview-info">
+            <span className="project-preview-title">Placeholder Name</span>
+            <div className="project-preview-meta">
+              <span className="project-preview-tag">hackathon</span>
+              <span className="project-preview-date">2026</span>
+            </div>
+          </div>
         </div>
       </section>
     </>
