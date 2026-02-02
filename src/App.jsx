@@ -3,6 +3,7 @@ import './App.css'
 
 function App() {
   const wavyRef = useRef(null)
+  const cursorCircleRef = useRef(null)
 
   useEffect(() => {
     const target = wavyRef.current
@@ -29,11 +30,26 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    const circle = cursorCircleRef.current;
+    if (!circle) return;
+    const moveCircle = (e) => {
+      circle.style.left = `${e.clientX}px`;
+      circle.style.top = `${e.clientY}px`;
+    };
+    window.addEventListener('mousemove', moveCircle);
+    return () => {
+      window.removeEventListener('mousemove', moveCircle);
+    };
+  }, []);
+
   return (
     <>
+      <div className="cursor-circle" ref={cursorCircleRef} />
       <nav className="taskbar">
         <span className="nav-left">home</span>
         <span className="nav-right">
+          <span>work</span>
           <span>me</span>
           <span>play</span>
         </span>
@@ -46,15 +62,15 @@ function App() {
         <main className="center-content">
           <h1 className="name">amy wang</h1>
           <div className="desc-group">
-            <div className="desc-line">
+            <div className="desc-line align-desc">
               <span className="arrow">→</span>
-              <span>
+              <span className="desc-text">
                 is a product designer who uses <span className="desc-italic-bold">aesthetics</span> and <span className="desc-bold">makes it work.</span>
               </span>
             </div>
-            <div className="desc-line">
+            <div className="desc-line align-desc">
               <span className="arrow">→</span>
-              <span>
+              <span className="desc-text">
                 currently studying management engineering @ waterloo!
               </span>
             </div>
@@ -79,9 +95,32 @@ function App() {
         <div className="project-preview-box">
           <div className="project-preview-square"></div>
           <div className="project-preview-info">
+            <span className="project-preview-title">relish</span>
+            <div className="project-preview-meta">
+              <span className="project-preview-tag">hackathon</span>
+              <span className="project-preview-date">2025</span>
+            </div>
+          </div>
+        </div>
+        <div className="project-preview-box">
+          <div className="project-preview-square"></div>
+          <div className="project-preview-info">
             <span className="project-preview-title">Placeholder Name</span>
             <div className="project-preview-meta">
-              <span className="project-preview-tag project-preview-tag-pink">website</span>
+              <span className="project-preview-tag">hackathon</span>
+              <span className="project-preview-date">2026</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="project-preview-row">
+        <div className="project-preview-box">
+          <div className="project-preview-square"></div>
+          <div className="project-preview-info">
+            <span className="project-preview-title">relish</span>
+            <div className="project-preview-meta">
+              <span className="project-preview-tag">hackathon</span>
               <span className="project-preview-date">2025</span>
             </div>
           </div>
