@@ -1,9 +1,67 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState, useMemo } from 'react'
 import './App.css'
 
 function App() {
   const wavyRef = useRef(null)
   const cursorCircleRef = useRef(null)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const { wavePath, waveWidth, repeatedText, waveCycleWidth, viewBoxWidth } = useMemo(() => {
+    // Original aesthetic relied on stretching the 1200 unit viewBox to ~3000px+ (approx 2.5x stretch).
+    const STRETCH_FACTOR = 2.5
+    // One full wave cycle in viewBox units (0,55 -> 600,55)
+    // Down (0-300) + Up (300-600)
+    const WAVE_UNIT_CYCLE = 600
+
+    // We apply stretch to the coordinate system directly now to prevent text distortion.
+    const VISUAL_CYCLE_WIDTH = WAVE_UNIT_CYCLE * STRETCH_FACTOR // 1500px
+
+    // We want enough width to cover screen + buffer for scrolling loop (1 cycle)
+    // DOUBLE the safety buffer and ensure we cover massive screens.
+    const minWidth = windowWidth + (VISUAL_CYCLE_WIDTH * 2)
+    const numCycles = Math.ceil(minWidth / VISUAL_CYCLE_WIDTH) + 2
+
+    const totalViewBoxWidth = numCycles * VISUAL_CYCLE_WIDTH
+    const totalPixelWidth = totalViewBoxWidth // 1:1 mapping since we stretched coordinates
+
+    let path = `M0 120`
+    for (let i = 0; i < numCycles; i++) {
+      const xBase = i * VISUAL_CYCLE_WIDTH
+
+      // Stretched control points
+      // Amplitude increased significantly (120 to 240 -> Delta 120)
+      const cp1x = xBase + 375
+      const cp2x = xBase + 375
+      const endX_Down = xBase + 750
+
+      const cp3x = xBase + 1125
+      const endX_Up = xBase + 1500
+
+      path += ` C ${cp1x} 120, ${cp2x} 240, ${endX_Down} 240`
+      path += ` S ${cp3x} 120, ${endX_Up} 120`
+    }
+
+    // Text repetition
+    // Extreme repetition to prevent any gaps.
+    const textBase = "see my work! "
+    const textRepeats = Math.ceil(totalViewBoxWidth / 40)
+
+    const text = textBase.repeat(textRepeats)
+
+    return {
+      wavePath: path,
+      waveWidth: totalPixelWidth,
+      viewBoxWidth: totalViewBoxWidth,
+      repeatedText: text,
+      waveCycleWidth: VISUAL_CYCLE_WIDTH
+    }
+  }, [windowWidth])
 
   useEffect(() => {
     const target = wavyRef.current
@@ -13,7 +71,7 @@ function App() {
     const update = () => {
       frame = 0
       const scrollY = window.scrollY || 0
-      const shift = (scrollY * 0.5) % 800
+      const shift = (scrollY * 0.5) % waveCycleWidth
       target.style.setProperty('--wave-shift', `${shift}px`)
     }
 
@@ -76,16 +134,24 @@ function App() {
             </div>
           </div>
         </main>
-        <div className="wavy-text" aria-hidden="true" ref={wavyRef}>
-          <svg viewBox="0 0 1200 160" preserveAspectRatio="none">
+        <div
+          className="wavy-text"
+          aria-hidden="true"
+          ref={wavyRef}
+          style={{
+            width: '100vw',
+            '--wave-range': `${waveCycleWidth}px`
+          }}
+        >
+          <svg viewBox={`0 0 ${viewBoxWidth} 400`} style={{ width: waveWidth, height: '100%' }}>
             <path
               id="wave-path"
-              d="M0 55 C 150 55 150 105 300 105 S 450 55 600 55 S 750 105 900 105 S 1050 55 1200 55 S 1350 105 1500 105"
+              d={wavePath}
               fill="none"
             />
             <text className="wavy-text-label">
-              <textPath href="#wave-path" startOffset="100">
-                see my work! see my work! see my work! see my work! see my work!
+              <textPath href="#wave-path" startOffset="-1000">
+                {repeatedText}
               </textPath>
             </text>
           </svg>

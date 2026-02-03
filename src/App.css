@@ -1,9 +1,11 @@
-body, html {
+body,
+html {
   cursor: none;
   background-color: #fff;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="1.5" numOctaves="3"/></filter><rect width="100" height="100" fill="white"/><rect width="100" height="100" filter="url(%23noise)" opacity="0.22"/></svg>');
   background-repeat: repeat;
 }
+
 /* Cursor circle effect */
 .cursor-circle {
   position: fixed;
@@ -17,21 +19,25 @@ body, html {
   z-index: 9999;
   transform: translate(-50%, -50%);
 }
+
 /* Align description lines so text aligns regardless of arrow */
 .align-desc {
   display: flex;
   align-items: baseline;
 }
- .align-desc .arrow {
+
+.align-desc .arrow {
   margin-right: 0em;
   min-width: 1.2em;
   text-align: left;
   pointer-events: none;
   display: inline-block;
 }
+
 .align-desc .desc-text {
   display: inline;
 }
+
 /* ===== Project Preview Row (Custom) ===== */
 .project-preview-row {
   display: flex;
@@ -59,7 +65,7 @@ body, html {
   width: 100%;
   aspect-ratio: 1.5 / 1;
   border-radius: 0.2rem;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.10);
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
@@ -112,6 +118,7 @@ body, html {
   color: #888;
   font-weight: 600;
 }
+
 /* ===== Project Grid Section ===== */
 .project-grid {
   display: grid;
@@ -127,7 +134,7 @@ body, html {
 .project-card {
   background: #f6f8fa;
   border-radius: 2.2rem;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
   width: 370px;
   min-height: 520px;
   display: flex;
@@ -180,8 +187,10 @@ body, html {
   font-weight: 700;
   font-family: 'Raleway', Arial, sans-serif;
 }
+
 /* ===== Base ===== */
-html, body {
+html,
+body {
   width: 100vw;
   overflow-x: hidden !important;
   margin: 0;
@@ -251,13 +260,11 @@ html, body {
   transform: translate(-50%, -50%);
   width: 180vw;
   height: 180vh;
-  background: radial-gradient(
-    ellipse 65% 50% at 50% 50%,
-    rgba(255, 199, 138, 0.9) 0%,
-    rgba(254, 130, 130, 0.3) 45%,
-    rgba(254, 130, 130, 0.1) 65%,
-    transparent 78%
-  );
+  background: radial-gradient(ellipse 65% 50% at 50% 50%,
+      rgba(255, 199, 138, 0.9) 0%,
+      rgba(254, 130, 130, 0.3) 45%,
+      rgba(254, 130, 130, 0.1) 65%,
+      transparent 78%);
   pointer-events: none;
   z-index: 0;
   animation: page-gradient-fade 1s ease-out 0.1s forwards;
@@ -296,24 +303,24 @@ html, body {
   transform: translate(-50%, -50%);
   width: 900px;
   height: 540px;
-  background: radial-gradient(
-    ellipse 60% 45% at 50% 50%,
-    rgba(254,163,163,0.92) 0%,
-    rgba(254,163,163,0.22) 35%,
-    rgba(254,163,163,0.08) 55%,
-    transparent 75%
-  );
+  background: radial-gradient(ellipse 60% 45% at 50% 50%,
+      rgba(254, 163, 163, 0.92) 0%,
+      rgba(254, 163, 163, 0.22) 35%,
+      rgba(254, 163, 163, 0.08) 55%,
+      transparent 75%);
   pointer-events: none;
   z-index: 1;
   animation: center-gradient-breathe 3s ease-in-out infinite;
 }
 
 @keyframes center-gradient-breathe {
+
   0%,
   100% {
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0.6;
   }
+
   50% {
     transform: translate(-50%, -50%) scale(1.18);
     opacity: 1;
@@ -324,9 +331,9 @@ html, body {
 .wavy-text {
   position: absolute;
   left: 0;
-  bottom: -135px;
+  bottom: -28%;
   width: 120rem;
-  height: 21rem;
+  height: 30rem;
   pointer-events: none;
   z-index: 3;
   overflow: visible;
@@ -345,7 +352,7 @@ html, body {
 
 .wavy-text-label {
   font-family: 'Editorial New', serif;
-  font-size: 3rem;
+  font-size: 7rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   fill: #9b9b9b;
@@ -374,7 +381,8 @@ html, body {
   overflow: visible;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  isolation: isolate; /* prevents visual clipping */
+  isolation: isolate;
+  /* prevents visual clipping */
   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
