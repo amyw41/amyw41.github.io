@@ -1,5 +1,8 @@
 body, html {
   cursor: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2"/></filter><rect width="100" height="100" fill="white"/><rect width="100" height="100" filter="url(%23noise)" opacity="0.08"/></svg>');
+  background-repeat: repeat;
 }
 /* Cursor circle effect */
 .cursor-circle {
@@ -90,10 +93,11 @@ body, html {
   font-family: 'Raleway', Arial, sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  border-radius: 0.2em;
+  border-radius: 0em;
   padding: 0.2em 0.9em;
   margin-right: 0.5em;
   display: inline-block;
+  border: 1px solid #dadada;
 }
 
 .project-preview-tag-pink {
@@ -113,7 +117,7 @@ body, html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 2.5rem 2.5rem;
+  gap: 2rem 2.5rem;
   justify-items: center;
   align-items: start;
   margin: 4rem 0 0 0;
