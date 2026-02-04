@@ -154,6 +154,20 @@ html {
   /* For absolute children */
 }
 
+.project-preview-square::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-preview-box:hover .project-preview-square::after {
+  opacity: 0.2;
+}
+
 .project-img {
   position: absolute;
   top: 20%;
@@ -174,15 +188,15 @@ html {
 
 .project-preview-square-first {
   background:
-    radial-gradient(ellipse 100% 100% at 85% 15%, rgba(255, 255, 255, 0.9) 0%, transparent 55%),
-    radial-gradient(ellipse 100% 100% at 20% 85%, rgba(255, 255, 255, 0.6) 0%, transparent 60%),
-    linear-gradient(135deg, #e2f3ff 0%, #99d4ff 100%);
+    radial-gradient(ellipse 50% 50% at 85% 15%, rgba(184, 241, 255, 0.9) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 50% at 20% 85%, rgba(77, 173, 232, 0.6) 0%, transparent 60%),
+    linear-gradient(135deg, #99d4ff 0%, #99d4ff 100%);
 }
 
 .project-preview-square-second {
   background:
     radial-gradient(circle, rgba(0, 0, 0, 0.09) 1.5px, transparent 1.5px),
-    radial-gradient(ellipse 65% 50% at 50% 50%, #fff3d6 0%, #fffefa 100%);
+    radial-gradient(ellipse 65% 50% at 50% 50%, #ffe8b8 0%, #fff3d6 100%);
   background-size: 20px 20px, 100% 100%;
 }
 
