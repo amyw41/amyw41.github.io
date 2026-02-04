@@ -637,7 +637,7 @@ body {
 
 @media (max-width: 1024px) {
   .projects-container {
-    padding: 10vw 5vw 20vw 5vw;
+    padding: 20vw 5vw 20vw 5vw;
     gap: 10vh;
     /* Gap between rows on mobile */
   }
