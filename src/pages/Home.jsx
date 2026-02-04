@@ -139,7 +139,7 @@ function Home() {
           </div>
         </div>
         <div className="project-preview-box reveal-item" ref={box2Ref}>
-          <div className="project-preview-square"></div>
+          <div className="project-preview-square project-preview-square-second"></div>
           <div className="project-preview-info">
             <span className="project-preview-title">Placeholder Name</span>
             <div className="project-preview-meta">
