@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 function CursorCircle() {
   const cursorCircleRef = useRef(null);
   const [isHoveringButton, setIsHoveringButton] = useState(false);
+  const [isInFooter, setIsInFooter] = useState(false);
 
   useEffect(() => {
     const circle = cursorCircleRef.current;
@@ -11,6 +12,14 @@ function CursorCircle() {
     const moveCircle = (e) => {
       circle.style.left = `${e.clientX}px`;
       circle.style.top = `${e.clientY}px`;
+      
+      // Check if cursor is over footer
+      const footer = document.querySelector('.footer');
+      if (footer) {
+        const footerRect = footer.getBoundingClientRect();
+        const isOver = e.clientY >= footerRect.top && e.clientY <= footerRect.bottom;
+        setIsInFooter(isOver);
+      }
     };
     
     const handleMouseOver = (e) => {
@@ -36,7 +45,7 @@ function CursorCircle() {
     };
   }, []);
 
-  return <div className={`cursor-circle ${isHoveringButton ? 'cursor-hover' : ''}`} ref={cursorCircleRef} />;
+  return <div className={`cursor-circle ${isHoveringButton ? 'cursor-hover' : ''} ${isInFooter ? 'cursor-footer' : ''}`} ref={cursorCircleRef} />;
 }
 
 export default CursorCircle;
