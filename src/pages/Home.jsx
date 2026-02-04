@@ -171,8 +171,8 @@ function Home() {
       <footer className="footer">
         <div className="footer-left">let's build something together !</div>
         <div className="footer-right">
-          <a href="www.linkedin.com/in/amyw41"><span className="footer-symbol">𝜗𝜚⋆₊˚</span> <span className="footer-text">linkedin</span></a>
-          <a href="https://x.com/apriberri"><span className="footer-symbol">𐙚⋆.˚</span> <span className="footer-text">x/twitter</span></a>
+          <a href="https://www.linkedin.com/in/amyw41" target="_blank" rel="noopener noreferrer"><span className="footer-symbol">𝜗𝜚⋆₊˚</span> <span className="footer-text">linkedin</span></a>
+          <a href="https://x.com/apriberri" target="_blank" rel="noopener noreferrer"><span className="footer-symbol">𐙚⋆.˚</span> <span className="footer-text">x/twitter</span></a>
         </div>
       </footer>
     </>
