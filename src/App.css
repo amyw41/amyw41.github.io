@@ -71,7 +71,7 @@ html {
   flex-direction: column;
   align-items: center;
   flex: 1 1 0;
-  max-height: 5vw;
+  max-height: 6vw;
   max-width: 48vw;
 }
 
@@ -354,7 +354,7 @@ body {
   width: 900px;
   height: 540px;
   background: radial-gradient(ellipse 60% 45% at 50% 50%,
-      rgba(254, 163, 163, 0.92) 0%,
+      rgba(255, 147, 147, 0.92) 0%,
       rgba(254, 163, 163, 0.22) 35%,
       rgba(254, 163, 163, 0.08) 55%,
       transparent 75%);
@@ -383,7 +383,7 @@ body {
   left: 0;
   bottom: -28%;
   width: 120rem;
-  height: 30rem;
+  height: 26rem;
   pointer-events: none;
   z-index: 3;
   overflow: visible;

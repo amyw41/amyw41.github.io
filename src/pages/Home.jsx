@@ -59,26 +59,17 @@ function Home() {
     const target = wavyRef.current
     if (!target) return
 
-    let frame = 0
     const update = () => {
-      frame = 0
       const scrollY = window.scrollY || 0
       const shift = (scrollY * 0.5) % waveCycleWidth
       target.style.setProperty('--wave-shift', `${shift}px`)
     }
 
-    const onScroll = () => {
-      if (frame) return
-      frame = window.requestAnimationFrame(update)
-    }
-
-    update()
-    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('scroll', update, { passive: true })
     return () => {
-      if (frame) window.cancelAnimationFrame(frame)
-      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('scroll', update)
     }
-  }, [])
+  }, [waveCycleWidth])
 
   return (
     <>
