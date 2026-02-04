@@ -111,7 +111,7 @@ function Home() {
               fill="none"
             />
             <text className="wavy-text-label">
-              <textPath href="#wave-path" startOffset="-1000">
+              <textPath href="#wave-path" startOffset="-10">
                 {repeatedText}
               </textPath>
             </text>
