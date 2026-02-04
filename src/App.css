@@ -129,8 +129,8 @@ html {
 
 .project-preview-subtitle {
   width: 100%;
-  font-family: 'Raleway', Arial, sans-serif;
-  font-size: 1.2rem;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 1.05rem;
   font-weight: 500;
   color: #999;
   margin-top: 0.3rem;
@@ -139,8 +139,8 @@ html {
 
 .project-preview-title {
   font-family: 'Raleway', serif;
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: 1.4rem;
+  font-weight: 600;
   color: #111;
 }
 
@@ -157,16 +157,10 @@ html {
   font-weight: 700;
   border-radius: 0em;
   padding: 0.2em 0.9em;
-  margin-right: 0.5em;
   display: inline-block;
   border: 1px solid #dadada;
 }
 
-.project-preview-tag-pink {
-  background: rgba(254, 130, 130, 0.18);
-  color: #fe8282;
-  border: 1.5px solid #fe8282;
-}
 
 .project-preview-date {
   font-family: 'Raleway', Arial, sans-serif;
