@@ -96,7 +96,8 @@ html {
   width: 100%;
   aspect-ratio: 1.5 / 1;
   border-radius: 0.2rem;
-  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: none;
+  border: 1px solid #e5e5e5;
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
@@ -105,18 +106,16 @@ html {
 
 .project-preview-square-first {
   background: 
-    radial-gradient(ellipse 200% 180% at 75% 15%, #b1ceff 0%, transparent 60%),
-    radial-gradient(ellipse 220% 200% at 85% 25%, rgba(246, 251, 255, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse 180% 160% at 70% -5%, rgba(230, 242, 255, 0.07) 0%, transparent 55%),
-    radial-gradient(ellipse 240% 220% at 90% 35%, rgba(255, 255, 255, 0.05) 0%, transparent 65%),
-    radial-gradient(ellipse 200% 190% at 60% 20%, rgba(230, 242, 255, 0.04) 0%, transparent 70%),
-    radial-gradient(ellipse 210% 210% at 80% 50%, rgba(246, 251, 255, 0.04) 0%, transparent 75%),
-    linear-gradient(135deg, #EDF7FF 0%, #EDF7FF 100%);
-  background-blend-mode: screen;
+    radial-gradient(ellipse 100% 100% at 85% 15%, rgba(255, 255, 255, 0.9) 0%, transparent 55%),
+    radial-gradient(ellipse 100% 100% at 20% 85%, rgba(255, 255, 255, 0.6) 0%, transparent 60%),
+    linear-gradient(135deg, #e2f3ff 0%, #e2f3ff 100%);
 }
 
 .project-preview-square-second {
-  background: radial-gradient(ellipse 65% 50% at 50% 50%, #e0efd0 0%, #fffefa 100%);
+  background: 
+    radial-gradient(circle, rgba(0, 0, 0, 0.09) 1.5px, transparent 1.5px),
+    radial-gradient(ellipse 65% 50% at 50% 50%, #ebefd0 0%, #fffefa 100%);
+  background-size: 20px 20px, 100% 100%;
 }
 
 .project-preview-info {
@@ -126,6 +125,16 @@ html {
   align-items: center;
   justify-content: space-between;
   margin-top: 0.5rem;
+}
+
+.project-preview-subtitle {
+  width: 100%;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #999;
+  margin-top: 0.3rem;
+  text-align: left;
 }
 
 .project-preview-title {

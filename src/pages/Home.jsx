@@ -131,17 +131,18 @@ function Home() {
         <div className="project-preview-box reveal-item" ref={box1Ref}>
           <div className="project-preview-square project-preview-square-first"></div>
           <div className="project-preview-info">
-            <span className="project-preview-title">relish</span>
+            <span className="project-preview-title">3d data analysis & cool ocean visuals</span>
             <div className="project-preview-meta">
-              <span className="project-preview-tag">hackathon</span>
-              <span className="project-preview-date">2025</span>
+              <span className="project-preview-tag">Product Design</span>
+              <span className="project-preview-date">2026</span>
             </div>
           </div>
+          <div className="project-preview-subtitle">1st overall @ uOttaHacks</div>
         </div>
         <div className="project-preview-box reveal-item" ref={box2Ref}>
           <div className="project-preview-square project-preview-square-second"></div>
           <div className="project-preview-info">
-            <span className="project-preview-title">Placeholder Name</span>
+            <span className="project-preview-title">relish</span>
             <div className="project-preview-meta">
               <span className="project-preview-tag">hackathon</span>
               <span className="project-preview-date">2026</span>
