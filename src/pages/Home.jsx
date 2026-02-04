@@ -84,13 +84,13 @@ function Home() {
             <div className="desc-line align-desc">
               <span className="arrow">→</span>
               <span className="desc-text">
-                is a product designer who uses <span className="desc-italic-bold">aesthetics</span> and <span className="desc-bold">makes it work.</span>
+                is a product designer who uses <span className="desc-italic-bold">aesthetics</span> and<br className="mobile-break" /> <span className="desc-bold">makes it work.</span>
               </span>
             </div>
             <div className="desc-line align-desc">
               <span className="arrow">→</span>
               <span className="desc-text">
-                currently studying management engineering @ waterloo!
+                currently studying management engineering<br className="mobile-break" /> @ waterloo!
               </span>
             </div>
           </div>

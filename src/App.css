@@ -168,7 +168,7 @@ html {
   font-family: 'Raleway', serif;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #111;
+  color: #373737;
 }
 
 .project-preview-meta {
@@ -537,6 +537,10 @@ body {
   font-weight: 700;
 }
 
+.mobile-break {
+  display: none;
+}
+
 /* ===== Taskbar Links ===== */
 .taskbar a {
   color: var(--text);
@@ -685,5 +689,57 @@ body {
   .project-preview-subtitle {
     margin-top: 0.5rem;
     font-size: 1rem;
+  }
+
+  /* ===== Hero Mobile Refactor ===== */
+  .center-content {
+    flex-direction: column;
+    align-items: center;
+    /* Center the container content (specifically the name) */
+    justify-content: center;
+    padding-left: 0;
+    /* Remove left padding to allow true centering */
+    padding: 0 5vw;
+    /* Add horizontal padding to prevent edge touching */
+    gap: 2rem;
+  }
+
+  .name {
+    align-items: center;
+    font-size: 7rem;
+    line-height: 1;
+    margin-left: 0;
+    /* Remove offset */
+    text-align: center;
+    /* Ensure text is centered */
+  }
+
+  .desc-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    /* Allow container to shrink to text width so it can be centered */
+    max-width: 90vw;
+    margin-top: 1rem;
+  }
+
+  .desc-line {
+    font-size: 1.5rem;
+    flex-wrap: nowrap;
+    /* Keep arrow with text */
+  }
+
+
+}
+
+@media (max-width: 750px) {
+  .desc-text {
+    display: inline;
+    white-space: nowrap;
+  }
+
+  .mobile-break {
+    display: block;
   }
 }
