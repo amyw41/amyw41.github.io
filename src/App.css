@@ -18,16 +18,49 @@ html {
   width: 28px;
   height: 28px;
   border: 1px solid #111;
-  border-radius: 50%;
+  border-radius: 100px;
+  /* Fixed high value for perfect pill shape */
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+  transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+    height 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .cursor-circle.cursor-hover {
   width: 16px;
   height: 16px;
+}
+
+.cursor-circle.cursor-project {
+  width: 140px;
+  height: 30px;
+  background-color: #111;
+  border-color: #111;
+}
+
+.cursor-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.cursor-circle.cursor-project .cursor-text {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .cursor-circle.cursor-footer {
@@ -57,6 +90,8 @@ html {
   display: flex;
   flex-direction: column;
   padding: 16vw 3vw 5vw 3vw;
+  scroll-margin-top: 15vh;
+  /* Landing offset for anchor links */
   /* Combined padding from rows */
   gap: 5vw;
   /* Spacing between rows */
@@ -113,20 +148,62 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  /* Ensure image doesn't bleed out */
+  position: relative;
+  /* For absolute children */
 }
+
+.project-img {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+  border: 10px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 12px 32px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
 
 .project-preview-square-first {
   background:
     radial-gradient(ellipse 100% 100% at 85% 15%, rgba(255, 255, 255, 0.9) 0%, transparent 55%),
     radial-gradient(ellipse 100% 100% at 20% 85%, rgba(255, 255, 255, 0.6) 0%, transparent 60%),
-    linear-gradient(135deg, #e2f3ff 0%, #e2f3ff 100%);
+    linear-gradient(135deg, #e2f3ff 0%, #99d4ff 100%);
 }
 
 .project-preview-square-second {
   background:
     radial-gradient(circle, rgba(0, 0, 0, 0.09) 1.5px, transparent 1.5px),
-    radial-gradient(ellipse 65% 50% at 50% 50%, #ebefd0 0%, #fffefa 100%);
+    radial-gradient(ellipse 65% 50% at 50% 50%, #fff3d6 0%, #fffefa 100%);
   background-size: 20px 20px, 100% 100%;
+}
+
+.project-side-by-side-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  width: 95%;
+  height: 85%;
+  perspective: 1000px;
+}
+
+.project-side-img {
+  height: 90%;
+  object-fit: contain;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* ===== Project Preview Row (Refactored) ===== */
@@ -319,7 +396,7 @@ body {
   justify-content: flex-start;
   overflow: visible;
   z-index: 2;
-  animation: fadeIn 1s ease-out forwards;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 @keyframes fadeIn {
@@ -349,14 +426,14 @@ body {
   transform: translate(-50%, -50%);
   width: 180vw;
   height: 180vh;
-  background: radial-gradient(ellipse 65% 50% at 50% 50%,
-      rgba(255, 199, 138, 0.9) 0%,
-      rgba(254, 130, 130, 0.3) 45%,
-      rgba(254, 130, 130, 0.1) 65%,
-      transparent 78%);
+  background: radial-gradient(ellipse 70% 55% at 50% 50%,
+      rgba(255, 140, 50, 1) 0%,
+      rgba(254, 80, 80, 0.6) 40%,
+      rgba(254, 80, 80, 0.3) 70%,
+      transparent 95%);
   pointer-events: none;
   z-index: 0;
-  animation: page-gradient-fade 1s ease-out 0.1s forwards;
+  animation: page-gradient-fade 0.5s ease-out 0.1s forwards;
 }
 
 @keyframes page-gradient-fade {
@@ -396,7 +473,7 @@ body {
       rgba(255, 147, 147, 0.92) 0%,
       rgba(254, 163, 163, 0.22) 35%,
       rgba(254, 163, 163, 0.08) 55%,
-      transparent 75%);
+      transparent 85%);
   pointer-events: none;
   z-index: 1;
   animation: center-gradient-breathe 3s ease-in-out infinite;
@@ -451,7 +528,7 @@ body {
 
 /* ===== Taskbar ===== */
 .taskbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -468,20 +545,6 @@ body {
   z-index: 10;
   background: transparent;
   overflow: visible;
-  backdrop-filter: blur(10px);
-  isolation: isolate;
-  /* prevents visual clipping */
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  transition: transform 0.3s ease-out;
-}
-
-.taskbar.visible {
-  transform: translateY(0);
-}
-
-.taskbar.hidden {
-  transform: translateY(-100%);
 }
 
 .nav-left {

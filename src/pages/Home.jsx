@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState, useMemo } from 'react'
 import '../App.css'
 import useScrollReveal from '../hooks/useScrollReveal'
+import cyberseaImg from '../assets/cybersea_new.png'
+import relishMain from '../assets/relish-main.png'
+import relishForm from '../assets/relish-form.png'
+import relishCalendar from '../assets/relish-calendar.png'
 
 function Home() {
   const wavyRef = useRef(null)
@@ -11,6 +15,8 @@ function Home() {
   const box2Ref = useScrollReveal(100)
   const box3Ref = useScrollReveal(200)
   const box4Ref = useScrollReveal(300)
+  const box5Ref = useScrollReveal(0)
+  const box6Ref = useScrollReveal(100)
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
@@ -121,9 +127,11 @@ function Home() {
       <section id="work" className="projects-container">
         <div className="project-preview-row">
           <div className="project-preview-box reveal-item" ref={box1Ref}>
-            <div className="project-preview-square project-preview-square-first"></div>
+            <div className="project-preview-square project-preview-square-first">
+              <img src={cyberseaImg} alt="Cybersea Project UI" className="project-img" />
+            </div>
             <div className="project-preview-info">
-              <span className="project-preview-title">3d data analysis & cool ocean visuals</span>
+              <span className="project-preview-title">3D mesh playground & cool ocean visuals</span>
               <div className="project-preview-meta">
                 <span className="project-preview-tag">Product Design</span>
                 <span className="project-preview-tag">Hackathon</span>
@@ -132,15 +140,21 @@ function Home() {
             <div className="project-preview-subtitle">1ST OVERALL @ UOTTAHACKS • 2026</div>
           </div>
           <div className="project-preview-box reveal-item" ref={box2Ref}>
-            <div className="project-preview-square project-preview-square-second"></div>
-            <div className="project-preview-info">
-              <span className="project-preview-title">Make eating fun with cute hand-drawn icons</span>
-              <div className="project-preview-meta">
-                <span className="project-preview-tag">Product Design</span>
-                <span className="project-preview-tag">Designathon</span>
+            <div className="project-preview-square project-preview-square-second">
+              <div className="project-side-by-side-container">
+                <img src={relishMain} alt="Relish Main" className="project-side-img" />
+                <img src={relishForm} alt="Relish Form" className="project-side-img" />
+                <img src={relishCalendar} alt="Relish Calendar" className="project-side-img" />
               </div>
             </div>
-            <div className="project-preview-subtitle">FIGMA MAKE-A-THON @ WATERLOO • 2025</div>
+            <div className="project-preview-info">
+              <span className="project-preview-title">relish: campus safety & community</span>
+              <div className="project-preview-meta">
+                <span className="project-preview-tag">Mobile App</span>
+                <span className="project-preview-tag">Product Design</span>
+              </div>
+            </div>
+            <div className="project-preview-subtitle">FIGMA MAKE-A-THON • 2025</div>
           </div>
         </div>
 
@@ -148,12 +162,13 @@ function Home() {
           <div className="project-preview-box reveal-item" ref={box3Ref}>
             <div className="project-preview-square"></div>
             <div className="project-preview-info">
-              <span className="project-preview-title">relish</span>
+              <span className="project-preview-title">Amazon through a UX lense</span>
               <div className="project-preview-meta">
-                <span className="project-preview-tag">hackathon</span>
+                <span className="project-preview-tag">UX Research</span>
+                <span className="project-preview-tag">UX Design</span>
               </div>
             </div>
-            <div className="project-preview-subtitle">Description here</div>
+            <div className="project-preview-subtitle">UX REDESIGN CASE STUDY • 2025</div>
           </div>
           <div className="project-preview-box reveal-item" ref={box4Ref}>
             <div className="project-preview-square"></div>
@@ -164,6 +179,30 @@ function Home() {
               </div>
             </div>
             <div className="project-preview-subtitle">Description here</div>
+          </div>
+        </div>
+
+        <div className="project-preview-row">
+          <div className="project-preview-box reveal-item" ref={box5Ref}>
+            <div className="project-preview-square"></div>
+            <div className="project-preview-info">
+              <span className="project-preview-title">New Project A</span>
+              <div className="project-preview-meta">
+                <span className="project-preview-tag">Tag 1</span>
+                <span className="project-preview-tag">Tag 2</span>
+              </div>
+            </div>
+            <div className="project-preview-subtitle">PROJECT SUBTITLE • 2026</div>
+          </div>
+          <div className="project-preview-box reveal-item" ref={box6Ref}>
+            <div className="project-preview-square"></div>
+            <div className="project-preview-info">
+              <span className="project-preview-title">New Project B</span>
+              <div className="project-preview-meta">
+                <span className="project-preview-tag">Tag 1</span>
+              </div>
+            </div>
+            <div className="project-preview-subtitle">PROJECT SUBTITLE • 2026</div>
           </div>
         </div>
       </section>

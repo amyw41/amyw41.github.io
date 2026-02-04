@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 
-function Taskbar({ isVisible }) {
+function Taskbar() {
   return (
-    <nav className={`taskbar ${isVisible ? 'visible' : 'hidden'}`}>
+    <nav className="taskbar">
       <Link to="/" className="nav-left">home</Link>
       <span className="nav-right">
-        <a href="/#work">work</a>
+        <a href="#work">work</a>
         <Link to="/me">about</Link>
         <Link to="/play">play</Link>
       </span>
