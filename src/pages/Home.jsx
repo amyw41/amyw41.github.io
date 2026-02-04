@@ -118,51 +118,53 @@ function Home() {
           </svg>
         </div>
       </section>
-      <section id="work" className="project-preview-row">
-        <div className="project-preview-box reveal-item" ref={box1Ref}>
-          <div className="project-preview-square project-preview-square-first"></div>
-          <div className="project-preview-info">
-            <span className="project-preview-title">3d data analysis & cool ocean visuals</span>
-            <div className="project-preview-meta">
-              <span className="project-preview-tag">Product Design</span>
-              <span className="project-preview-tag">Hackathon</span>
+      <section id="work" className="projects-container">
+        <div className="project-preview-row">
+          <div className="project-preview-box reveal-item" ref={box1Ref}>
+            <div className="project-preview-square project-preview-square-first"></div>
+            <div className="project-preview-info">
+              <span className="project-preview-title">3d data analysis & cool ocean visuals</span>
+              <div className="project-preview-meta">
+                <span className="project-preview-tag">Product Design</span>
+                <span className="project-preview-tag">Hackathon</span>
+              </div>
             </div>
+            <div className="project-preview-subtitle">1ST OVERALL @ UOTTAHACKS • 2026</div>
           </div>
-          <div className="project-preview-subtitle">1ST OVERALL @ UOTTAHACKS • 2026</div>
-        </div>
-        <div className="project-preview-box reveal-item" ref={box2Ref}>
-          <div className="project-preview-square project-preview-square-second"></div>
-          <div className="project-preview-info">
-            <span className="project-preview-title">Make eating fun with cute hand-drawn icons</span>
-            <div className="project-preview-meta">
-              <span className="project-preview-tag">Product Design</span>
-              <span className="project-preview-tag">Designathon</span>
+          <div className="project-preview-box reveal-item" ref={box2Ref}>
+            <div className="project-preview-square project-preview-square-second"></div>
+            <div className="project-preview-info">
+              <span className="project-preview-title">Make eating fun with cute hand-drawn icons</span>
+              <div className="project-preview-meta">
+                <span className="project-preview-tag">Product Design</span>
+                <span className="project-preview-tag">Designathon</span>
+              </div>
             </div>
+            <div className="project-preview-subtitle">FIGMA MAKE-A-THON @ WATERLOO • 2025</div>
           </div>
-          <div className="project-preview-subtitle">FIGMA MAKE-A-THON @ WATERLOO • 2025</div>
         </div>
-      </section>
 
-      <section className="project-preview-row">
-        <div className="project-preview-box reveal-item" ref={box3Ref}>
-          <div className="project-preview-square"></div>
-          <div className="project-preview-info">
-            <span className="project-preview-title">relish</span>
-            <div className="project-preview-meta">
-              <span className="project-preview-tag">hackathon</span>
+        <div className="project-preview-row">
+          <div className="project-preview-box reveal-item" ref={box3Ref}>
+            <div className="project-preview-square"></div>
+            <div className="project-preview-info">
+              <span className="project-preview-title">relish</span>
+              <div className="project-preview-meta">
+                <span className="project-preview-tag">hackathon</span>
+              </div>
             </div>
+            <div className="project-preview-subtitle">Description here</div>
           </div>
-          <div className="project-preview-subtitle">Description here</div>
-        </div>
-        <div className="project-preview-box reveal-item" ref={box4Ref}>
-          <div className="project-preview-square"></div>
-          <div className="project-preview-info">
-            <span className="project-preview-title">Placeholder Name</span>
-            <div className="project-preview-meta">
-              <span className="project-preview-tag">hackathon</span>
+          <div className="project-preview-box reveal-item" ref={box4Ref}>
+            <div className="project-preview-square"></div>
+            <div className="project-preview-info">
+              <span className="project-preview-title">Placeholder Name</span>
+              <div className="project-preview-meta">
+                <span className="project-preview-tag">hackathon</span>
+              </div>
             </div>
+            <div className="project-preview-subtitle">Description here</div>
           </div>
-          <div className="project-preview-subtitle">Description here</div>
         </div>
       </section>
 

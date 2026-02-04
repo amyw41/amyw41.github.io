@@ -52,22 +52,30 @@ html {
   display: inline;
 }
 
-/* ===== Project Preview Row (Custom) ===== */
+/* ===== Projects Container (New Wrapper) ===== */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16vw 3vw 5vw 3vw;
+  /* Combined padding from rows */
+  gap: 5vw;
+  /* Spacing between rows */
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* ===== Project Preview Row (Refactored) ===== */
 .project-preview-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100vw;
-  max-width: 100vw;
-  margin: 0 auto 0 auto;
-  padding: 16vw 3vw 16vw 3vw;
-  box-sizing: border-box;
+  width: 100%;
   gap: 1vw;
-}
-
-.project-preview-row:last-of-type {
-  padding-bottom: 32vw;
+  padding: 0;
+  margin: 0;
 }
 
 .project-preview-box {
@@ -75,7 +83,6 @@ html {
   flex-direction: column;
   align-items: center;
   flex: 1 1 0;
-  max-height: 6vw;
   max-width: 48vw;
 }
 
@@ -109,26 +116,42 @@ html {
 }
 
 .project-preview-square-first {
-  background: 
+  background:
     radial-gradient(ellipse 100% 100% at 85% 15%, rgba(255, 255, 255, 0.9) 0%, transparent 55%),
     radial-gradient(ellipse 100% 100% at 20% 85%, rgba(255, 255, 255, 0.6) 0%, transparent 60%),
     linear-gradient(135deg, #e2f3ff 0%, #e2f3ff 100%);
 }
 
 .project-preview-square-second {
-  background: 
+  background:
     radial-gradient(circle, rgba(0, 0, 0, 0.09) 1.5px, transparent 1.5px),
     radial-gradient(ellipse 65% 50% at 50% 50%, #ebefd0 0%, #fffefa 100%);
   background-size: 20px 20px, 100% 100%;
 }
 
+/* ===== Project Preview Row (Refactored) ===== */
 .project-preview-info {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  /* Aligns title and tags to the top */
   justify-content: space-between;
   margin-top: 0.5rem;
+}
+
+/* ... existing code ... */
+
+@media (max-width: 1024px) {
+
+  /* ... existing code ... */
+  .project-preview-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
 }
 
 .project-preview-subtitle {
@@ -163,6 +186,7 @@ html {
   padding: 0.2em 0.9em;
   display: inline-block;
   border: 1px solid #dadada;
+  white-space: nowrap;
 }
 
 
@@ -302,6 +326,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -572,7 +597,7 @@ body {
   position: absolute;
   top: 3rem;
   right: 8rem;
-  font-family:'Editorial New', serif;
+  font-family: 'Editorial New', serif;
   font-weight: 100;
   font-size: 3rem;
   font-style: italic;
@@ -604,4 +629,61 @@ body {
 
 .footer-right a:hover {
   opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .projects-container {
+    padding: 10vw 5vw 20vw 5vw;
+    gap: 10vh;
+    /* Gap between rows on mobile */
+  }
+
+  .project-preview-row {
+    flex-direction: column;
+    padding: 0;
+    gap: 12vw;
+    /* Gap between projects within a row */
+    width: 100%;
+  }
+
+  .project-preview-box {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    height: auto !important;
+    /* Force auto height to prevent layering issues */
+    flex: none;
+    margin: 0;
+  }
+
+  .project-preview-square {
+    width: 100%;
+    aspect-ratio: 1.2 / 1;
+  }
+
+  .project-preview-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .project-preview-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.2;
+  }
+
+  .project-preview-meta {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .project-preview-subtitle {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
 }
