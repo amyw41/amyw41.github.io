@@ -5,6 +5,9 @@ import cyberseaImg from '../assets/cybersea_new.png'
 import relishMain from '../assets/relish-main.png'
 import relishForm from '../assets/relish-form.png'
 import relishCalendar from '../assets/relish-calendar.png'
+import amazon1 from '../assets/amazon 1.png'
+import amazon2 from '../assets/amazon 2.png'
+import amazon3 from '../assets/amazon 3.png'
 
 function Home() {
   const wavyRef = useRef(null)
@@ -161,7 +164,13 @@ function Home() {
 
         <div className="project-preview-row">
           <div className="project-preview-box reveal-item" ref={box3Ref}>
-            <div className="project-preview-square"></div>
+            <div className="project-preview-square project-preview-square-third">
+              <div className="project-side-by-side-container">
+                <img src={amazon1} alt="Amazon 1" className="project-side-img" />
+                <img src={amazon2} alt="Amazon 2" className="project-side-img" />
+                <img src={amazon3} alt="Amazon 3" className="project-side-img" />
+              </div>
+            </div>
             <div className="project-preview-info">
               <span className="project-preview-title">Amazon through a UX lense</span>
               <div className="project-preview-meta">
@@ -172,7 +181,7 @@ function Home() {
             <div className="project-preview-subtitle">UX REDESIGN CASE STUDY • 2025</div>
           </div>
           <div className="project-preview-box reveal-item" ref={box4Ref}>
-            <div className="project-preview-square"></div>
+            <div className="project-preview-square project-preview-square-fourth"></div>
             <div className="project-preview-info">
               <span className="project-preview-title">Placeholder Name</span>
               <div className="project-preview-meta">
@@ -180,30 +189,6 @@ function Home() {
               </div>
             </div>
             <div className="project-preview-subtitle">Description here</div>
-          </div>
-        </div>
-
-        <div className="project-preview-row">
-          <div className="project-preview-box reveal-item" ref={box5Ref}>
-            <div className="project-preview-square"></div>
-            <div className="project-preview-info">
-              <span className="project-preview-title">New Project A</span>
-              <div className="project-preview-meta">
-                <span className="project-preview-tag">Tag 1</span>
-                <span className="project-preview-tag">Tag 2</span>
-              </div>
-            </div>
-            <div className="project-preview-subtitle">PROJECT SUBTITLE • 2026</div>
-          </div>
-          <div className="project-preview-box reveal-item" ref={box6Ref}>
-            <div className="project-preview-square"></div>
-            <div className="project-preview-info">
-              <span className="project-preview-title">New Project B</span>
-              <div className="project-preview-meta">
-                <span className="project-preview-tag">Tag 1</span>
-              </div>
-            </div>
-            <div className="project-preview-subtitle">PROJECT SUBTITLE • 2026</div>
           </div>
         </div>
       </section>

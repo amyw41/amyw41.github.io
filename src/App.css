@@ -176,24 +176,35 @@ html {
   width: 85%;
   height: auto;
   object-fit: contain;
-  border: 8px solid rgba(255, 255, 255, 0.2);
+  border: 10px solid rgba(255, 255, 255, 0.2);
   border-radius: 1.5rem;
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease;
 }
 
-.project-preview-box:hover .project-img {
+.project-preview-square:hover .project-img {
   transform: translateX(-50%) translateY(-3px) scale(1.01);
 }
-
 
 .project-preview-square-first {
   background: #ddeeff;
 }
 
 .project-preview-square-second {
+  background: #a3b5a2;
+}
+
+.project-preview-square-third {
   background: #fff2d9;
+}
+
+.project-preview-square-third .project-side-img {
+  border-radius: 32px;
+}
+
+.project-preview-square-fourth {
+  background: #e5b7bc;
 }
 
 .project-side-by-side-container {
@@ -735,11 +746,6 @@ body {
     /* Force auto height to prevent layering issues */
     flex: none;
     margin: 0;
-  }
-
-  .project-preview-square {
-    width: 100%;
-    aspect-ratio: 1.2 / 1;
   }
 
   .project-preview-info {
