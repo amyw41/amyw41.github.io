@@ -5,9 +5,15 @@ import cyberseaImg from '../assets/cybersea_new.png'
 import relishMain from '../assets/relish-main.png'
 import relishForm from '../assets/relish-form.png'
 import relishCalendar from '../assets/relish-calendar.png'
+<<<<<<< HEAD
 import amazon1 from '../assets/amazon 1.png'
 import amazon2 from '../assets/amazon 2.png'
 import amazon3 from '../assets/amazon 3.png'
+=======
+import amazonA from '../assets/amazon a.png'
+import amazonB from '../assets/amazon b.png'
+import amazonC from '../assets/amazon c.png'
+>>>>>>> 15b425d29e2b991ac80fa0f419c27693b6f0f60c
 
 function Home() {
   const wavyRef = useRef(null)
@@ -18,8 +24,6 @@ function Home() {
   const box2Ref = useScrollReveal(100)
   const box3Ref = useScrollReveal(200)
   const box4Ref = useScrollReveal(300)
-  const box5Ref = useScrollReveal(0)
-  const box6Ref = useScrollReveal(100)
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
@@ -166,9 +170,15 @@ function Home() {
           <div className="project-preview-box reveal-item" ref={box3Ref}>
             <div className="project-preview-square project-preview-square-third">
               <div className="project-side-by-side-container">
+<<<<<<< HEAD
                 <img src={amazon1} alt="Amazon 1" className="project-side-img" />
                 <img src={amazon2} alt="Amazon 2" className="project-side-img" />
                 <img src={amazon3} alt="Amazon 3" className="project-side-img" />
+=======
+                <img src={amazonA} alt="Amazon A" className="project-side-img" />
+                <img src={amazonB} alt="Amazon B" className="project-side-img" />
+                <img src={amazonC} alt="Amazon C" className="project-side-img" />
+>>>>>>> 15b425d29e2b991ac80fa0f419c27693b6f0f60c
               </div>
             </div>
             <div className="project-preview-info">
