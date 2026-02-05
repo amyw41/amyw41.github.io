@@ -18,8 +18,6 @@ function Home() {
   const box2Ref = useScrollReveal(100)
   const box3Ref = useScrollReveal(200)
   const box4Ref = useScrollReveal(300)
-  const box5Ref = useScrollReveal(0)
-  const box6Ref = useScrollReveal(100)
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
