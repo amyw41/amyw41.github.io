@@ -5,6 +5,9 @@ import cyberseaImg from '../assets/cybersea_new.png'
 import relishMain from '../assets/relish-main.png'
 import relishForm from '../assets/relish-form.png'
 import relishCalendar from '../assets/relish-calendar.png'
+import amazonA from '../assets/amazon a.png'
+import amazonB from '../assets/amazon b.png'
+import amazonC from '../assets/amazon c.png'
 
 function Home() {
   const wavyRef = useRef(null)
@@ -15,8 +18,6 @@ function Home() {
   const box2Ref = useScrollReveal(100)
   const box3Ref = useScrollReveal(200)
   const box4Ref = useScrollReveal(300)
-  const box5Ref = useScrollReveal(0)
-  const box6Ref = useScrollReveal(100)
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
@@ -161,7 +162,13 @@ function Home() {
 
         <div className="project-preview-row">
           <div className="project-preview-box reveal-item" ref={box3Ref}>
-            <div className="project-preview-square"></div>
+            <div className="project-preview-square project-preview-square-third">
+              <div className="project-side-by-side-container">
+                <img src={amazonA} alt="Amazon A" className="project-side-img" />
+                <img src={amazonB} alt="Amazon B" className="project-side-img" />
+                <img src={amazonC} alt="Amazon C" className="project-side-img" />
+              </div>
+            </div>
             <div className="project-preview-info">
               <span className="project-preview-title">Amazon through a UX lense</span>
               <div className="project-preview-meta">
@@ -172,7 +179,7 @@ function Home() {
             <div className="project-preview-subtitle">UX REDESIGN CASE STUDY • 2025</div>
           </div>
           <div className="project-preview-box reveal-item" ref={box4Ref}>
-            <div className="project-preview-square"></div>
+            <div className="project-preview-square project-preview-square-fourth"></div>
             <div className="project-preview-info">
               <span className="project-preview-title">Placeholder Name</span>
               <div className="project-preview-meta">
@@ -180,30 +187,6 @@ function Home() {
               </div>
             </div>
             <div className="project-preview-subtitle">Description here</div>
-          </div>
-        </div>
-
-        <div className="project-preview-row">
-          <div className="project-preview-box reveal-item" ref={box5Ref}>
-            <div className="project-preview-square"></div>
-            <div className="project-preview-info">
-              <span className="project-preview-title">New Project A</span>
-              <div className="project-preview-meta">
-                <span className="project-preview-tag">Tag 1</span>
-                <span className="project-preview-tag">Tag 2</span>
-              </div>
-            </div>
-            <div className="project-preview-subtitle">PROJECT SUBTITLE • 2026</div>
-          </div>
-          <div className="project-preview-box reveal-item" ref={box6Ref}>
-            <div className="project-preview-square"></div>
-            <div className="project-preview-info">
-              <span className="project-preview-title">New Project B</span>
-              <div className="project-preview-meta">
-                <span className="project-preview-tag">Tag 1</span>
-              </div>
-            </div>
-            <div className="project-preview-subtitle">PROJECT SUBTITLE • 2026</div>
           </div>
         </div>
       </section>
