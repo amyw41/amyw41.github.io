@@ -148,9 +148,10 @@ function Home() {
               </div>
             </div>
             <div className="project-preview-info">
-              <span className="project-preview-title">relish: campus safety & community</span>
+              <span className="project-preview-title">Making food fun w hand-drawn icons</span>
               <div className="project-preview-meta">
                 <span className="project-preview-tag">Mobile App</span>
+                <span className="project-preview-tag">Designathon</span>
                 <span className="project-preview-tag">Product Design</span>
               </div>
             </div>
