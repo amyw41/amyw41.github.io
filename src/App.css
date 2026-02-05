@@ -199,16 +199,12 @@ html {
   background: #f3dec0;
 }
 
-.project-preview-square-third {
-  background: #a3b5a2;
-}
-
 .project-preview-square-third .project-side-img {
   border-radius: 32px;
 }
 
 .project-preview-square-fourth {
-  background: #e5b7bc;
+  background: #ffe1e7;
 }
 .project-side-by-side-container {
   display: flex;
