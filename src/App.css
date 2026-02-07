@@ -196,7 +196,7 @@ html {
 }
 
 .project-preview-square-third {
-  background: #f3dec0;
+  background: #ffe2c3;
 }
 
 .project-preview-square-third .project-side-img {
@@ -206,6 +206,7 @@ html {
 .project-preview-square-fourth {
   background: #ffe1e7;
 }
+
 .project-side-by-side-container {
   display: flex;
   flex-direction: row;
