@@ -4,7 +4,7 @@ import CursorCircle from './components/CursorCircle'
 import Taskbar from './components/Taskbar'
 import Home from './pages/Home'
 import Work from './pages/Work'
-import Me from './pages/Me'
+import About from './pages/About'
 import Play from './pages/Play'
 import { useState, useEffect } from 'react'
 
@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Work />} />
-        <Route path="/me" element={<Me />} />
+        <Route path="/about" element={<About />} />
         <Route path="/play" element={<Play />} />
       </Routes>
     </BrowserRouter>

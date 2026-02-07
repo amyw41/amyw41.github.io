@@ -41,7 +41,7 @@ html {
 
 .cursor-circle.cursor-project {
   width: 140px;
-  height: 30px;
+  height: 34px;
   background-color: #111;
   border-color: #111;
 }
@@ -121,6 +121,7 @@ html {
   max-width: 64vw;
   width: 100%;
   margin-right: 3.2vw;
+  user-select: none;
 }
 
 /* Scroll reveal animation */
@@ -382,7 +383,7 @@ body {
   overflow-x: hidden !important;
   margin: 0;
   padding: 0;
-  user-select: none;
+  user-select: auto;
   font-size: 2vh;
 }
 
@@ -537,6 +538,7 @@ body {
   overflow: visible;
   --wave-shift: 0px;
   --wave-range: 800px;
+  user-select: none;
 }
 
 .wavy-text svg {
@@ -650,11 +652,11 @@ body {
 
 /* ===== Page Container ===== */
 .page-container {
-  margin-top: 120px;
-  padding: 3rem;
-  max-width: 1200px;
-  margin-left: auto;
+  margin-top: 80px;
+  margin-left: 2rem;
   margin-right: auto;
+  padding: 2rem;
+  max-width: 1200px;
   min-height: calc(100vh - 120px);
 }
 
@@ -671,6 +673,25 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
   color: var(--text);
+}
+
+.about-title {
+  font-family: 'Raleway', serif;
+  font-size: 4.2rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  color: var(--text);
+}
+
+.about-description {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.2rem !important;
+  line-height: 1.8;
+  color: var(--text);
+  max-width: 55%;
+  overflow: hidden;
+  color: #4c4c4c !important;
 }
 
 /* ===== Footer ===== */
