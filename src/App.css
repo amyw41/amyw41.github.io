@@ -122,6 +122,14 @@ html {
   width: 100%;
   margin-right: 3.2vw;
   user-select: none;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-preview-box:hover {
+  transform: translateY(-4px);
 }
 
 /* Scroll reveal animation */
@@ -845,8 +853,70 @@ body {
 
 }
 
+/* ===== Project Detail Pages ===== */
+.project-detail-page {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 8rem;
+  box-sizing: border-box;
+}
+
+.project-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+.project-detail-page .project-title {
+  font-family: 'Editorial New', serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+.project-meta-info {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-detail-page .project-tag {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0;
+  padding: 0.3em 1em;
+  display: inline-block;
+  border: 1px solid #dadada;
+  background: white;
+}
+
+.project-detail-page .project-subtitle {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #999;
+  margin-top: 1rem;
+}
+
+.project-content {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 4rem;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4c4c4c;
+}
+
 @media (max-width: 750px) {
   .desc-text {
+
     display: inline;
     white-space: nowrap;
   }

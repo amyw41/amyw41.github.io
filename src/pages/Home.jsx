@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import '../App.css'
 import useScrollReveal from '../hooks/useScrollReveal'
 import cyberseaImg from '../assets/cybersea_new.png'
@@ -127,7 +128,7 @@ function Home() {
       </section>
       <section id="work" className="projects-container">
         <div className="project-preview-row">
-          <div className="project-preview-box reveal-item" ref={box1Ref}>
+          <Link to="/projects/cybersea" className="project-preview-box reveal-item" ref={box1Ref}>
             <div className="project-preview-square project-preview-square-first">
               <img src={cyberseaImg} alt="Cybersea Project UI" className="project-img" />
             </div>
@@ -139,8 +140,8 @@ function Home() {
               </div>
             </div>
             <div className="project-preview-subtitle">1ST OVERALL @ UOTTAHACKS • 2026</div>
-          </div>
-          <div className="project-preview-box reveal-item" ref={box2Ref}>
+          </Link>
+          <Link to="/projects/relish" className="project-preview-box reveal-item" ref={box2Ref}>
             <div className="project-preview-square project-preview-square-second">
               <div className="project-side-by-side-container">
                 <img src={relishMain} alt="Relish Main" className="project-side-img" />
@@ -157,11 +158,11 @@ function Home() {
               </div>
             </div>
             <div className="project-preview-subtitle">FIGMA MAKE-A-THON • 2025</div>
-          </div>
+          </Link>
         </div>
 
         <div className="project-preview-row">
-          <div className="project-preview-box reveal-item" ref={box3Ref}>
+          <Link to="/projects/amazon" className="project-preview-box reveal-item" ref={box3Ref}>
             <div className="project-preview-square project-preview-square-third">
               <div className="project-side-by-side-container">
                 <img src={amazon1} alt="Amazon 1" className="project-side-img" />
@@ -177,8 +178,8 @@ function Home() {
               </div>
             </div>
             <div className="project-preview-subtitle">UX REDESIGN CASE STUDY • 2025</div>
-          </div>
-          <div className="project-preview-box reveal-item" ref={box4Ref}>
+          </Link>
+          <Link to="/projects/placeholder" className="project-preview-box reveal-item" ref={box4Ref}>
             <div className="project-preview-square project-preview-square-fourth"></div>
             <div className="project-preview-info">
               <span className="project-preview-title">Placeholder Name</span>
@@ -187,7 +188,7 @@ function Home() {
               </div>
             </div>
             <div className="project-preview-subtitle">Description here</div>
-          </div>
+          </Link>
         </div>
       </section>
 
