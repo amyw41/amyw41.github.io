@@ -179,16 +179,6 @@ function Home() {
             </div>
             <div className="project-preview-subtitle">UX REDESIGN CASE STUDY • 2025</div>
           </Link>
-          <Link to="/projects/placeholder" className="project-preview-box reveal-item" ref={box4Ref}>
-            <div className="project-preview-square project-preview-square-fourth"></div>
-            <div className="project-preview-info">
-              <span className="project-preview-title">Placeholder Name</span>
-              <div className="project-preview-meta">
-                <span className="project-preview-tag">hackathon</span>
-              </div>
-            </div>
-            <div className="project-preview-subtitle">Description here</div>
-          </Link>
         </div>
       </section>
 
