@@ -271,7 +271,7 @@ html {
 
 .project-preview-subtitle {
   width: 100%;
-  font-family: 'Lato', Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.15rem;
   font-weight: 500;
   color: #999;
@@ -673,7 +673,7 @@ body {
 }
 
 .page-container {
-  margin-top: 80px;
+  margin-top: 120px;
   margin-left: 2rem;
   margin-right: auto;
   padding: 2rem;
@@ -785,7 +785,7 @@ body {
 }
 
 .about-description a:hover {
-  color: #ee837b;
+  color: #ff9b9b;
   /* Black color on hover */
 }
 
@@ -948,6 +948,91 @@ body {
   box-sizing: border-box;
 }
 
+.relish-page-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 7rem;
+  flex-direction: column;
+  position: relative;
+  isolation: isolate;
+}
+
+body.relish-page {
+  /* Keep grain fixed but remove the gradient from here */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="1.5" numOctaves="3"/></filter><rect width="100" height="100" fill="white"/><rect width="100" height="100" filter="url(%23noise)" opacity="0.22"/></svg>');
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+
+.relish-background-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130vh;
+  z-index: -1;
+  background: radial-gradient(ellipse 120vw 34vw at 55% 48%,
+      rgba(255, 155, 155, 0.85) 0%,
+      rgba(255, 155, 155, 0.1) 30%,
+      transparent 65%);
+  pointer-events: none;
+}
+
+.cursor-circle.cursor-clicked {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.relish-hero-container {
+  width: 90vw;
+  height: 82vh;
+
+  margin: 0;
+  transform: translateX(12vw);
+  cursor: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.relish-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: fit-content;
+  max-width: 100%;
+  height: 100%;
+}
+
+.relish-title {
+  font-family: 'Editorial New', serif !important;
+  font-size: 4rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: var(--text);
+  text-align: right;
+  transform: translateX(-4rem);
+  line-height: 1;
+}
+
+.relish-hero-container .project-side-img {
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.relish-hero-container .project-side-img:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.relish-hero-container .project-side-by-side-container {
+  gap: 1rem;
+}
+
 .project-hero {
   max-width: 1200px;
   margin: 0 auto;
@@ -956,7 +1041,7 @@ body {
 }
 
 .project-detail-page .project-title {
-  font-family: 'Editorial New', serif;
+  font-family: 'Raleway', serif;
   font-size: 3.5rem;
   font-weight: 500;
   color: #1a1a1a;
@@ -984,7 +1069,7 @@ body {
 }
 
 .project-detail-page .project-subtitle {
-  font-family: 'Lato', Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   color: #999;
@@ -1010,5 +1095,191 @@ body {
 
   .mobile-break {
     display: block;
+  }
+}
+
+/* ===== Case Study Content (OpenAI Style) ===== */
+.case-study-metadata-wrapper {
+  width: 100vw;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  box-sizing: border-box;
+}
+
+.case-study-container {
+  display: flex;
+  width: 100vw;
+  max-width: 1300px;
+  margin: 0 auto 5rem auto;
+  padding: 0 4rem;
+  gap: 6rem;
+  box-sizing: border-box;
+}
+
+.case-study-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 250px;
+  height: fit-content;
+}
+
+.sidebar-back {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.sidebar-back:hover {
+  color: #1a1a1a;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sidebar-nav li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.sidebar-nav li:hover,
+.sidebar-nav li.active {
+  color: #1a1a1a;
+}
+
+.case-study-content {
+  flex-grow: 1;
+  max-width: 900px;
+}
+
+.metadata-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #eee;
+}
+
+.metadata-label {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #888;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.8rem;
+}
+
+.metadata-value,
+.metadata-list {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.metadata-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-label {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #888;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.overview-title {
+  font-family: 'Raleway', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.overview-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  color: #4c4c4c;
+  line-height: 1.6;
+  margin-bottom: 4rem;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 6rem;
+}
+
+.process-col h3 {
+  font-family: 'Raleway', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.process-col p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #4c4c4c;
+  line-height: 1.6;
+}
+
+.problem-section {
+  padding-top: 4rem;
+  border-top: 1px solid #eee;
+}
+
+@media (max-width: 1024px) {
+  .case-study-container {
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 4rem;
+  }
+
+  .case-study-sidebar {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .sidebar-nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .metadata-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }

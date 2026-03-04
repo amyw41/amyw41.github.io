@@ -5,6 +5,7 @@ function CursorCircle() {
   const [isHoveringButton, setIsHoveringButton] = useState(false);
   const [isHoveringProject, setIsHoveringProject] = useState(false);
   const [isInFooter, setIsInFooter] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     const circle = cursorCircleRef.current;
@@ -45,20 +46,27 @@ function CursorCircle() {
       }
     };
 
+    const handleMouseDown = () => setIsClicked(true);
+    const handleMouseUp = () => setIsClicked(false);
+
     window.addEventListener('mousemove', moveCircle);
     document.addEventListener('mouseover', handleMouseOver);
     document.addEventListener('mouseout', handleMouseOut);
+    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mouseup', handleMouseUp);
 
     return () => {
       window.removeEventListener('mousemove', moveCircle);
       document.removeEventListener('mouseover', handleMouseOver);
       document.removeEventListener('mouseout', handleMouseOut);
+      document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('mouseup', handleMouseUp);
     };
   }, []);
 
   return (
     <div
-      className={`cursor-circle ${isHoveringButton ? 'cursor-hover' : ''} ${isHoveringProject ? 'cursor-project' : ''} ${isInFooter ? 'cursor-footer' : ''}`}
+      className={`cursor-circle ${isHoveringButton ? 'cursor-hover' : ''} ${isHoveringProject ? 'cursor-project' : ''} ${isInFooter ? 'cursor-footer' : ''} ${isClicked ? 'cursor-clicked' : ''}`}
       ref={cursorCircleRef}
     >
       <span className="cursor-text">case study</span>
