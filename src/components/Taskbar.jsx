@@ -6,7 +6,7 @@ function Taskbar() {
 
   const handleWorkClick = (e) => {
     e.preventDefault();
-    
+
     if (location.pathname === '/') {
       // Already on home page, scroll smoothly to work section
       const workSection = document.getElementById('work');
@@ -27,6 +27,20 @@ function Taskbar() {
       }, 100);
     }
   };
+
+  const isCaseStudy = location.pathname.startsWith('/projects/');
+
+  if (isCaseStudy) {
+    return (
+      <nav className="taskbar">
+        <span className="nav-left" style={{ display: 'flex', gap: '2.5rem' }}>
+          <Link to="/">home</Link>
+          <Link to="/about">about</Link>
+          <Link to="/play">play</Link>
+        </span>
+      </nav>
+    );
+  }
 
   return (
     <nav className="taskbar">

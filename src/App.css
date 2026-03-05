@@ -11,7 +11,7 @@ html {
 }
 
 .page-fade-in {
-  animation: pageFadeIn 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation: pageFadeIn 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
 @keyframes pageFadeIn {
@@ -173,7 +173,7 @@ html {
 .load-reveal {
   opacity: 0;
   transform: translateY(30px);
-  animation: loadReveal 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation: loadReveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
 @keyframes loadReveal {
@@ -188,11 +188,11 @@ html {
 }
 
 .stagger-2 {
-  animation-delay: 0.25s;
+  animation-delay: 0.3s;
 }
 
 .stagger-3 {
-  animation-delay: 0.4s;
+  animation-delay: 0.55s;
 }
 
 .project-preview-square {
@@ -763,7 +763,7 @@ body {
 
 /* ===== About page static gradient ===== */
 .about-gradient {
-  position: fixed;
+  position: absolute;
   left: 25%;
   top: 30%;
   transform: translate(-50%, -50%);
@@ -1014,7 +1014,7 @@ body.relish-page {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 110%;
   height: 150vh;
   z-index: -1;
 
@@ -1040,7 +1040,7 @@ body.relish-page {
   height: 82vh;
 
   margin: 0;
-  transform: translateX(12vw);
+  transform: translateX(15vw) translateY(-2vh);
   cursor: auto;
   display: flex;
   flex-direction: column;
@@ -1074,18 +1074,23 @@ body.relish-page {
   font-size: 1.2rem;
   color: #777;
   text-align: right;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.6rem;
 }
 
 .relish-hero-container .project-side-img {
-  box-shadow: none !important;
+  box-shadow:
+    0 4px 20px rgba(210, 100, 100, 0.18),
+    0 0 0 1px rgba(200, 120, 120, 0.12);
   transform: none !important;
+  border: 11px solid rgba(255, 255, 255, 0.2);
 }
 
 .relish-hero-container .project-side-img:hover {
   transform: none !important;
-  box-shadow: none !important;
+  box-shadow:
+    0 4px 20px rgba(210, 100, 100, 0.18),
+    0 0 0 1px rgba(200, 120, 120, 0.12);
 }
 
 .relish-hero-container .project-side-by-side-container {

@@ -11,6 +11,7 @@ import Relish from './pages/Relish'
 import Amazon from './pages/Amazon'
 import PlaceholderProject from './pages/PlaceholderProject'
 import ScrollToTop from './components/ScrollToTop'
+import Footer from './components/Footer'
 import { useState, useEffect } from 'react'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/projects/amazon" element={<Amazon />} />
         <Route path="/projects/placeholder" element={<PlaceholderProject />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
