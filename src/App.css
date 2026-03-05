@@ -1,3 +1,13 @@
+:root {
+  /* Taskbar Font Sizes */
+  --taskbar-min-tablet: 1.2rem;
+  --taskbar-min-mobile: 1.1rem;
+
+  /* Footer Font Sizes */
+  --footer-min-tablet: 1.8rem;
+  --footer-min-mobile: 1.5rem;
+}
+
 body,
 html {
   cursor: none !important;
@@ -915,7 +925,7 @@ body {
 
   .taskbar {
     padding: 1.8rem 2rem 1rem 2rem;
-    font-size: clamp(0.9rem, 2.5vw, 1.25rem);
+    font-size: clamp(var(--taskbar-min-tablet), 2.5vw, 1.4rem);
   }
 
   .about-title {
@@ -931,7 +941,7 @@ body {
   }
 
   .footer-left {
-    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-size: clamp(var(--footer-min-tablet), 5vw, 3rem);
   }
 
 }
@@ -954,7 +964,7 @@ body {
 
   .taskbar {
     padding: 1.4rem 1.2rem 0.8rem 1.2rem;
-    font-size: clamp(0.8rem, 3.5vw, 1rem);
+    font-size: clamp(var(--taskbar-min-mobile), 5vw, 1.3rem);
   }
 
   .nav-right {
@@ -1006,7 +1016,7 @@ body {
   }
 
   .footer-left {
-    font-size: clamp(1.2rem, 5vw, 2rem);
+    font-size: clamp(var(--footer-min-mobile), 10vw, 2.8rem);
     top: 3rem;
     right: 2rem;
   }
@@ -1263,6 +1273,11 @@ body.relish-page {
   color: #1a1a1a;
 }
 
+.sidebar-nav {
+  border-top: 1px solid #d4d4d4;
+  padding-top: 1.2rem;
+}
+
 .sidebar-nav ul {
   list-style: none;
   padding: 0;
@@ -1387,7 +1402,7 @@ body.relish-page {
 
 .problem-section {
   padding-top: 4rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #d4d4d4;
 }
 
 .problem-section:first-of-type {
