@@ -10,11 +10,13 @@ import Cybersea from './pages/Cybersea'
 import Relish from './pages/Relish'
 import Amazon from './pages/Amazon'
 import PlaceholderProject from './pages/PlaceholderProject'
+import ScrollToTop from './components/ScrollToTop'
 import { useState, useEffect } from 'react'
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <CursorCircle />
       <Taskbar />
       <Routes>
