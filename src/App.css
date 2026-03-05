@@ -317,7 +317,7 @@ html {
 .project-preview-subtitle {
   width: 100%;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.15rem;
+  font-size: clamp(0.9rem, 1.2vw, 1.15rem);
   font-weight: 500;
   color: #999;
   margin-top: 0.1rem;
@@ -326,10 +326,10 @@ html {
 
 .project-preview-title {
   font-family: 'Raleway', serif;
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
   font-weight: 600;
   color: #373737;
-  white-space: nowrap;
+  line-height: 1.2;
 }
 
 .project-preview-meta {
@@ -343,7 +343,7 @@ html {
 
 .project-preview-tag {
   font-family: 'Raleway', Arial, sans-serif;
-  font-size: 1.05rem;
+  font-size: clamp(0.85rem, 1.1vw, 1.05rem);
   font-weight: 700;
   border-radius: 0em;
   padding: 0.2em 0.9em;
@@ -361,74 +361,6 @@ html {
   font-weight: 600;
 }
 
-/* ===== Project Grid Section ===== */
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 2rem 2.5rem;
-  justify-items: center;
-  align-items: start;
-  margin: 4rem 0 0 0;
-  padding: 2rem 0 4rem 0;
-}
-
-.project-card {
-  background: #f6f8fa;
-  border-radius: 3rem;
-  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
-  width: 370px;
-  min-height: 520px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 2.2rem 2.2rem 1.7rem 2.2rem;
-  position: relative;
-}
-
-.project-image-placeholder {
-  width: 100%;
-  height: 260px;
-  background: #dbeafe;
-  border-radius: 1.3rem;
-  margin-bottom: 2.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.project-info {
-  width: 100%;
-}
-
-.project-index {
-  font-size: 1.25rem;
-  font-family: 'Raleway', Arial, sans-serif;
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-  letter-spacing: 0.01em;
-}
-
-.project-title {
-  font-family: 'Editorial New', serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
-  margin-left: 0.2em;
-}
-
-.project-desc {
-  font-size: 1.05rem;
-  color: #222;
-  margin-top: 0.2rem;
-  line-height: 1.5;
-}
-
-.project-type {
-  font-weight: 700;
-  font-family: 'Raleway', Arial, sans-serif;
-}
 
 /* ===== Base ===== */
 html,
@@ -606,7 +538,7 @@ body {
 
 .wavy-text-label {
   font-family: 'Editorial New', serif;
-  font-size: 7rem;
+  font-size: clamp(3.5rem, 8vw, 7rem);
   font-weight: 500;
   letter-spacing: 0.02em;
   fill: #9b9b9b;
@@ -926,7 +858,6 @@ body {
   }
 
   .project-preview-title {
-    font-size: 1.6rem;
     margin-bottom: 0.2rem;
     line-height: 1.2;
   }
@@ -940,7 +871,7 @@ body {
 
   .project-preview-subtitle {
     margin-top: 0.5rem;
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 2vw, 1.15rem);
   }
 
   /* ===== Hero Mobile Refactor ===== */
@@ -958,7 +889,7 @@ body {
 
   .name {
     align-items: center;
-    font-size: 7rem;
+    font-size: clamp(3rem, 10vw, 7rem);
     line-height: 1;
     margin-left: 0;
     /* Remove offset */
@@ -977,12 +908,139 @@ body {
   }
 
   .desc-line {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
     flex-wrap: nowrap;
     /* Keep arrow with text */
   }
 
+  .taskbar {
+    padding: 1.8rem 2rem 1rem 2rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.25rem);
+  }
 
+  .about-title {
+    font-size: clamp(2rem, 6vw, 4.2rem) !important;
+  }
+
+  .relish-title {
+    font-size: clamp(2.5rem, 8vw, 6rem) !important;
+  }
+
+  .overview-title {
+    font-size: clamp(1.6rem, 5vw, 2.8rem);
+  }
+
+  .footer-left {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+
+}
+
+/* ===== Extra-small phones (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  .name {
+    font-size: clamp(2.5rem, 13vw, 4.5rem);
+    white-space: normal;
+    text-align: center;
+  }
+
+  .desc-line {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+  }
+
+  .arrow {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+  }
+
+  .taskbar {
+    padding: 1.4rem 1.2rem 0.8rem 1.2rem;
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+  }
+
+  .nav-right {
+    gap: 1.2rem;
+  }
+
+  .about-title {
+    font-size: clamp(1.8rem, 8vw, 2.8rem) !important;
+  }
+
+  .about-description {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem) !important;
+    max-width: 100%;
+  }
+
+  .relish-title {
+    font-size: clamp(2rem, 10vw, 3.5rem) !important;
+  }
+
+  .overview-title {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+
+  .section-subtitle {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+  }
+
+  .section-body,
+  .section-list {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+
+  .metadata-label {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  }
+
+  .metadata-value,
+  .metadata-list {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+
+
+  .project-preview-subtitle {
+    font-size: clamp(0.85rem, 4vw, 1.05rem);
+  }
+
+  .project-preview-tag {
+    font-size: clamp(0.8rem, 3.5vw, 0.95rem);
+  }
+
+  .footer-left {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    top: 3rem;
+    right: 2rem;
+  }
+
+  .footer {
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+    padding: 2rem 2rem 2rem 0;
+  }
+
+  .page-container h1 {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  .relish-hero-container {
+    transform: none;
+    width: 95vw;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .case-study-metadata-wrapper {
+    padding: 0 1rem;
+    margin-top: 3rem;
+  }
+
+  .case-study-container {
+    padding: 0 1rem;
+  }
+
+  .metadata-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
 }
 
 /* ===== Project Detail Pages ===== */
@@ -1106,7 +1164,7 @@ body.relish-page {
 
 .project-detail-page .project-title {
   font-family: 'Raleway', serif;
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 8vw, 4.5rem);
   font-weight: 500;
   color: #1a1a1a;
   margin-bottom: 1.5rem;
