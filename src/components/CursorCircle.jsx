@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function CursorCircle() {
   const cursorCircleRef = useRef(null);
+  const location = useLocation();
 
   // Three distinct cursor states
   const [isHoveringButton, setIsHoveringButton] = useState(false);   // plain links/buttons → shrink
@@ -94,16 +96,17 @@ function CursorCircle() {
     };
   }, []);
 
-  // Reset hover state whenever the component re-mounts (i.e. page navigation)
+  // Reset hover state whenever the route changes (i.e. page navigation)
   useEffect(() => {
     setIsHoveringButton(false);
     setIsHoveringProject(false);
     setIsClicked(false);
-  }, []);
+  }, [location.pathname]);
 
   const classes = [
     'cursor-circle',
-    isClicked ? 'cursor-clicked' : '',
+    // Do not shrink on click if we are hovering a project
+    (isClicked && !isHoveringProject) ? 'cursor-clicked' : '',
     // Only shrink for plain buttons when not clicked and not on a project
     (!isClicked && isHoveringButton && !isHoveringProject) ? 'cursor-hover' : '',
     // Project card: big + label
