@@ -1,13 +1,3 @@
-:root {
-  /* Taskbar Font Sizes */
-  --taskbar-min-tablet: 1.2rem;
-  --taskbar-min-mobile: 1.1rem;
-
-  /* Footer Font Sizes */
-  --footer-min-tablet: 1.8rem;
-  --footer-min-mobile: 1.5rem;
-}
-
 body,
 html {
   cursor: none !important;
@@ -380,7 +370,6 @@ body {
   margin: 0;
   padding: 0;
   user-select: auto;
-  font-size: 2vh;
 }
 
 /* ===== Scrollable section ===== */
@@ -418,8 +407,8 @@ body {
 .hero-gradient-container {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  min-height: 100vh;
+  height: auto;
+  min-height: 700px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -479,9 +468,11 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 700px;
   width: 100vw;
   gap: 3vw;
+  padding: 0 4vw;
+  box-sizing: border-box;
 }
 
 .name,
@@ -779,29 +770,27 @@ body {
 /* ===== Footer ===== */
 .footer {
   width: 100vw;
-  height: 40vh;
+  min-height: 250px;
   background: #1a1a1a;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
   align-items: flex-end;
+  gap: 3rem;
   margin-top: 8rem;
-  padding: 3rem 8rem 3.5rem 0rem;
+  padding: 4rem 8rem;
   font-family: 'Raleway', Arial, sans-serif;
   font-weight: 500;
   font-size: 1.25rem;
   letter-spacing: 0.02em;
   color: white;
   box-sizing: border-box;
-  position: relative;
 }
 
 .footer-left {
-  position: absolute;
-  top: 5rem;
-  right: 8rem;
   font-family: 'Editorial New', serif;
   font-weight: 100;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-style: italic;
   text-align: right;
 }
@@ -925,7 +914,6 @@ body {
 
   .taskbar {
     padding: 1.8rem 2rem 1rem 2rem;
-    font-size: clamp(var(--taskbar-min-tablet), 2.5vw, 1.4rem);
   }
 
   .about-title {
@@ -941,7 +929,7 @@ body {
   }
 
   .footer-left {
-    font-size: clamp(var(--footer-min-tablet), 5vw, 3rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
   }
 
 }
@@ -964,7 +952,6 @@ body {
 
   .taskbar {
     padding: 1.4rem 1.2rem 0.8rem 1.2rem;
-    font-size: clamp(var(--taskbar-min-mobile), 5vw, 1.3rem);
   }
 
   .nav-right {
@@ -1016,7 +1003,7 @@ body {
   }
 
   .footer-left {
-    font-size: clamp(var(--footer-min-mobile), 10vw, 2.8rem);
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
     top: 3rem;
     right: 2rem;
   }
@@ -1065,7 +1052,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 7rem;
+  padding-top: 0;
   flex-direction: column;
   position: relative;
   isolation: isolate;
@@ -1099,20 +1086,22 @@ body.relish-page {
 }
 
 .cursor-circle.cursor-clicked {
-  width: 24px !important;
-  height: 24px !important;
+  width: 10px !important;
+  height: 10px !important;
 }
 
 .relish-hero-container {
-  width: 90vw;
-  height: 82vh;
-
-  margin: 0;
-  transform: translateX(15vw) translateY(-2vh);
+  width: 100%;
+  max-width: 1200px;
+  min-height: 540px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 4vw;
+  box-sizing: border-box;
   cursor: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   gap: 0.5rem;
 }
@@ -1121,9 +1110,9 @@ body.relish-page {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: fit-content;
-  max-width: 100%;
-  height: 100%;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
 }
 
 .relish-title {
@@ -1152,6 +1141,8 @@ body.relish-page {
     0 0 0 1px rgba(200, 120, 120, 0.12);
   transform: none !important;
   border: 11px solid rgba(255, 255, 255, 0.2);
+  max-height: 420px;
+  width: auto;
 }
 
 .relish-hero-container .project-side-img:hover {
@@ -1234,7 +1225,7 @@ body.relish-page {
 .case-study-metadata-wrapper {
   width: 100vw;
   max-width: 1300px;
-  margin: 8rem auto 0 auto;
+  margin: 3rem auto 0 auto;
   padding: 0 4rem;
   box-sizing: border-box;
 }
@@ -1430,7 +1421,10 @@ body.relish-page {
   color: #4c4c4c;
   line-height: 1.6;
   margin-bottom: 2.5rem;
-  padding-left: 1.5rem;
+  padding: 2.5rem 3rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 12px;
+  list-style-position: inside;
 }
 
 .section-list li {
@@ -1454,7 +1448,7 @@ body.relish-page {
   border-radius: 20px;
   padding: 3rem 2rem;
   text-align: center;
-  border: 1px solid #eaeaea;
+  border: 1px solid #d4d4d4;
   display: flex;
   flex-direction: column;
   align-items: center;

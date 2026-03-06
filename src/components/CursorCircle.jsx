@@ -2,10 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 
 function CursorCircle() {
   const cursorCircleRef = useRef(null);
-  const [isHoveringButton, setIsHoveringButton] = useState(false);
-  const [isHoveringProject, setIsHoveringProject] = useState(false);
-  const [isInFooter, setIsInFooter] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
+
+  // Three distinct cursor states
+  const [isHoveringButton, setIsHoveringButton] = useState(false);   // plain links/buttons → shrink
+  const [isHoveringProject, setIsHoveringProject] = useState(false); // project cards → "view case study"
+  const [isInFooter, setIsInFooter] = useState(false);               // dark footer → white border
+  const [isClicked, setIsClicked] = useState(false);                 // click → shrink briefly
 
   useEffect(() => {
     const circle = cursorCircleRef.current;
@@ -18,42 +20,69 @@ function CursorCircle() {
       // Check if cursor is over footer
       const footer = document.querySelector('.footer');
       if (footer) {
-        const footerRect = footer.getBoundingClientRect();
-        const isOver = e.clientY >= footerRect.top && e.clientY <= footerRect.bottom;
-        setIsInFooter(isOver);
+        const rect = footer.getBoundingClientRect();
+        setIsInFooter(e.clientY >= rect.top && e.clientY <= rect.bottom);
       }
     };
 
     const handleMouseOver = (e) => {
-      // General links/buttons
-      if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('button') || e.target.closest('a')) {
-        setIsHoveringButton(true);
+      const projectBox = e.target.closest('.project-preview-box');
+      if (projectBox) {
+        // Project cards: show label, don't shrink
+        setIsHoveringProject(true);
+        setIsHoveringButton(false);
+        return;
       }
 
-      // Project boxes specifically
-      if (e.target.closest('.project-preview-box')) {
-        setIsHoveringProject(true);
+      // Plain interactive elements (links, buttons) that are NOT project boxes
+      const isInteractive =
+        e.target.tagName === 'BUTTON' ||
+        e.target.tagName === 'A' ||
+        e.target.closest('button') ||
+        e.target.closest('a');
+
+      if (isInteractive) {
+        setIsHoveringButton(true);
       }
     };
 
     const handleMouseOut = (e) => {
-      if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('button') || e.target.closest('a')) {
-        setIsHoveringButton(false);
+      // Leaving a project box
+      if (e.target.closest && e.target.closest('.project-preview-box')) {
+        const relatedInBox = e.relatedTarget?.closest?.('.project-preview-box');
+        if (!relatedInBox) {
+          setIsHoveringProject(false);
+        }
       }
 
-      if (!e.relatedTarget || !e.relatedTarget.closest || !e.relatedTarget.closest('.project-preview-box')) {
-        setIsHoveringProject(false);
+      // Leaving a plain interactive element
+      const isInteractive =
+        e.target.tagName === 'BUTTON' ||
+        e.target.tagName === 'A' ||
+        e.target.closest('button') ||
+        e.target.closest('a');
+
+      if (isInteractive) {
+        setIsHoveringButton(false);
       }
     };
 
     const handleMouseDown = () => setIsClicked(true);
     const handleMouseUp = () => setIsClicked(false);
 
+    // Reset all hover states on route change (page navigation)
+    const resetStates = () => {
+      setIsHoveringButton(false);
+      setIsHoveringProject(false);
+      setIsClicked(false);
+    };
+
     window.addEventListener('mousemove', moveCircle);
     document.addEventListener('mouseover', handleMouseOver);
     document.addEventListener('mouseout', handleMouseOut);
     document.addEventListener('mousedown', handleMouseDown);
     document.addEventListener('mouseup', handleMouseUp);
+    window.addEventListener('popstate', resetStates);
 
     return () => {
       window.removeEventListener('mousemove', moveCircle);
@@ -61,15 +90,30 @@ function CursorCircle() {
       document.removeEventListener('mouseout', handleMouseOut);
       document.removeEventListener('mousedown', handleMouseDown);
       document.removeEventListener('mouseup', handleMouseUp);
+      window.removeEventListener('popstate', resetStates);
     };
   }, []);
 
+  // Reset hover state whenever the component re-mounts (i.e. page navigation)
+  useEffect(() => {
+    setIsHoveringButton(false);
+    setIsHoveringProject(false);
+    setIsClicked(false);
+  }, []);
+
+  const classes = [
+    'cursor-circle',
+    isClicked ? 'cursor-clicked' : '',
+    // Only shrink for plain buttons when not clicked and not on a project
+    (!isClicked && isHoveringButton && !isHoveringProject) ? 'cursor-hover' : '',
+    // Project card: big + label
+    isHoveringProject ? 'cursor-project' : '',
+    isInFooter ? 'cursor-footer' : '',
+  ].filter(Boolean).join(' ');
+
   return (
-    <div
-      className={`cursor-circle ${isHoveringButton ? 'cursor-hover' : ''} ${isHoveringProject ? 'cursor-project' : ''} ${isInFooter ? 'cursor-footer' : ''} ${isClicked ? 'cursor-clicked' : ''}`}
-      ref={cursorCircleRef}
-    >
-      <span className="cursor-text">case study</span>
+    <div className={classes} ref={cursorCircleRef}>
+      <span className="cursor-text">view case study</span>
     </div>
   );
 }
