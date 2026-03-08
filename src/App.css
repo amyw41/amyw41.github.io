@@ -107,7 +107,7 @@ html {
   display: flex;
   flex-direction: column;
   padding: 16vw 3vw 5vw 3vw;
-  scroll-margin-top: 15vh;
+  scroll-margin-top: 135px;
   /* Landing offset for anchor links */
   /* Combined padding from rows */
   gap: 5vw;
@@ -370,7 +370,7 @@ body {
   margin: 0;
   padding: 0;
   user-select: auto;
-  font-size: 2vh;
+  font-size: 14px;
 }
 
 /* ===== Scrollable section ===== */
@@ -408,8 +408,8 @@ body {
 .hero-gradient-container {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  min-height: 100vh;
+  height: 700px;
+  min-height: 700px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -444,7 +444,7 @@ body {
   top: 48%;
   transform: translate(-50%, -50%);
   width: 180vw;
-  height: 180vh;
+  height: 1620px;
   background: radial-gradient(ellipse 70% 55% at 50% 50%,
       rgba(255, 140, 50, 1) 0%,
       rgba(254, 80, 80, 0.6) 40%,
@@ -469,7 +469,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 700px;
   width: 100vw;
   gap: 3vw;
 }
@@ -655,7 +655,7 @@ body {
   margin-right: auto;
   padding: 2rem;
   max-width: 1200px;
-  min-height: calc(100vh - 120px);
+  min-height: 580px;
   position: relative;
   z-index: 1;
 }
@@ -769,7 +769,7 @@ body {
 /* ===== Footer ===== */
 .footer {
   width: 100vw;
-  height: 40vh;
+  height: 360px;
   background: #1a1a1a;
   display: flex;
   justify-content: flex-end;
@@ -1046,7 +1046,7 @@ body {
 /* ===== Project Detail Pages ===== */
 .project-detail-page {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 700px;
   padding-top: 8rem;
   box-sizing: border-box;
 }
@@ -1073,7 +1073,7 @@ body.relish-page {
   top: 0;
   left: 0;
   width: 110%;
-  height: 150vh;
+  height: 1350px;
   z-index: -1;
 
   /* Easily adjust the gradient size here */
@@ -1095,10 +1095,10 @@ body.relish-page {
 
 .relish-hero-container {
   width: 90vw;
-  height: 82vh;
+  height: 740px;
 
   margin: 0;
-  transform: translateX(15vw) translateY(-2vh);
+  transform: translateX(15vw) translateY(-18px);
   cursor: auto;
   display: flex;
   flex-direction: column;
