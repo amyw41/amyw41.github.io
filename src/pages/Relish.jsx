@@ -4,10 +4,14 @@ import useScrollReveal from '../hooks/useScrollReveal'
 import relishMain from '../assets/relish-main.png'
 import relishForm from '../assets/relish-form.png'
 import relishCalendar from '../assets/relish-calendar.png'
+import relishLockscreen from '../assets/relish-lockscreen.png'
+import relishFeed from '../assets/relish-feed.png'
 
 const sectionsData = [
     { id: 'overview', title: 'Overview' },
     { id: 'planning', title: 'Planning' },
+    { id: 'solution', title: 'Solution' },
+    { id: 'competitive-analysis', title: 'Competitive Analysis' },
 ];
 
 const UserIcon = () => (
@@ -23,6 +27,8 @@ function Relish() {
     const metadataRef = useScrollReveal(0);
     const overviewRef = useScrollReveal(100);
     const planningRef = useScrollReveal(100);
+    const solutionRef = useScrollReveal(100);
+    const competitiveRef = useScrollReveal(100);
 
     useEffect(() => {
         document.body.classList.add('relish-page');
@@ -63,7 +69,7 @@ function Relish() {
             <div className="relish-hero-container">
                 <div className="relish-hero-content">
                     <h1 className="relish-title load-reveal stagger-1">relish</h1>
-                    <p className="relish-subtitle load-reveal stagger-2">make mealtime mindful with cute hand-drawn icons</p>
+                    <p className="relish-subtitle load-reveal stagger-2">A mobile app designed to make eating more intentional and enjoyable.</p>
                     <div className="project-side-by-side-container load-reveal stagger-3">
                         <img src={relishMain} alt="Relish Main" className="project-side-img" />
                         <img src={relishForm} alt="Relish Form" className="project-side-img" />
@@ -111,9 +117,13 @@ function Relish() {
                                 <li
                                     key={section.id}
                                     className={activeSection === section.id ? 'active' : ''}
-                                    onClick={() => scrollToSection(section.id)}
                                 >
-                                    {section.title}
+                                    <button
+                                        className="sidebar-button"
+                                        onClick={() => scrollToSection(section.id)}
+                                    >
+                                        {section.title}
+                                    </button>
                                 </li>
                             ))}
                         </ul>
@@ -135,10 +145,7 @@ function Relish() {
                         <div className="planning-timeline-wrapper">
                             <h3 className="section-subtitle">a) Deciding on a route</h3>
                             <p className="section-body">
-                                Relish was targetted towards issues that I had noticed in myself and the people around me, no matter their age:
-                            </p>
-                            <p className="section-body">
-                                The struggle to eat properly, healthily, and on time.
+                                We wanted to address a problem noticed in our daily lives: <i>the struggle to eat properly, healthily, and on time.</i>
                             </p>
 
                             <h3 className="section-subtitle">b) Research & Users</h3>
@@ -182,6 +189,61 @@ function Relish() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div id="solution" className="problem-section reveal-item" ref={solutionRef}>
+                        <span className="section-label">SOLUTION</span>
+                        <div className="solution-layout">
+                            {/* Left: stacked images */}
+                            <div className="solution-images">
+                                <img src={relishLockscreen} alt="Relish Lockscreen" className="project-side-img solution-img" />
+                                <img src={relishFeed} alt="Relish Feed" className="project-side-img solution-img" />
+                            </div>
+
+                            {/* Right: text content */}
+                            <div className="solution-text">
+                                <h2 className="overview-title solution-heading">How does Relish address their problems?</h2>
+
+                                <div className="solution-persona">
+                                    <div className="solution-persona-header">
+                                        <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
+                                        <h4 className="persona-name">Alex:</h4>
+                                    </div>
+                                    <ul className="solution-list">
+                                        <li className="section-body">Now can track everything she eats in a calendar view.</li>
+                                        <li className="section-body">Helps hold her accountable when she can see all her meals laid out in front of her.</li>
+                                    </ul>
+                                </div>
+
+                                <div className="solution-persona">
+                                    <div className="solution-persona-header">
+                                        <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
+                                        <h4 className="persona-name">Ben:</h4>
+                                    </div>
+                                    <ul className="solution-list">
+                                        <li className="section-body">Receives a <strong>notification</strong> to remind him to eat.</li>
+                                        <li className="section-body">Is motivated to eat so he can fill out his calendar.</li>
+                                    </ul>
+                                </div>
+
+                                <div className="solution-persona">
+                                    <div className="solution-persona-header">
+                                        <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
+                                        <h4 className="persona-name">Cam:</h4>
+                                    </div>
+                                    <ul className="solution-list">
+                                        <li className="section-body">Can keep up with his friends and what they eat on the "Friends" tab, making him feel less lonely!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="competitive-analysis" className="problem-section reveal-item" ref={competitiveRef}>
+                        <span className="section-label">COMPETITIVE ANALYSIS</span>
+                        <h2 className="section-body">
+                            We looked at apps that contained similar features to what we were imagining and <strong>why they worked well</strong>.
+                        </h2>
                     </div>
                 </main>
             </div>

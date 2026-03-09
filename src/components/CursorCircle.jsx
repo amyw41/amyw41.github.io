@@ -46,19 +46,39 @@ function CursorCircle() {
       // Only apply hover states after the cursor has actually moved
       if (!hasMovedRef.current) return;
 
-      // General links/buttons
-      if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('button') || e.target.closest('a')) {
+      const target = e.target;
+      if (!target || !target.closest) return;
+
+      // Generic check for anything interactive
+      const isInteractive =
+        target.tagName === 'BUTTON' ||
+        target.tagName === 'A' ||
+        target.closest('button') ||
+        target.closest('a') ||
+        window.getComputedStyle(target).cursor === 'pointer';
+
+      if (isInteractive) {
         setIsHoveringButton(true);
       }
 
       // Project boxes specifically
-      if (e.target.closest('.project-preview-box')) {
+      if (target.closest('.project-preview-box')) {
         setIsHoveringProject(true);
       }
     };
 
     const handleMouseOut = (e) => {
-      if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('button') || e.target.closest('a')) {
+      const target = e.target;
+      if (!target || !target.closest) return;
+
+      const isInteractive =
+        target.tagName === 'BUTTON' ||
+        target.tagName === 'A' ||
+        target.closest('button') ||
+        target.closest('a') ||
+        window.getComputedStyle(target).cursor === 'pointer';
+
+      if (isInteractive) {
         setIsHoveringButton(false);
       }
 

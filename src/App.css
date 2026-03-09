@@ -772,10 +772,17 @@ body {
   height: 360px;
   background: #1a1a1a;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  /* Stack vertically */
+  justify-content: center;
+  /* Center vertically in the 360px height */
   align-items: flex-end;
+  /* Align to the right */
   margin-top: 8rem;
-  padding: 3rem 8rem 3.5rem 0rem;
+  padding: 0 8rem 0 0;
+  /* Standard side padding */
+  gap: 0rem;
+  /* Space between "let's build" and links - change this to add space! */
   font-family: 'Raleway', Arial, sans-serif;
   font-weight: 500;
   font-size: 1.25rem;
@@ -786,21 +793,21 @@ body {
 }
 
 .footer-left {
-  position: absolute;
-  top: 5rem;
-  right: 8rem;
   font-family: 'Editorial New', serif;
   font-weight: 100;
   font-size: 3rem;
   font-style: italic;
   text-align: right;
+  margin-bottom: 3.5rem;
+  /* Specific space below header - adjust this as needed! */
 }
 
 .footer-right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.5rem;
+  gap: 0.3rem;
+  /* Space between individual links */
 }
 
 .footer-right a {
@@ -1007,7 +1014,7 @@ body {
   }
 
   .section-subtitle {
-    font-size: clamp(1rem, 4vw, 1.3rem);
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
   }
 
   .section-body,
@@ -1035,13 +1042,16 @@ body {
 
   .footer-left {
     font-size: clamp(1.2rem, 5vw, 2rem);
-    top: 3rem;
-    right: 2rem;
+    margin-bottom: 2rem;
+    text-align: right;
   }
 
   .footer {
     font-size: clamp(0.8rem, 3.5vw, 1rem);
-    padding: 2rem 2rem 2rem 0;
+    padding: 2rem;
+    align-items: flex-end;
+    height: auto;
+    min-height: 250px;
   }
 
   .page-container h1 {
@@ -1341,15 +1351,35 @@ body.relish-page {
 }
 
 .sidebar-nav li {
-  font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+
+.sidebar-button {
+  background: none !important;
+  background-color: transparent !important;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
   font-size: 1rem;
   color: #888;
   cursor: pointer;
   transition: color 0.2s ease;
+  width: 100%;
+  text-align: left;
+  outline: none;
 }
 
-.sidebar-nav li:hover,
-.sidebar-nav li.active {
+.sidebar-button:hover,
+.sidebar-button:focus,
+.sidebar-button:active {
+  background: none !important;
+  background-color: transparent !important;
+  outline: none;
+}
+
+.sidebar-nav li:hover .sidebar-button,
+.sidebar-nav li.active .sidebar-button {
   color: #1a1a1a;
 }
 
@@ -1425,12 +1455,12 @@ body.relish-page {
 }
 
 .overview-title {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   margin-bottom: 0.2rem;
 }
 
 .section-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-top: 3.5rem;
   margin-bottom: 1.5rem;
 }
@@ -1467,13 +1497,8 @@ body.relish-page {
 
 .problem-section {
   padding-top: 4rem;
-  border-top: 1px solid #eee;
 }
 
-.problem-section:first-of-type {
-  border-top: none;
-  padding-top: 1rem;
-}
 
 /* ===== Research & Persona Section ===== */
 .section-highlight {
@@ -1635,5 +1660,115 @@ body.relish-page {
   .process-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+}
+
+/* ===== Solution Section Images ===== */
+.solution-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  align-items: stretch;
+  /* Make both columns equal height */
+  margin-top: 2rem;
+}
+
+.solution-images {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+.solution-img {
+  height: auto;
+  width: auto;
+  max-height: 480px;
+  max-width: 270px;
+  object-fit: contain;
+  border: clamp(5px, 0.8vw, 11px) solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: clamp(14px, 2vw, 28px) !important;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.10),
+    0 0 0 1px rgba(200, 120, 120, 0.08) !important;
+}
+
+.solution-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Heading + 3 cards all share equal gaps */
+  flex: 1;
+  min-height: 0;
+}
+
+
+.solution-heading {
+  margin-bottom: 0 !important;
+}
+
+.solution-persona {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  /* No flex: 1 — cards hug content, gaps grow via space-between */
+}
+
+.solution-persona-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.solution-persona-icon {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  padding: 0 !important;
+}
+
+.solution-persona-icon .persona-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.solution-list {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.15rem;
+  /* Match section-body */
+  color: #4c4c4c;
+  line-height: 1.6;
+  padding-left: 1.2rem;
+  margin: 0;
+  list-style: disc;
+}
+
+.solution-list .section-body {
+  margin-bottom: 0.3rem;
+  /* Override the large section-body margin inside list items */
+}
+
+.solution-list li {
+  margin-bottom: 0.4rem;
+}
+
+.solution-list strong {
+  color: #1a1a1a;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .solution-layout {
+    flex-direction: column;
+  }
+
+  .solution-images {
+    align-items: center;
+    width: 100%;
   }
 }
