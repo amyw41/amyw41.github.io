@@ -11,6 +11,8 @@ import bereal2 from '../assets/bereal-2.jpg'
 import beli1 from '../assets/beli-1.jpg'
 import beli2 from '../assets/beli-2.jpg'
 import roughSketch from '../assets/rough-sketch.png'
+import relishListSketch from '../assets/relish-list-sketch.jpg'
+import relishCalendarSketch from '../assets/relish-calendar-sketch.jpg'
 
 const sectionsData = [
     { id: 'overview', title: 'Overview' },
@@ -26,11 +28,37 @@ const UserIcon = () => (
     </svg>
 );
 
+const CheckIcon = () => (
+    <svg viewBox="0 0 24 24" className="list-icon">
+        <rect width="24" height="24" rx="4" fill="#1a1a1a" />
+        <path d="M7 12.5l3 3 7-7" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+);
+
+const CrossIcon = () => (
+    <svg viewBox="0 0 24 24" className="list-icon">
+        <rect width="24" height="24" rx="4" fill="#1a1a1a" />
+        <path d="M8 8l8 8M16 8l-8 8" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+);
+
 function Relish() {
     const [activeSection, setActiveSection] = useState('overview');
 
     // Reveal refs for different sections
     const metadataRef = useScrollReveal(0);
+    const persona1Ref = useScrollReveal(0);
+    const persona2Ref = useScrollReveal(0);
+    const persona3Ref = useScrollReveal(0);
+    const solutionImg1Ref = useScrollReveal(0);
+    const solutionImg2Ref = useScrollReveal(0);
+    const compCard1Ref = useScrollReveal(0);
+    const compCard2Ref = useScrollReveal(0);
+    const compCard3Ref = useScrollReveal(0);
+    const compCard4Ref = useScrollReveal(0);
+    const roughSketchRef = useScrollReveal(0);
+    const comparisonCol1Ref = useScrollReveal(0);
+    const comparisonCol2Ref = useScrollReveal(0);
 
     useEffect(() => {
         document.body.classList.add('relish-page');
@@ -165,7 +193,7 @@ function Relish() {
                             </p>
 
                             <div className="persona-grid">
-                                <div className="persona-card">
+                                <div className="persona-card reveal-item" ref={persona1Ref}>
                                     <div className="persona-icon-wrapper">
                                         <UserIcon />
                                     </div>
@@ -173,7 +201,7 @@ function Relish() {
                                     <p className="persona-role">Busy and Stressed Student</p>
                                     <p className="persona-quote">"I struggle to eat accountably and can never follow my diet."</p>
                                 </div>
-                                <div className="persona-card">
+                                <div className="persona-card reveal-item" ref={persona2Ref}>
                                     <div className="persona-icon-wrapper">
                                         <UserIcon />
                                     </div>
@@ -181,7 +209,7 @@ function Relish() {
                                     <p className="persona-role">Absent Minded worker</p>
                                     <p className="persona-quote">"I keep forgetting to eat at work."</p>
                                 </div>
-                                <div className="persona-card">
+                                <div className="persona-card reveal-item" ref={persona3Ref}>
                                     <div className="persona-icon-wrapper">
                                         <UserIcon />
                                     </div>
@@ -200,8 +228,8 @@ function Relish() {
                         <div className="solution-layout">
                             {/* Images stacked vertically on the left */}
                             <div className="solution-images">
-                                <img src={relishLockscreen} alt="Relish Lockscreen" className="project-side-img solution-img" />
-                                <img src={relishFeed} alt="Relish Feed" className="project-side-img solution-img" />
+                                <img src={relishLockscreen} alt="Relish Lockscreen" className="project-side-img solution-img reveal-item" ref={solutionImg1Ref} />
+                                <img src={relishFeed} alt="Relish Feed" className="project-side-img solution-img reveal-item" ref={solutionImg2Ref} />
                             </div>
 
                             {/* Personas stacked vertically on the right */}
@@ -250,13 +278,13 @@ function Relish() {
                         <p className="comp-sub-title">01 BeReal</p>
                         <div className="comp-section-row">
                             <div className="comp-analysis-grid">
-                                <div className="comp-card">
+                                <div className="comp-card reveal-item" ref={compCard1Ref}>
                                     <div className="comp-img-wrapper">
                                         <img src={bereal1} alt="BeReal Profile" className="comp-img" />
                                     </div>
                                     <span className="comp-card-label">BEREAL: USER PROFILE & HISTORY</span>
                                 </div>
-                                <div className="comp-card">
+                                <div className="comp-card reveal-item" ref={compCard2Ref}>
                                     <div className="comp-img-wrapper">
                                         <img src={bereal2} alt="BeReal Calendar" className="comp-img" />
                                     </div>
@@ -288,13 +316,13 @@ function Relish() {
                         <p className="comp-sub-title">02 Beli</p>
                         <div className="comp-section-row">
                             <div className="comp-analysis-grid">
-                                <div className="comp-card">
+                                <div className="comp-card reveal-item" ref={compCard3Ref}>
                                     <div className="comp-img-wrapper">
                                         <img src={beli1} alt="Beli Rating" className="comp-img" />
                                     </div>
                                     <span className="comp-card-label">BELI: INTERACTIVE RATING SYSTEM</span>
                                 </div>
-                                <div className="comp-card">
+                                <div className="comp-card reveal-item" ref={compCard4Ref}>
                                     <div className="comp-img-wrapper">
                                         <img src={beli2} alt="Beli Lists" className="comp-img" />
                                     </div>
@@ -325,7 +353,34 @@ function Relish() {
                     <div id="rough-draft" className="problem-section">
                         <span className="section-label">ROUGH DRAFT</span>
                         <p className="overview-title">Designing & iterating quickly</p>
-                        <img src={roughSketch} alt="Rough Sketch of Relish app screens" className="rough-sketch-img" />
+                        <p className="comp-sub-title">a) Rough sketches</p>
+                        <img src={roughSketch} alt="Rough Sketch of Relish app screens" className="rough-sketch-img reveal-item" ref={roughSketchRef} />
+                        <span className="section-label" style={{ marginTop: '5rem' }}>DESIGN CHOICES</span>
+                        <p className="comp-sub-title" style={{ marginTop: '1rem' }}>a) Calendar vs. List View</p>
+
+                        <div className="comparison-container">
+                            <div className="comparison-col reveal-item" ref={comparisonCol1Ref}>
+                                <img src={relishCalendarSketch} alt="Relish Calendar Sketch" className="comparison-img" />
+                                <div className="comparison-card" style={{ backgroundColor: '#f7f7f7' }}>
+                                    <ul className="comparison-list">
+                                        <li><CheckIcon /> Easy to visualize</li>
+                                        <li><CheckIcon /> Encourages streak mentality</li>
+                                        <li><CheckIcon /> Good for habit formation</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="comparison-col reveal-item" ref={comparisonCol2Ref}>
+                                <img src={relishListSketch} alt="Relish List Sketch" className="comparison-img" />
+                                <div className="comparison-card" style={{ backgroundColor: '#f7f7f7' }}>
+                                    <ul className="comparison-list">
+                                        <li><CheckIcon /> Better for detailed browsing</li>
+                                        <li><CrossIcon /> Too dense and difficult to navigate</li>
+                                        <li><CrossIcon /> Unable to easily see patterns and habits</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </main>
             </div>
