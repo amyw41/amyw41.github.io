@@ -20,6 +20,7 @@ const sectionsData = [
     { id: 'solution', title: 'Solution' },
     { id: 'competitive-analysis', title: 'Competitive Analysis' },
     { id: 'rough-draft', title: 'Rough Draft' },
+    { id: 'reflection', title: 'Reflection' },
 ];
 
 const UserIcon = () => (
@@ -47,18 +48,6 @@ function Relish() {
 
     // Reveal refs for different sections
     const metadataRef = useScrollReveal(0);
-    const persona1Ref = useScrollReveal(0);
-    const persona2Ref = useScrollReveal(0);
-    const persona3Ref = useScrollReveal(0);
-    const solutionImg1Ref = useScrollReveal(0);
-    const solutionImg2Ref = useScrollReveal(0);
-    const compCard1Ref = useScrollReveal(0);
-    const compCard2Ref = useScrollReveal(0);
-    const compCard3Ref = useScrollReveal(0);
-    const compCard4Ref = useScrollReveal(0);
-    const roughSketchRef = useScrollReveal(0);
-    const comparisonCol1Ref = useScrollReveal(0);
-    const comparisonCol2Ref = useScrollReveal(0);
 
     useEffect(() => {
         document.body.classList.add('relish-page');
@@ -193,7 +182,7 @@ function Relish() {
                             </p>
 
                             <div className="persona-grid">
-                                <div className="persona-card reveal-item" ref={persona1Ref}>
+                                <div className="persona-card">
                                     <div className="persona-icon-wrapper">
                                         <UserIcon />
                                     </div>
@@ -201,7 +190,7 @@ function Relish() {
                                     <p className="persona-role">Busy and Stressed Student</p>
                                     <p className="persona-quote">"I struggle to eat accountably and can never follow my diet."</p>
                                 </div>
-                                <div className="persona-card reveal-item" ref={persona2Ref}>
+                                <div className="persona-card">
                                     <div className="persona-icon-wrapper">
                                         <UserIcon />
                                     </div>
@@ -209,7 +198,7 @@ function Relish() {
                                     <p className="persona-role">Absent Minded worker</p>
                                     <p className="persona-quote">"I keep forgetting to eat at work."</p>
                                 </div>
-                                <div className="persona-card reveal-item" ref={persona3Ref}>
+                                <div className="persona-card">
                                     <div className="persona-icon-wrapper">
                                         <UserIcon />
                                     </div>
@@ -228,8 +217,8 @@ function Relish() {
                         <div className="solution-layout">
                             {/* Images stacked vertically on the left */}
                             <div className="solution-images">
-                                <img src={relishLockscreen} alt="Relish Lockscreen" className="project-side-img solution-img reveal-item" ref={solutionImg1Ref} />
-                                <img src={relishFeed} alt="Relish Feed" className="project-side-img solution-img reveal-item" ref={solutionImg2Ref} />
+                                <img src={relishLockscreen} alt="Relish Lockscreen" className="project-side-img solution-img" />
+                                <img src={relishFeed} alt="Relish Feed" className="project-side-img solution-img" />
                             </div>
 
                             {/* Personas stacked vertically on the right */}
@@ -272,19 +261,19 @@ function Relish() {
                     <div id="competitive-analysis" className="problem-section">
                         <span className="section-label">COMPETITIVE ANALYSIS</span>
                         <p className="overview-title">
-                            Researching similar apps & understanding why they work.
+                            Researching similar apps & understanding why they work
                         </p>
 
                         <p className="comp-sub-title">01 BeReal</p>
                         <div className="comp-section-row">
                             <div className="comp-analysis-grid">
-                                <div className="comp-card reveal-item" ref={compCard1Ref}>
+                                <div className="comp-card">
                                     <div className="comp-img-wrapper">
                                         <img src={bereal1} alt="BeReal Profile" className="comp-img" />
                                     </div>
                                     <span className="comp-card-label">BEREAL: USER PROFILE & HISTORY</span>
                                 </div>
-                                <div className="comp-card reveal-item" ref={compCard2Ref}>
+                                <div className="comp-card">
                                     <div className="comp-img-wrapper">
                                         <img src={bereal2} alt="BeReal Calendar" className="comp-img" />
                                     </div>
@@ -316,13 +305,13 @@ function Relish() {
                         <p className="comp-sub-title">02 Beli</p>
                         <div className="comp-section-row">
                             <div className="comp-analysis-grid">
-                                <div className="comp-card reveal-item" ref={compCard3Ref}>
+                                <div className="comp-card">
                                     <div className="comp-img-wrapper">
                                         <img src={beli1} alt="Beli Rating" className="comp-img" />
                                     </div>
                                     <span className="comp-card-label">BELI: INTERACTIVE RATING SYSTEM</span>
                                 </div>
-                                <div className="comp-card reveal-item" ref={compCard4Ref}>
+                                <div className="comp-card">
                                     <div className="comp-img-wrapper">
                                         <img src={beli2} alt="Beli Lists" className="comp-img" />
                                     </div>
@@ -354,12 +343,12 @@ function Relish() {
                         <span className="section-label">ROUGH DRAFT</span>
                         <p className="overview-title">Designing & iterating quickly</p>
                         <p className="comp-sub-title">a) Rough sketches</p>
-                        <img src={roughSketch} alt="Rough Sketch of Relish app screens" className="rough-sketch-img reveal-item" ref={roughSketchRef} />
+                        <img src={roughSketch} alt="Rough Sketch of Relish app screens" className="rough-sketch-img" />
                         <span className="section-label" style={{ marginTop: '5rem' }}>DESIGN CHOICES</span>
                         <p className="comp-sub-title" style={{ marginTop: '1rem' }}>a) Calendar vs. List View</p>
 
                         <div className="comparison-container">
-                            <div className="comparison-col reveal-item" ref={comparisonCol1Ref}>
+                            <div className="comparison-col">
                                 <img src={relishCalendarSketch} alt="Relish Calendar Sketch" className="comparison-img" />
                                 <div className="comparison-card" style={{ backgroundColor: '#f7f7f7' }}>
                                     <ul className="comparison-list">
@@ -370,7 +359,7 @@ function Relish() {
                                 </div>
                             </div>
 
-                            <div className="comparison-col reveal-item" ref={comparisonCol2Ref}>
+                            <div className="comparison-col">
                                 <img src={relishListSketch} alt="Relish List Sketch" className="comparison-img" />
                                 <div className="comparison-card" style={{ backgroundColor: '#f7f7f7' }}>
                                     <ul className="comparison-list">
@@ -381,6 +370,14 @@ function Relish() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div id="final-product" className="problem-section">
+                        <span className="section-label">FINAL PRODUCT</span>
+                        <p className="overview-title">Check out the Figma!</p>
+                    </div>
+                    <div id="reflection" className="problem-section">
+                        <span className="section-label">REFLECTION</span>
+                        <p className="overview-title">What went well and what could be improved</p>
                     </div>
                 </main>
             </div>

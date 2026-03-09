@@ -1565,7 +1565,7 @@ body.relish-page {
 
 .persona-card {
   background-color: #f7f7f7;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 3rem 2rem;
   text-align: center;
   border: 1px solid var(--border-color);
@@ -1797,7 +1797,7 @@ body.relish-page {
   flex-direction: column;
   gap: 0.5rem;
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 1.2rem 1.5rem;
   /* No flex: 1 — cards hug content, gaps grow via space-between */
 }
@@ -1930,7 +1930,7 @@ body.relish-page {
 .comp-card {
   background: #f1f3f6;
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
@@ -2003,7 +2003,7 @@ body.relish-page {
   display: flex;
   gap: 0;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -2178,7 +2178,7 @@ body.relish-page {
 }
 
 .comparison-card {
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 1.5rem 1.8rem;
   width: 100%;
   box-sizing: border-box;
