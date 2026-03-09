@@ -934,6 +934,34 @@ body {
     font-size: clamp(1.5rem, 4vw, 3rem);
   }
 
+  .relish-hero-container {
+    transform: none;
+    width: 100%;
+    max-width: 1300px;
+    padding: 3rem 1.5rem 2rem 1.5rem;
+    /* Decreased top padding for mobile/tablet */
+    height: auto;
+    align-items: center;
+    /* Center everything on tablet */
+  }
+
+  .relish-title {
+    text-align: center !important;
+  }
+
+  .relish-subtitle {
+    text-align: center;
+  }
+
+  .relish-hero-container .project-side-by-side-container {
+    justify-content: center;
+  }
+
+  .relish-hero-container .project-side-img {
+    height: auto;
+    max-height: 500px;
+    max-width: 32%;
+  }
 }
 
 /* ===== Extra-small phones (max-width: 480px) ===== */
@@ -1022,9 +1050,30 @@ body {
 
   .relish-hero-container {
     transform: none;
-    width: 95vw;
+    width: 100%;
+    max-width: 1300px;
     height: auto;
-    padding: 1rem 0;
+    padding: 1.5rem 1rem;
+    align-items: center;
+    /* Center everything on mobile */
+  }
+
+  .relish-title {
+    text-align: center !important;
+  }
+
+  .relish-subtitle {
+    text-align: center;
+  }
+
+  .relish-hero-container .project-side-by-side-container {
+    justify-content: center;
+  }
+
+  .relish-hero-container .project-side-img {
+    height: auto;
+    width: 31%;
+    max-height: 420px;
   }
 
   .case-study-metadata-wrapper {
@@ -1073,14 +1122,15 @@ body.relish-page {
   top: 0;
   left: 0;
   width: 110%;
-  height: 1350px;
+  /* Height matches the hero section so gradient center always lands on the photos */
+  height: clamp(600px, 80vw, 1000px);
   z-index: -1;
 
-  /* Easily adjust the gradient size here */
+  /* Gradient size */
   --relish-gradient-width: 100vw;
   --relish-gradient-height: 40vw;
 
-  background: radial-gradient(ellipse var(--relish-gradient-width) var(--relish-gradient-height) at 55% 48%,
+  background: radial-gradient(ellipse var(--relish-gradient-width) var(--relish-gradient-height) at 55% 55%,
       rgba(255, 120, 120, 0.85) 0%,
       rgba(255, 155, 155, 0.2) 35%,
       rgba(255, 155, 155, 0.04) 60%,
@@ -1088,52 +1138,58 @@ body.relish-page {
   pointer-events: none;
 }
 
-.cursor-circle.cursor-clicked {
-  width: 24px !important;
-  height: 24px !important;
-}
 
 .relish-hero-container {
-  width: 90vw;
-  height: 740px;
-
-  margin: 0;
-  transform: translateX(15vw) translateY(-18px);
+  width: 100%;
+  max-width: 1300px;
+  padding: 2rem 4rem 4rem 4rem;
+  /* Top padding to clear home/about/play nav */
+  margin: 0 auto;
+  box-sizing: border-box;
+  transform: none;
+  /* Removed translateY to keep it predictable */
   cursor: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  align-items: flex-end;
+  justify-content: flex-start;
+  /* Aligned to top-right area */
+  gap: 2.5rem;
+  /* More breathing room */
+  height: auto;
+  min-height: 600px;
+  /* Reduced min-height to push content up */
 }
 
 .relish-hero-content {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: fit-content;
+  width: 100%;
   max-width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .relish-title {
   font-family: 'Editorial New', serif !important;
-  font-size: 6rem !important;
+  font-size: 7rem !important;
+  /* Fixed, like all other page text */
   font-weight: 100 !important;
   margin-bottom: 0;
   margin-top: 0;
   color: var(--text);
   text-align: right;
-  line-height: 1;
+  line-height: 0.85;
 }
 
 .relish-subtitle {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  /* Fixed, like all other page text */
   color: #777;
   text-align: right;
-  margin-top: 0.3rem;
-  margin-bottom: 0.6rem;
+  margin-top: 0.2rem;
+  margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
 }
 
 .relish-hero-container .project-side-img {
@@ -1141,7 +1197,14 @@ body.relish-page {
     0 4px 20px rgba(210, 100, 100, 0.18),
     0 0 0 1px rgba(200, 120, 120, 0.12);
   transform: none !important;
-  border: 11px solid rgba(255, 255, 255, 0.2);
+  /* Border and radius scale with viewport width */
+  border: clamp(5px, 0.9vw, 14px) solid rgba(255, 255, 255, 0.22);
+  border-radius: clamp(14px, 2.2vw, 32px);
+  max-height: clamp(400px, 65vh, 720px);
+  /* Significant increase */
+  /* Limit height to keep it on screen */
+  width: auto;
+  object-fit: contain;
 }
 
 .relish-hero-container .project-side-img:hover {
@@ -1152,7 +1215,11 @@ body.relish-page {
 }
 
 .relish-hero-container .project-side-by-side-container {
-  gap: 1rem;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: clamp(0.5rem, 1.5vw, 2rem);
 }
 
 .project-hero {
@@ -1224,7 +1291,8 @@ body.relish-page {
 .case-study-metadata-wrapper {
   width: 100vw;
   max-width: 1300px;
-  margin: 8rem auto 0 auto;
+  margin: 0 auto 0 auto;
+  /* Removed top margin */
   padding: 0 4rem;
   box-sizing: border-box;
 }
@@ -1292,7 +1360,8 @@ body.relish-page {
 
 .metadata-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  /* Always 4-up on desktop */
   gap: 4rem;
   margin-bottom: 3rem;
   padding: 3rem;
@@ -1300,6 +1369,17 @@ body.relish-page {
   border: 1px solid #d4d4d4;
   text-align: center;
 }
+
+/* Switch to 2x2 grid instead of collapsing to a single column */
+@media (max-width: 900px) {
+  .metadata-row {
+    grid-template-columns: repeat(2, 1fr);
+    /* Clean 2x2 square layout */
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+}
+
 
 .metadata-label {
   display: block;

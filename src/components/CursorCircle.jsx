@@ -1,11 +1,20 @@
 import { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function CursorCircle() {
   const cursorCircleRef = useRef(null);
+  const hasMovedRef = useRef(false);
   const [isHoveringButton, setIsHoveringButton] = useState(false);
   const [isHoveringProject, setIsHoveringProject] = useState(false);
   const [isInFooter, setIsInFooter] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
+  const location = useLocation();
+
+  // Reset hover states on every route change so the cursor
+  // always shows as the default large circle when entering a new page.
+  useEffect(() => {
+    setIsHoveringButton(false);
+    setIsHoveringProject(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const circle = cursorCircleRef.current;
@@ -14,6 +23,15 @@ function CursorCircle() {
     const moveCircle = (e) => {
       circle.style.left = `${e.clientX}px`;
       circle.style.top = `${e.clientY}px`;
+
+      // Show on first move, and clear any hover states that were set
+      // before the mouse moved (e.g. cursor was already over a link on load)
+      if (!hasMovedRef.current) {
+        hasMovedRef.current = true;
+        setIsHoveringButton(false);
+        setIsHoveringProject(false);
+        circle.style.opacity = '1';
+      }
 
       // Check if cursor is over footer
       const footer = document.querySelector('.footer');
@@ -25,6 +43,9 @@ function CursorCircle() {
     };
 
     const handleMouseOver = (e) => {
+      // Only apply hover states after the cursor has actually moved
+      if (!hasMovedRef.current) return;
+
       // General links/buttons
       if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('button') || e.target.closest('a')) {
         setIsHoveringButton(true);
@@ -46,27 +67,21 @@ function CursorCircle() {
       }
     };
 
-    const handleMouseDown = () => setIsClicked(true);
-    const handleMouseUp = () => setIsClicked(false);
-
     window.addEventListener('mousemove', moveCircle);
     document.addEventListener('mouseover', handleMouseOver);
     document.addEventListener('mouseout', handleMouseOut);
-    document.addEventListener('mousedown', handleMouseDown);
-    document.addEventListener('mouseup', handleMouseUp);
 
     return () => {
       window.removeEventListener('mousemove', moveCircle);
       document.removeEventListener('mouseover', handleMouseOver);
       document.removeEventListener('mouseout', handleMouseOut);
-      document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('mouseup', handleMouseUp);
     };
   }, []);
 
   return (
     <div
-      className={`cursor-circle ${isHoveringButton ? 'cursor-hover' : ''} ${isHoveringProject ? 'cursor-project' : ''} ${isInFooter ? 'cursor-footer' : ''} ${isClicked ? 'cursor-clicked' : ''}`}
+      className={`cursor-circle ${isHoveringButton ? 'cursor-hover' : ''} ${isHoveringProject ? 'cursor-project' : ''} ${isInFooter ? 'cursor-footer' : ''}`}
+      style={{ opacity: 0 }}
       ref={cursorCircleRef}
     >
       <span className="cursor-text">case study</span>
