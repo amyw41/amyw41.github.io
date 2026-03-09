@@ -1109,6 +1109,9 @@ body {
   min-height: 700px;
   padding-top: 8rem;
   box-sizing: border-box;
+  --text: #666;
+  /* Gray body text on case study pages only */
+  color: var(--text);
 }
 
 .relish-page-container {
@@ -1698,8 +1701,8 @@ body.relish-page {
 .solution-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  /* Heading + 3 cards all share equal gaps */
+  justify-content: center;
+  gap: 5rem;
   flex: 1;
   min-height: 0;
 }

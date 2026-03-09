@@ -6,7 +6,7 @@
   /* Light theme only */
   color-scheme: light;
   --bg: #ffffff;
-  --text: #666;
+  --text: #1a1a1a;
   --muted: #888;
   --card-bg: rgba(255, 255, 255, 0.95);
   --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);

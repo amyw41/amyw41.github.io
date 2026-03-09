@@ -197,16 +197,16 @@ function Relish() {
                         <span className="section-label">SOLUTION</span>
                         <p className="overview-title solution-main-heading">How does Relish address their problems?</p>
 
-                        <div className="solution-layout-v2">
-                            {/* Images Row */}
-                            <div className="solution-images-row">
+                        <div className="solution-layout">
+                            {/* Images stacked vertically on the left */}
+                            <div className="solution-images">
                                 <img src={relishLockscreen} alt="Relish Lockscreen" className="project-side-img solution-img" />
                                 <img src={relishFeed} alt="Relish Feed" className="project-side-img solution-img" />
                             </div>
 
-                            {/* Personas Stack */}
-                            <div className="solution-personas-container">
-                                <div className="solution-persona-v2">
+                            {/* Personas stacked vertically on the right */}
+                            <div className="solution-text">
+                                <div className="solution-persona">
                                     <div className="solution-persona-header">
                                         <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
                                         <h4 className="persona-name">Alex:</h4>
@@ -217,7 +217,7 @@ function Relish() {
                                     </ul>
                                 </div>
 
-                                <div className="solution-persona-v2">
+                                <div className="solution-persona">
                                     <div className="solution-persona-header">
                                         <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
                                         <h4 className="persona-name">Ben:</h4>
@@ -228,7 +228,7 @@ function Relish() {
                                     </ul>
                                 </div>
 
-                                <div className="solution-persona-v2">
+                                <div className="solution-persona">
                                     <div className="solution-persona-header">
                                         <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
                                         <h4 className="persona-name">Cam:</h4>
