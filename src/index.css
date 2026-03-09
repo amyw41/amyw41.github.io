@@ -6,8 +6,8 @@
   /* Light theme only */
   color-scheme: light;
   --bg: #ffffff;
-  --text: #111827;
-  --muted: #374151;
+  --text: #666;
+  --muted: #888;
   --card-bg: rgba(255, 255, 255, 0.95);
   --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   --button-bg: rgba(17, 24, 39, 0.06);

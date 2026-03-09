@@ -6,12 +6,18 @@ import relishForm from '../assets/relish-form.png'
 import relishCalendar from '../assets/relish-calendar.png'
 import relishLockscreen from '../assets/relish-lockscreen.png'
 import relishFeed from '../assets/relish-feed.png'
+import bereal1 from '../assets/bereal-1.jpg'
+import bereal2 from '../assets/bereal-2.jpg'
+import beli1 from '../assets/beli-1.jpg'
+import beli2 from '../assets/beli-2.jpg'
+import roughSketch from '../assets/rough-sketch.png'
 
 const sectionsData = [
     { id: 'overview', title: 'Overview' },
     { id: 'planning', title: 'Planning' },
     { id: 'solution', title: 'Solution' },
     { id: 'competitive-analysis', title: 'Competitive Analysis' },
+    { id: 'rough-draft', title: 'Rough Draft' },
 ];
 
 const UserIcon = () => (
@@ -25,10 +31,6 @@ function Relish() {
 
     // Reveal refs for different sections
     const metadataRef = useScrollReveal(0);
-    const overviewRef = useScrollReveal(100);
-    const planningRef = useScrollReveal(100);
-    const solutionRef = useScrollReveal(100);
-    const competitiveRef = useScrollReveal(100);
 
     useEffect(() => {
         document.body.classList.add('relish-page');
@@ -131,7 +133,7 @@ function Relish() {
                 </aside>
 
                 <main className="case-study-content">
-                    <div id="overview" className="problem-section reveal-item" ref={overviewRef}>
+                    <div id="overview" className="problem-section">
                         <span className="section-label">OUR PROMPT</span>
                         <h2 className="overview-title">How might we make mundane, everyday tasks more enjoyable?</h2>
                         <p className="section-body">
@@ -139,7 +141,7 @@ function Relish() {
                         </p>
                     </div>
 
-                    <div id="planning" className="problem-section reveal-item" ref={planningRef}>
+                    <div id="planning" className="problem-section">
                         <span className="section-label">PLANNING</span>
 
                         <div className="planning-timeline-wrapper">
@@ -191,59 +193,139 @@ function Relish() {
                         </div>
                     </div>
 
-                    <div id="solution" className="problem-section reveal-item" ref={solutionRef}>
+                    <div id="solution" className="problem-section">
                         <span className="section-label">SOLUTION</span>
-                        <div className="solution-layout">
-                            {/* Left: stacked images */}
-                            <div className="solution-images">
+                        <p className="overview-title solution-main-heading">How does Relish address their problems?</p>
+
+                        <div className="solution-layout-v2">
+                            {/* Images Row */}
+                            <div className="solution-images-row">
                                 <img src={relishLockscreen} alt="Relish Lockscreen" className="project-side-img solution-img" />
                                 <img src={relishFeed} alt="Relish Feed" className="project-side-img solution-img" />
                             </div>
 
-                            {/* Right: text content */}
-                            <div className="solution-text">
-                                <h2 className="overview-title solution-heading">How does Relish address their problems?</h2>
-
-                                <div className="solution-persona">
+                            {/* Personas Stack */}
+                            <div className="solution-personas-container">
+                                <div className="solution-persona-v2">
                                     <div className="solution-persona-header">
                                         <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
                                         <h4 className="persona-name">Alex:</h4>
                                     </div>
                                     <ul className="solution-list">
-                                        <li className="section-body">Now can track everything she eats in a calendar view.</li>
-                                        <li className="section-body">Helps hold her accountable when she can see all her meals laid out in front of her.</li>
+                                        <li>Now can track everything she eats in a calendar view.</li>
+                                        <li>Helps hold her accountable when she can see all her meals laid out in front of her.</li>
                                     </ul>
                                 </div>
 
-                                <div className="solution-persona">
+                                <div className="solution-persona-v2">
                                     <div className="solution-persona-header">
                                         <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
                                         <h4 className="persona-name">Ben:</h4>
                                     </div>
                                     <ul className="solution-list">
-                                        <li className="section-body">Receives a <strong>notification</strong> to remind him to eat.</li>
-                                        <li className="section-body">Is motivated to eat so he can fill out his calendar.</li>
+                                        <li>Receives a <strong>notification</strong> to remind him to eat.</li>
+                                        <li>Is motivated to eat so he can fill out his calendar.</li>
                                     </ul>
                                 </div>
 
-                                <div className="solution-persona">
+                                <div className="solution-persona-v2">
                                     <div className="solution-persona-header">
                                         <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
                                         <h4 className="persona-name">Cam:</h4>
                                     </div>
                                     <ul className="solution-list">
-                                        <li className="section-body">Can keep up with his friends and what they eat on the "Friends" tab, making him feel less lonely!</li>
+                                        <li>Can keep up with his friends and what they eat on the "Friends" tab, making him feel less lonely!</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="competitive-analysis" className="problem-section reveal-item" ref={competitiveRef}>
+                    <div id="competitive-analysis" className="problem-section">
                         <span className="section-label">COMPETITIVE ANALYSIS</span>
-                        <h2 className="section-body">
-                            We looked at apps that contained similar features to what we were imagining and <strong>why they worked well</strong>.
-                        </h2>
+                        <p className="overview-title">
+                            Researching similar apps & understanding why they work.
+                        </p>
+
+                        <p className="comp-sub-title">01 BeReal</p>
+                        <div className="comp-section-row">
+                            <div className="comp-analysis-grid">
+                                <div className="comp-card">
+                                    <div className="comp-img-wrapper">
+                                        <img src={bereal1} alt="BeReal Profile" className="comp-img" />
+                                    </div>
+                                    <span className="comp-card-label">BEREAL: USER PROFILE & HISTORY</span>
+                                </div>
+                                <div className="comp-card">
+                                    <div className="comp-img-wrapper">
+                                        <img src={bereal2} alt="BeReal Calendar" className="comp-img" />
+                                    </div>
+                                    <span className="comp-card-label">BEREAL: MONTHLY CALENDAR VIEW</span>
+                                </div>
+                            </div>
+                            <div className="comp-text-content">
+                                <ul className="comp-bullets">
+                                    <li>Sends a <strong>notification</strong> to users every day, reminding them to take a pic.</li>
+                                    <li>Assembles pics into a <strong>calendar view</strong>.</li>
+                                </ul>
+                                <div className="comp-pros-cons">
+                                    <div className="comp-pros">
+                                        <p className="comp-pros-cons-label">Pros:</p>
+                                        <ul className="comp-pros-cons-list">
+                                            <li>The calendar view is very clean and easy to navigate.</li>
+                                        </ul>
+                                    </div>
+                                    <div className="comp-cons">
+                                        <p className="comp-pros-cons-label">Cons:</p>
+                                        <ul className="comp-pros-cons-list">
+                                            <li>Not enough motivation to take a pic every day.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="comp-sub-title">02 Beli</p>
+                        <div className="comp-section-row">
+                            <div className="comp-analysis-grid">
+                                <div className="comp-card">
+                                    <div className="comp-img-wrapper">
+                                        <img src={beli1} alt="Beli Rating" className="comp-img" />
+                                    </div>
+                                    <span className="comp-card-label">BELI: INTERACTIVE RATING SYSTEM</span>
+                                </div>
+                                <div className="comp-card">
+                                    <div className="comp-img-wrapper">
+                                        <img src={beli2} alt="Beli Lists" className="comp-img" />
+                                    </div>
+                                    <span className="comp-card-label">BELI: SEARCH & PERSONALIZED LISTS</span>
+                                </div>
+                            </div>
+                            <div className="comp-text-content">
+                                <ul className="comp-bullets">
+                                    <li>Tracks restaurants by allowing users to fill out and <strong>rate</strong> every restaurant they try.</li>
+                                </ul>
+                                <div className="comp-pros-cons">
+                                    <div className="comp-pros">
+                                        <p className="comp-pros-cons-label">Pros:</p>
+                                        <ul className="comp-pros-cons-list">
+                                            <li>Organized way for users to keep track of restaurants.</li>
+                                        </ul>
+                                    </div>
+                                    <div className="comp-cons">
+                                        <p className="comp-pros-cons-label">Cons:</p>
+                                        <ul className="comp-pros-cons-list">
+                                            <li>Users may not be able to constantly try new restaurants.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="rough-draft" className="problem-section">
+                        <span className="section-label">ROUGH DRAFT</span>
+                        <p className="overview-title">Designing & iterating quickly</p>
+                        <img src={roughSketch} alt="Rough Sketch of Relish app screens" className="rough-sketch-img" />
                     </div>
                 </main>
             </div>

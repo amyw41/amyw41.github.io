@@ -4,6 +4,7 @@ html {
   background-color: #fff;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="1.5" numOctaves="3"/></filter><rect width="100" height="100" fill="white"/><rect width="100" height="100" filter="url(%23noise)" opacity="0.22"/></svg>');
   background-repeat: repeat;
+  --border-color: #d8d8d8;
 }
 
 * {
@@ -200,7 +201,7 @@ html {
   aspect-ratio: 1.8 / 1;
   border-radius: 0.2rem;
   box-shadow: none;
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--border-color);
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
@@ -349,7 +350,7 @@ html {
   padding: 0.2em 0.9em;
   margin-bottom: 0.8em;
   display: inline-block;
-  border: 1px solid #dadada;
+  border: 1px solid var(--border-color);
   white-space: nowrap;
 }
 
@@ -747,7 +748,7 @@ body {
   color: var(--text);
   max-width: 55%;
   overflow: hidden;
-  color: #4c4c4c !important;
+  color: #818181 !important;
 }
 
 .about-description a {
@@ -1187,7 +1188,7 @@ body.relish-page {
   font-weight: 100 !important;
   margin-bottom: 0;
   margin-top: 0;
-  color: var(--text);
+  color: #1a1a1a;
   text-align: right;
   line-height: 0.85;
 }
@@ -1263,7 +1264,7 @@ body.relish-page {
   border-radius: 0;
   padding: 0.3em 1em;
   display: inline-block;
-  border: 1px solid #dadada;
+  border: 1px solid var(--border-color);
   background: white;
 }
 
@@ -1282,7 +1283,7 @@ body.relish-page {
   font-family: 'Raleway', Arial, sans-serif;
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #4c4c4c;
+  color: #666;
 }
 
 @media (max-width: 750px) {
@@ -1396,7 +1397,7 @@ body.relish-page {
   margin-bottom: 3rem;
   padding: 3rem;
   border-radius: 10px;
-  border: 1px solid #d4d4d4;
+  border: 1px solid var(--border-color);
   text-align: center;
 }
 
@@ -1425,7 +1426,7 @@ body.relish-page {
 .metadata-list {
   font-family: 'Raleway', sans-serif;
   font-size: 1.1rem;
-  color: #444;
+  color: #666;
   line-height: 1.4;
 }
 
@@ -1449,7 +1450,7 @@ body.relish-page {
 .overview-title,
 .section-subtitle {
   font-family: 'Raleway', serif;
-  font-weight: 500;
+  font-weight: 400;
   color: #1a1a1a;
   line-height: 1.2;
 }
@@ -1468,7 +1469,7 @@ body.relish-page {
 .section-body {
   font-family: 'Raleway', sans-serif;
   font-size: 1.15rem;
-  color: #4c4c4c;
+  color: #666;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -1491,7 +1492,7 @@ body.relish-page {
 .process-col p {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
-  color: #4c4c4c;
+  color: #666;
   line-height: 1.6;
 }
 
@@ -1511,13 +1512,13 @@ body.relish-page {
   margin: 3.5rem 0;
   background-color: #f7f7f7;
   border-radius: 16px;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--border-color);
 }
 
 .section-list {
   font-family: 'Raleway', sans-serif;
   font-size: 1.15rem;
-  color: #4c4c4c;
+  color: #666;
   line-height: 1.6;
   margin-bottom: 2.5rem;
   padding-left: 1.5rem;
@@ -1544,7 +1545,7 @@ body.relish-page {
   border-radius: 20px;
   padding: 3rem 2rem;
   text-align: center;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1586,7 +1587,7 @@ body.relish-page {
 .persona-quote {
   font-family: 'Raleway', sans-serif;
   font-size: 1.05rem;
-  color: #4c4c4c;
+  color: #666;
   line-height: 1.5;
   margin: 0;
   padding-top: 1.5rem;
@@ -1712,7 +1713,7 @@ body.relish-page {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border: 1px solid #d4d4d4;
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 1.2rem 1.5rem;
   /* No flex: 1 — cards hug content, gaps grow via space-between */
@@ -1741,7 +1742,7 @@ body.relish-page {
   font-family: 'Raleway', sans-serif;
   font-size: 1.15rem;
   /* Match section-body */
-  color: #4c4c4c;
+  color: #666;
   line-height: 1.6;
   padding-left: 1.2rem;
   margin: 0;
@@ -1771,4 +1772,274 @@ body.relish-page {
     align-items: center;
     width: 100%;
   }
+}
+
+.comp-sub-title {
+  font-family: 'Editorial New', serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Solution Layout V2 - Full Width Stack */
+.solution-main-heading {
+  margin-bottom: 2.5rem !important;
+}
+
+.solution-layout-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+
+.solution-images-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 3rem;
+  width: 100%;
+}
+
+.solution-images-row .solution-img {
+  max-width: 300px;
+  /* Fixed width for the focus images */
+  height: auto;
+}
+
+.solution-personas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.solution-persona-v2 {
+  width: 100%;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.solution-persona-v2:last-child {
+  border-bottom: none;
+}
+
+/* Competitive Analysis Grid */
+.comp-section-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.comp-analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  flex: 0 0 55%;
+  /* Takes up ~55% of the row */
+}
+
+.comp-card {
+  background: #f1f3f6;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.comp-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
+}
+
+.comp-img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 12px;
+  border: 4px solid rgba(255, 255, 255, 0.55);
+  outline: 1px solid var(--border-color);
+}
+
+.comp-card-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #888;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.comp-text-content {
+  flex: 1;
+}
+
+.comp-text-content .section-subtitle {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.comp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comp-bullets li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.15rem;
+  color: #666;
+  padding-left: 1.2em;
+  position: relative;
+}
+
+.comp-bullets li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: #888;
+  font-weight: 700;
+}
+
+.comp-pros-cons {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comp-pros,
+.comp-cons {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+}
+
+.comp-pros {
+  border-right: 1px solid var(--border-color);
+}
+
+.comp-pros-cons-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.4rem 0;
+}
+
+.comp-pros-cons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.comp-pros-cons-list li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.15rem;
+  color: #666;
+  padding-left: 1.2em;
+  position: relative;
+}
+
+.comp-pros-cons-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: #666;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .comp-section-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .comp-analysis-grid {
+    width: 100%;
+    flex: none;
+  }
+
+  .comp-img {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .comp-analysis-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Rough Draft Section */
+.rough-draft-section {
+  margin-top: 4rem;
+}
+
+.rough-draft-header {
+  background: #3d3d3d;
+  border-radius: 12px;
+  padding: 3rem 3.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rough-draft-step {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #aaa;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.rough-draft-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 600;
+  color: #e8e8e8;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.rough-draft-title em {
+  font-style: italic;
+  color: #c4c4c4;
+}
+
+.rough-draft-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #bbb;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.rough-sketch-img {
+  width: 100%;
+  height: auto;
 }
