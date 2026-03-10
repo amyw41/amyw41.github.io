@@ -371,14 +371,26 @@ function Relish() {
                             </div>
                         </div>
                     </div>
-                    <div id="final-product" className="problem-section">
-                        <span className="section-label">FINAL PRODUCT</span>
-                        <p className="overview-title">Check out the Figma!</p>
-                    </div>
                     <div id="reflection" className="problem-section">
                         <span className="section-label">REFLECTION</span>
-                        <p className="overview-title">What went well and what could be improved</p>
+                        <p className="overview-title">What would I have done different?</p>
+                        <div className="reflection-grid">
+                            <div className="reflection-col">
+                                <h3 className="reflection-heading reflection-heading--cursive">shift my priorities.</h3>
+                                <p className="section-body">I would focus less on the unrealistic ties to the prompt and focus more on the <strong>impact</strong> it has on the users.</p>
+                            </div>
+                            <div className="reflection-col">
+                                <h3 className="reflection-heading reflection-heading--cursive">More low-fidelity prototypes.</h3>
+                                <p className="section-body">I would create different <strong>solutions</strong> to the problem, taking advantage of others' <strong>feedback.</strong></p>
+                            </div>
+                            <div className="reflection-col">
+                                <h3 className="reflection-heading reflection-heading--cursive">Accessibility.</h3>
+                                <p className="section-body">An essential factor that is often overlooked to implement aesthetics. I would recreate certain parts of Relish to allow for <strong>more accessible usage</strong>, such as increasing the size of each meal on the calendars.</p>
+                            </div>
+                        </div>
                     </div>
+
+
                 </main>
             </div>
         </div>
