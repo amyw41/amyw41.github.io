@@ -1028,6 +1028,10 @@ body {
     max-height: 500px;
     max-width: 32%;
   }
+
+  .mobile-break {
+    display: block;
+  }
 }
 
 /* ===== Extra-small phones (max-width: 480px) ===== */
@@ -1217,7 +1221,7 @@ body.relish-page {
 .relish-hero-container {
   width: 100%;
   max-width: 1300px;
-  padding: 2rem 4rem 4rem 4rem;
+  padding: 1rem 4rem 2rem 4rem;
   /* Top padding to clear home/about/play nav */
   margin: 0 auto;
   box-sizing: border-box;
@@ -1261,8 +1265,8 @@ body.relish-page {
   font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: #777;
   text-align: right;
-  margin-top: 0.2rem;
-  margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
+  margin-top: 1rem;
+  margin-bottom: 2.2rem;
 }
 
 .relish-hero-container .project-side-img {
@@ -1368,7 +1372,7 @@ body.relish-page {
   /* Removed top margin */
   padding: 0 4rem;
   box-sizing: border-box;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
 }
 
 .case-study-container {
@@ -1385,9 +1389,9 @@ body.relish-page {
   width: 220px;
   flex-shrink: 0;
   position: sticky;
-  bottom: 50px;
+  top: 80px;
   height: fit-content;
-  align-self: flex-end;
+  align-self: flex-start;
 }
 
 .sidebar-back {
@@ -1560,7 +1564,7 @@ body.relish-page {
 }
 
 .problem-section {
-  padding: 5rem 0;
+  padding: 2.5rem 0;
 }
 
 .problem-section>*:last-child {
@@ -1710,17 +1714,14 @@ body.relish-page {
 
 .persona-name {
   font-family: 'Raleway', serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #1a1a1a;
-  margin: 0 0 0.5rem 0;
-}
-
-.persona-role {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
-  color: #666;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 2rem 0;
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .persona-quote {
@@ -1826,21 +1827,29 @@ body.relish-page {
     flex-wrap: nowrap;
     gap: 1.5rem;
     margin: 0;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 0;
     width: 100%;
     min-width: 0;
     box-sizing: border-box;
     overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    mask-image: linear-gradient(to right, transparent, black 25px, black calc(100% - 25px), transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 25px, black calc(100% - 25px), transparent);
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
   }
 
-  /* Fix for webkit ignoring padding-right on scroll containers */
-  .sidebar-nav ul::after {
-    content: '';
-    padding-right: 1.5rem;
+  .sidebar-nav li {
+    scroll-snap-align: center;
+    scroll-margin-inline: 2.5rem;
+  }
+
+  .sidebar-nav li:first-child {
+    margin-left: 2.5rem;
+  }
+
+  .sidebar-nav li:last-child {
+    margin-right: 2.5rem;
   }
 
   .sidebar-nav ul::-webkit-scrollbar {

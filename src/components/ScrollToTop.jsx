@@ -5,7 +5,13 @@ export default function ScrollToTop() {
     const { pathname } = useLocation();
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+        }
+        // Use requestAnimationFrame to ensure the scroll happens after the DOM update
+        requestAnimationFrame(() => {
+            window.scrollTo(0, 0);
+        });
     }, [pathname]);
 
     return null;
