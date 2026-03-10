@@ -67,8 +67,9 @@ img {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1),
-    height 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+  transition: width 0.7s cubic-bezier(0.19, 1, 0.22, 1),
+    height 0.7s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 0.7s cubic-bezier(0.19, 1, 0.22, 1),
     border-color 0.2s ease,
     background-color 0.2s ease;
   display: flex;
@@ -88,6 +89,8 @@ img {
   height: 38px;
   background-color: #111;
   border-color: #111;
+  transform: translate(-12px, -50%);
+  justify-content: center;
 }
 
 .project-wip .project-preview-square::after {
