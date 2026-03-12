@@ -17,6 +17,9 @@ import cyberseaDemo from '../assets/cybersea-demo.gif'
 import cyberseaGlobe from '../assets/cybersea-globe-new.png'
 import cyberseaModel from '../assets/cybersea-model.png'
 import cyberseaHero from '../assets/cybersea-hero-new.png'
+import personaBen from '../assets/persona-ben.png'
+import personaAlex from '../assets/persona-alex.png'
+import personaCam from '../assets/persona-cam.png'
 
 const sectionsData = [
     { id: 'overview', title: 'Overview' },
@@ -128,7 +131,6 @@ function Cybersea() {
                         <span className="metadata-label">ROLE</span>
                         <ul className="metadata-list">
                             <li>Product Designer</li>
-                            <li>UX Researcher</li>
                             <li>Visual Design</li>
                         </ul>
                     </div>
@@ -178,7 +180,7 @@ function Cybersea() {
                             <div className="timeline-point" style={{ marginTop: '3rem' }}>
                                 <h3 className="section-subtitle" style={{ fontStyle: 'italic', fontWeight: '700', fontSize: '1.3rem', color: '#1a1a1a', marginBottom: '0.8rem' }}>TLDR:</h3>
                                 <p className="section-body" style={{ color: '#1a1a1a', fontWeight: '400', fontStyle: 'italic', fontSize: '1.3rem', marginTop: '0' }}>
-                                    Design a Real-Time Strategy simulator where trade routes are modelled to combat the constantly changing conditions of the Arctic sea.
+                                    Design a Real-Time Strategy simulator where trade routes are modelled to combat the <b>constantly changing conditions</b> of the Arctic sea.
                                 </p>
                             </div>
                         </div>
@@ -202,13 +204,6 @@ function Cybersea() {
                                             <li>Easy-to-use interface for quick, high-stakes decisions.</li>
                                             <li>Accurate data that can easily be seen and implemented.</li>
                                         </ul>
-                                        <div className="user-solution-container">
-                                            <img src={cyberseaGlobe} alt="Globe visual" className="user-solution-img" />
-                                            <div className="user-solution-text-container">
-                                                <span className="user-solution-label">Our Approach</span>
-                                                <span className="user-solution-desc">An interactive globe visual + data dashboard to keep info organized.</span>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div className="user-timeline-item">
                                         <h5 className="user-timeline-title">b) Constraint</h5>
@@ -227,6 +222,14 @@ function Cybersea() {
                                             </div>
                                         </div>
                                     </div>
+                                    <div className="user-solution-container">
+                                        <img src={cyberseaGlobe} alt="Globe visual" className="user-solution-img" />
+                                        <div className="user-solution-text-container">
+                                            <span className="user-solution-label">Our Approach</span>
+                                            <span className="user-solution-desc">An interactive globe visual + data dashboard to keep info organized.</span>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -263,6 +266,20 @@ function Cybersea() {
                                             </div>
                                         </div>
                                     </div>
+                                    <div className="user-solution-container">
+                                        <img src={cyberseaHero} alt="Hero dashboard" className="user-solution-img" />
+                                        <div className="user-solution-text-container">
+                                            <span className="user-solution-label">Our Approach</span>
+                                            <span className="user-solution-desc">A visually engaging interface with animated waves for delight!</span>
+                                        </div>
+                                    </div>
+                                    <div className="user-solution-container">
+                                        <img src={cyberseaModel} alt="Model visual" className="user-solution-img" />
+                                        <div className="user-solution-text-container">
+                                            <span className="user-solution-label">Our Approach</span>
+                                            <span className="user-solution-desc">AI generated descriptions for each model component.</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -283,7 +300,9 @@ function Cybersea() {
                             <div className="solution-text">
                                 <div className="solution-persona">
                                     <div className="solution-persona-header">
-                                        <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
+                                        <div className="persona-icon-wrapper solution-persona-icon">
+                                            <img src={personaAlex} alt="Alex" className="persona-img-circle" />
+                                        </div>
                                         <h4 className="persona-name">Alex:</h4>
                                     </div>
                                     <ul className="solution-list">
@@ -294,7 +313,9 @@ function Cybersea() {
 
                                 <div className="solution-persona">
                                     <div className="solution-persona-header">
-                                        <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
+                                        <div className="persona-icon-wrapper solution-persona-icon">
+                                            <img src={personaBen} alt="Ben" className="persona-img-circle" />
+                                        </div>
                                         <h4 className="persona-name">Ben:</h4>
                                     </div>
                                     <ul className="solution-list">
@@ -305,7 +326,9 @@ function Cybersea() {
 
                                 <div className="solution-persona">
                                     <div className="solution-persona-header">
-                                        <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
+                                        <div className="persona-icon-wrapper solution-persona-icon">
+                                            <img src={personaCam} alt="Cam" className="persona-img-circle" />
+                                        </div>
                                         <h4 className="persona-name">Cam:</h4>
                                     </div>
                                     <ul className="solution-list">

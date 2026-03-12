@@ -13,6 +13,9 @@ import beli2 from '../assets/beli-2.jpg'
 import roughSketch from '../assets/rough-sketch.png'
 import relishListSketch from '../assets/relish-list-sketch.jpg'
 import relishCalendarSketch from '../assets/relish-calendar-sketch.jpg'
+import personaBen from '../assets/persona-ben.png'
+import personaAlex from '../assets/persona-alex.png'
+import personaCam from '../assets/persona-cam.png'
 
 const sectionsData = [
     { id: 'overview', title: 'Overview' },
@@ -189,29 +192,32 @@ function Relish() {
                                 Thus, we were able to characterize our app-users as:
                             </p>
 
-                            <div className="persona-grid">
-                                <div className="persona-card">
-                                    <div className="persona-icon-wrapper">
-                                        <UserIcon />
-                                    </div>
-                                    <h4 className="persona-name">The Busy, Stressed Uni Student</h4>
-                                    <p className="persona-quote">"I struggle to eat accountably and can never follow my diet."</p>
-                                </div>
-                                <div className="persona-card">
-                                    <div className="persona-icon-wrapper">
-                                        <UserIcon />
-                                    </div>
-                                    <h4 className="persona-name">The Absent Minded Worker</h4>
-                                    <p className="persona-quote">"I keep forgetting to eat at work."</p>
-                                </div>
-                                <div className="persona-card">
-                                    <div className="persona-icon-wrapper">
-                                        <UserIcon />
-                                    </div>
-                                    <h4 className="persona-name">The Lonely Eater</h4>
-                                    <p className="persona-quote">"I feel lonely when I eat and it isn't fun."</p>
-                                </div>
-                            </div>
+                             <div className="persona-grid">
+                                 <div className="persona-card">
+                                     <div className="persona-icon-wrapper">
+                                         <img src={personaAlex} alt="Alex" className="persona-img-circle" />
+                                     </div>
+                                     <h4 className="persona-name">Alex</h4>
+                                     <span className="persona-category">The Busy, Stressed Uni Student</span>
+                                     <p className="persona-quote">"I struggle to eat accountably and can never follow my diet."</p>
+                                 </div>
+                                 <div className="persona-card">
+                                     <div className="persona-icon-wrapper">
+                                         <img src={personaBen} alt="Ben" className="persona-img-circle" />
+                                     </div>
+                                     <h4 className="persona-name">Ben</h4>
+                                     <span className="persona-category">The Absent Minded Worker</span>
+                                     <p className="persona-quote">"I keep forgetting to eat at work."</p>
+                                 </div>
+                                 <div className="persona-card">
+                                     <div className="persona-icon-wrapper">
+                                         <img src={personaCam} alt="Cam" className="persona-img-circle" />
+                                     </div>
+                                     <h4 className="persona-name">Cam</h4>
+                                     <span className="persona-category">The Lonely Eater</span>
+                                     <p className="persona-quote">"I feel lonely when I eat and it isn't fun."</p>
+                                 </div>
+                             </div>
                         </div>
                     </div>
 
@@ -230,7 +236,9 @@ function Relish() {
                             <div className="solution-text">
                                 <div className="solution-persona">
                                     <div className="solution-persona-header">
-                                        <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
+                                        <div className="persona-icon-wrapper solution-persona-icon">
+                                            <img src={personaAlex} alt="Alex" className="persona-img-circle" />
+                                        </div>
                                         <h4 className="persona-name">Alex:</h4>
                                     </div>
                                     <ul className="solution-list">
@@ -241,7 +249,9 @@ function Relish() {
 
                                 <div className="solution-persona">
                                     <div className="solution-persona-header">
-                                        <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
+                                        <div className="persona-icon-wrapper solution-persona-icon">
+                                            <img src={personaBen} alt="Ben" className="persona-img-circle" />
+                                        </div>
                                         <h4 className="persona-name">Ben:</h4>
                                     </div>
                                     <ul className="solution-list">
@@ -252,7 +262,9 @@ function Relish() {
 
                                 <div className="solution-persona">
                                     <div className="solution-persona-header">
-                                        <div className="persona-icon-wrapper solution-persona-icon"><UserIcon /></div>
+                                        <div className="persona-icon-wrapper solution-persona-icon">
+                                            <img src={personaCam} alt="Cam" className="persona-img-circle" />
+                                        </div>
                                         <h4 className="persona-name">Cam:</h4>
                                     </div>
                                     <ul className="solution-list">
