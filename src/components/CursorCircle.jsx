@@ -6,6 +6,7 @@ function CursorCircle() {
   const hasMovedRef = useRef(false);
   const [isHoveringButton, setIsHoveringButton] = useState(false);
   const [isHoveringProject, setIsHoveringProject] = useState(false);
+  const [isHoveringWhite, setIsHoveringWhite] = useState(false);
   const [isInFooter, setIsInFooter] = useState(false);
   const location = useLocation();
 
@@ -14,6 +15,7 @@ function CursorCircle() {
   useEffect(() => {
     setIsHoveringButton(false);
     setIsHoveringProject(false);
+    setIsHoveringWhite(false);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -30,6 +32,7 @@ function CursorCircle() {
         hasMovedRef.current = true;
         setIsHoveringButton(false);
         setIsHoveringProject(false);
+        setIsHoveringWhite(false);
         circle.style.opacity = '1';
       }
 
@@ -65,6 +68,11 @@ function CursorCircle() {
       if (target.closest('.project-preview-box')) {
         setIsHoveringProject(true);
       }
+
+      // Cybersea video specifically
+      if (target.closest('.cybersea-hero-video')) {
+        setIsHoveringWhite(true);
+      }
     };
 
     const handleMouseOut = (e) => {
@@ -85,6 +93,10 @@ function CursorCircle() {
       if (!e.relatedTarget || !e.relatedTarget.closest || !e.relatedTarget.closest('.project-preview-box')) {
         setIsHoveringProject(false);
       }
+
+      if (!e.relatedTarget || !e.relatedTarget.closest || !e.relatedTarget.closest('.cybersea-hero-video')) {
+        setIsHoveringWhite(false);
+      }
     };
 
     window.addEventListener('mousemove', moveCircle);
@@ -100,7 +112,7 @@ function CursorCircle() {
 
   return (
     <div
-      className={`cursor-circle ${isHoveringButton ? 'cursor-hover' : ''} ${isHoveringProject ? 'cursor-project' : ''} ${isInFooter ? 'cursor-footer' : ''}`}
+      className={`cursor-circle ${isHoveringButton ? 'cursor-hover' : ''} ${isHoveringProject ? 'cursor-project' : ''} ${isHoveringWhite ? 'cursor-white' : ''} ${isInFooter ? 'cursor-footer' : ''}`}
       style={{ opacity: 0 }}
       ref={cursorCircleRef}
     >

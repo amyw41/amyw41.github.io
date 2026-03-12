@@ -98,7 +98,7 @@ function Relish() {
             <div className="relish-background-gradient"></div>
             <div className="relish-hero-container">
                 <div className="relish-hero-content">
-                    <h1 className="relish-title load-reveal stagger-1">relish</h1>
+                    <h1 className="relish-title load-reveal stagger-1">Relish</h1>
                     <p className="relish-subtitle load-reveal stagger-2">A mobile app designed to make eating <br className="mobile-break" />more intentional and enjoyable.</p>
                     <div className="project-side-by-side-container load-reveal stagger-3">
                         <img src={relishMain} alt="Relish Main" className="project-side-img" />
@@ -117,7 +117,7 @@ function Relish() {
                     <div className="metadata-col">
                         <span className="metadata-label">TEAM</span>
                         <ul className="metadata-list">
-                            <li>1 designer, 1 developer</li>
+                            <li>1 designer (me!), 1 developer</li>
                         </ul>
                     </div>
                     <div className="metadata-col">

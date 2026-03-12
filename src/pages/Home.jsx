@@ -146,7 +146,7 @@ function Home() {
             </div>
             <div className="project-preview-subtitle">FIGMA MAKE-A-THON • 2025</div>
           </Link>
-          <Link to="/projects/cybersea" className="project-preview-box reveal-item project-wip" ref={box2Ref} onClick={(e) => e.preventDefault()}>
+          <Link to="/projects/cybersea" className="project-preview-box reveal-item" ref={box2Ref}>
             <div className="project-preview-square project-preview-square-first">
               <img src={cyberseaImg} alt="Cybersea Project UI" className="project-img" />
             </div>
