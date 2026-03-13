@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import '../App.css'
 import useScrollReveal from '../hooks/useScrollReveal'
 import relishMain from '../assets/relish-main.png'
@@ -17,17 +18,14 @@ import cyberseaDemo from '../assets/cybersea-demo.gif'
 import cyberseaGlobe from '../assets/cybersea-globe-new.png'
 import cyberseaModel from '../assets/cybersea-model.png'
 import cyberseaHero from '../assets/cybersea-hero-new.png'
-import personaBen from '../assets/persona-ben.png'
-import personaAlex from '../assets/persona-alex.png'
-import personaCam from '../assets/persona-cam.png'
+import cybersea_button_ex_1 from '../assets/cybersea-button-ex-1.png'
+import cybersea_button_ex_2 from '../assets/cybersea-button-ex-2.png'
 
 const sectionsData = [
     { id: 'overview', title: 'Overview' },
     { id: 'users', title: 'Users' },
-    { id: 'solution', title: 'Solution' },
-    { id: 'competitive-analysis', title: 'Competitive Analysis' },
-    { id: 'rough-draft', title: 'Rough Draft' },
-    { id: 'reflection', title: 'Reflection' },
+    { id: 'problem-1', title: 'Design Challenge' },
+    { id: 'solution', title: 'Solution', nested: true, parentId: 'problem-1' },
 ];
 
 const UserIcon = () => (
@@ -147,21 +145,27 @@ function Cybersea() {
 
             <div className="case-study-container">
                 <aside className="case-study-sidebar">
+                    <Link to="/" className="sidebar-back">
+                        <span className="back-arrow">←</span> HOME
+                    </Link>
                     <nav className="sidebar-nav">
                         <ul>
-                            {sectionsData.map((section) => (
-                                <li
-                                    key={section.id}
-                                    className={activeSection === section.id ? 'active' : ''}
-                                >
-                                    <button
-                                        className="sidebar-button"
-                                        onClick={() => scrollToSection(section.id)}
+                            {sectionsData.map((section) => {
+                                const isExpanded = !section.nested || activeSection === section.id || activeSection === section.parentId;
+                                return (
+                                    <li
+                                        key={section.id}
+                                        className={`${activeSection === section.id ? 'active' : ''} ${section.nested ? 'nested-nav-item' : ''} ${isExpanded ? 'expanded' : ''}`}
                                     >
-                                        {section.title}
-                                    </button>
-                                </li>
-                            ))}
+                                        <button
+                                            className="sidebar-button"
+                                            onClick={() => scrollToSection(section.id)}
+                                        >
+                                            {section.title}
+                                        </button>
+                                    </li>
+                                );
+                            })}
                         </ul>
                     </nav>
                 </aside>
@@ -192,7 +196,7 @@ function Cybersea() {
                         <div className="persona-column" style={{ paddingLeft: '0' }}>
                             <div className="user-list-card">
                                 <div className="user-list-header">
-                                    <div className="user-list-icon">
+                                    <div className="persona-icon-wrapper user-list-icon" style={{ backgroundColor: '#eeeeee' }}>
                                         <UserIcon />
                                     </div>
                                     <h4 className="user-list-title">Professionals <span style={{ color: '#888', fontStyle: 'italic', fontSize: '1.2rem', fontFamily: 'Raleway', fontWeight: '500', marginLeft: '0.5rem' }}>(The military, government, etc.)</span></h4>
@@ -235,7 +239,7 @@ function Cybersea() {
 
                             <div className="user-list-card">
                                 <div className="user-list-header">
-                                    <div className="user-list-icon">
+                                    <div className="persona-icon-wrapper user-list-icon" style={{ backgroundColor: '#eeeeee' }}>
                                         <UserIcon />
                                     </div>
                                     <h4 className="user-list-title">The Every Day User</h4>
@@ -285,193 +289,97 @@ function Cybersea() {
                         </div>
                     </div>
 
+                    <div id="problem-1" className="problem-section">
+                        <span className="section-label">DESIGN CHALLENGE</span>
+                        <div className="comp-section-row" style={{ alignItems: 'flex-start', marginTop: '1.5rem' }}>
+                            <div style={{ flex: 1 }}>
+                                <h3 className="problem-title">PROBLEM #1:</h3>
+                                <p className="problem-description">How can we <b>maximize clarity</b> without compromising visual design?</p>
+                            </div>
+                            <div style={{ flex: 1 }}>
+                                <div className="timeline-container" style={{ marginTop: 0 }}>
+                                    <div className="timeline-point">
+                                        <p className="section-body">Hackathons require projects to look <b>as unique</b> and <b>aesthetically pleasing</b> as possible.</p>
+                                    </div>
+                                    <div className="timeline-point" style={{ marginTop: '2rem' }}>
+                                        <p className="section-body">We need to find a balance between <b>data density</b> and <b>readability</b>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div id="solution" className="problem-section">
                         <span className="section-label">SOLUTION</span>
-                        <p className="overview-title solution-main-heading">How does Relish address their problems?</p>
+                        <p className="section-body">We introduced a distinctive visual style through subtle animations and thoughtful use of empty space, ensuring the interface felt engaging without compromising clarity.</p>
 
-                        <div className="solution-layout">
-                            {/* Images stacked vertically on the left */}
-                            <div className="solution-images">
-                                <img src={relishLockscreen} alt="Relish Lockscreen" className="project-side-img solution-img" />
-                                <img src={relishFeed} alt="Relish Feed" className="project-side-img solution-img" />
+                        <div className="ui-example-container" style={{ marginTop: '3rem' }}>
+                            <p className="comp-sub-title" style={{ marginTop: 0, marginBottom: '2rem' }}>a) Buttons</p>
+                            <div className="ui-example-row" style={{ paddingTop: 0 }}>
+                                <div className="ui-example-img-wrapper">
+                                    <img src={cybersea_button_ex_1} alt="Military button hover" className="ui-example-img" />
+                                </div>
+                                <div className="ui-example-label">Military style button hover</div>
+                            </div>
+                            <div className="ui-example-row">
+                                <div className="ui-example-img-wrapper">
+                                    <img src={cybersea_button_ex_2} alt="Not on all buttons" className="ui-example-img" style={{ objectPosition: 'center bottom' }} />
+                                </div>
+                                <div className="ui-example-label">But not on all buttons!</div>
                             </div>
 
-                            {/* Personas stacked vertically on the right */}
-                            <div className="solution-text">
-                                <div className="solution-persona">
-                                    <div className="solution-persona-header">
-                                        <div className="persona-icon-wrapper solution-persona-icon">
-                                            <img src={personaAlex} alt="Alex" className="persona-img-circle" />
-                                        </div>
-                                        <h4 className="persona-name">Alex:</h4>
-                                    </div>
-                                    <ul className="solution-list">
-                                        <li>Now can track everything she eats in a calendar view.</li>
-                                        <li>Helps hold her accountable when she can see all her meals laid out in front of her.</li>
-                                    </ul>
-                                </div>
-
-                                <div className="solution-persona">
-                                    <div className="solution-persona-header">
-                                        <div className="persona-icon-wrapper solution-persona-icon">
-                                            <img src={personaBen} alt="Ben" className="persona-img-circle" />
-                                        </div>
-                                        <h4 className="persona-name">Ben:</h4>
-                                    </div>
-                                    <ul className="solution-list">
-                                        <li>Receives a <strong>notification</strong> to remind him to eat.</li>
-                                        <li>Is motivated to eat so he can fill out his calendar.</li>
-                                    </ul>
-                                </div>
-
-                                <div className="solution-persona">
-                                    <div className="solution-persona-header">
-                                        <div className="persona-icon-wrapper solution-persona-icon">
-                                            <img src={personaCam} alt="Cam" className="persona-img-circle" />
-                                        </div>
-                                        <h4 className="persona-name">Cam:</h4>
-                                    </div>
-                                    <ul className="solution-list">
-                                        <li>Can keep up with his friends and what they eat on the "Friends" tab, making him feel less lonely!</li>
-                                    </ul>
+                            <div style={{ marginTop: '2.5rem' }}>
+                                <p className="comp-sub-title" style={{ marginBottom: '1.5rem' }}>b) Color Scheme</p>
+                                <p className="section-body">Using an intentional and consistent color scheme helps the product look more cohesive.</p>
+                                <div className="color-palette-pill" style={{ marginTop: '1rem' }}>
+                                    <div className="color-segment"><div className="color-dot" style={{ backgroundColor: '#186172' }}></div></div>
+                                    <div className="color-segment"><div className="color-dot" style={{ backgroundColor: '#0f3f57' }}></div></div>
+                                    <div className="color-segment"><div className="color-dot" style={{ backgroundColor: '#080808' }}></div></div>
+                                    <div className="color-segment"><div className="color-dot" style={{ backgroundColor: '#3d80fd' }}></div></div>
+                                    <div className="color-segment"><div className="color-dot" style={{ backgroundColor: '#fe3e46' }}></div></div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="competitive-analysis" className="problem-section">
-                        <span className="section-label">COMPETITIVE ANALYSIS</span>
-                        <p className="overview-title">
-                            Researching similar apps & understanding why they work
-                        </p>
-
-                        <p className="comp-sub-title">01 BeReal</p>
-                        <div className="comp-section-row">
-                            <div className="comp-analysis-grid">
-                                <div className="comp-card">
-                                    <div className="comp-img-wrapper">
-                                        <img src={bereal1} alt="BeReal Profile" className="comp-img" />
-                                    </div>
-                                    <span className="comp-card-label">BEREAL: USER PROFILE & HISTORY</span>
-                                </div>
-                                <div className="comp-card">
-                                    <div className="comp-img-wrapper">
-                                        <img src={bereal2} alt="BeReal Calendar" className="comp-img" />
-                                    </div>
-                                    <span className="comp-card-label">BEREAL: MONTHLY CALENDAR VIEW</span>
-                                </div>
-                            </div>
-                            <div className="comp-text-content">
-                                <ul className="comp-bullets">
-                                    <li>Sends a <strong>notification</strong> to users every day, reminding them to take a pic.</li>
-                                    <li>Assembles pics into a <strong>calendar view</strong>.</li>
-                                </ul>
-                                <div className="comp-pros-cons">
-                                    <div className="comp-pros">
-                                        <p className="comp-pros-cons-label">Pros:</p>
-                                        <ul className="comp-pros-cons-list">
-                                            <li>The calendar view is very clean and easy to navigate.</li>
-                                        </ul>
-                                    </div>
-                                    <div className="comp-cons">
-                                        <p className="comp-pros-cons-label">Cons:</p>
-                                        <ul className="comp-pros-cons-list">
-                                            <li>Not enough motivation to take a pic every day.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                    <div className="wip-container">
+                        <div className="wip-overlay">
+                            <div className="wip-message">The rest of the case study is currently a work in progress!</div>
                         </div>
-
-                        <p className="comp-sub-title">02 Beli</p>
-                        <div className="comp-section-row">
-                            <div className="comp-analysis-grid">
-                                <div className="comp-card">
-                                    <div className="comp-img-wrapper">
-                                        <img src={beli1} alt="Beli Rating" className="comp-img" />
-                                    </div>
-                                    <span className="comp-card-label">BELI: INTERACTIVE RATING SYSTEM</span>
-                                </div>
-                                <div className="comp-card">
-                                    <div className="comp-img-wrapper">
-                                        <img src={beli2} alt="Beli Lists" className="comp-img" />
-                                    </div>
-                                    <span className="comp-card-label">BELI: SEARCH & PERSONALIZED LISTS</span>
-                                </div>
+                        <div className="wip-blur-wrapper">
+                            <div id="design-process" className="problem-section">
+                                <span className="section-label">DESIGN PROCESS</span>
+                                {/* Content removed */}
                             </div>
-                            <div className="comp-text-content">
-                                <ul className="comp-bullets">
-                                    <li>Tracks restaurants by allowing users to fill out and <strong>rate</strong> every restaurant they try.</li>
-                                </ul>
-                                <div className="comp-pros-cons">
-                                    <div className="comp-pros">
-                                        <p className="comp-pros-cons-label">Pros:</p>
-                                        <ul className="comp-pros-cons-list">
-                                            <li>Organized way for users to keep track of restaurants.</li>
-                                        </ul>
+                            <div id="rough-draft" className="problem-section">
+                                <span className="section-label">ROUGH DRAFT</span>
+                                {/* Placeholder for new contents */}
+                            </div>
+
+                            <div id="results" className="problem-section">
+                                <span className="section-label">RESULTS</span>
+                                {/* Content removed */}
+                            </div>
+                            <div id="reflection" className="problem-section">
+                                <span className="section-label">REFLECTION</span>
+                                <p className="overview-title">What would I have done different?</p>
+                                <div className="reflection-grid">
+                                    <div className="reflection-col">
+                                        <h3 className="reflection-heading reflection-heading--cursive">shift my priorities.</h3>
+                                        <p className="section-body">I would focus less on the unrealistic ties to the prompt and focus more on the <strong>impact</strong> it has on the users.</p>
                                     </div>
-                                    <div className="comp-cons">
-                                        <p className="comp-pros-cons-label">Cons:</p>
-                                        <ul className="comp-pros-cons-list">
-                                            <li>Users may not be able to constantly try new restaurants.</li>
-                                        </ul>
+                                    <div className="reflection-col">
+                                        <h3 className="reflection-heading reflection-heading--cursive">More low-fidelity prototypes.</h3>
+                                        <p className="section-body">I would create different <strong>solutions</strong> to the problem, taking advantage of others' <strong>feedback.</strong></p>
+                                    </div>
+                                    <div className="reflection-col">
+                                        <h3 className="reflection-heading reflection-heading--cursive">Accessibility.</h3>
+                                        <p className="section-body">An essential factor that is often overlooked to implement aesthetics. I would recreate certain parts of Relish to allow for <strong>more accessible usage</strong>, such as increasing the size of each meal on the calendars.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="rough-draft" className="problem-section">
-                        <span className="section-label">ROUGH DRAFT</span>
-                        <p className="overview-title">Designing & iterating quickly</p>
-                        <p className="comp-sub-title">a) Rough sketches</p>
-                        <img src={roughSketch} alt="Rough Sketch of Relish app screens" className="rough-sketch-img" />
-                        <span className="section-label" style={{ marginTop: '5rem' }}>DESIGN CHOICES</span>
-                        <p className="comp-sub-title" style={{ marginTop: '1rem' }}>a) Calendar vs. List View</p>
-
-                        <div className="comparison-container">
-                            <div className="comparison-col">
-                                <img src={relishCalendarSketch} alt="Relish Calendar Sketch" className="comparison-img" />
-                                <div className="comparison-card" style={{ backgroundColor: '#f7f7f7' }}>
-                                    <ul className="comparison-list">
-                                        <li><CheckIcon /> Easy to visualize</li>
-                                        <li><CheckIcon /> Encourages streak mentality</li>
-                                        <li><CheckIcon /> Good for habit formation</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className="comparison-col">
-                                <img src={relishListSketch} alt="Relish List Sketch" className="comparison-img" />
-                                <div className="comparison-card" style={{ backgroundColor: '#f7f7f7' }}>
-                                    <ul className="comparison-list">
-                                        <li><CheckIcon /> Better for detailed browsing</li>
-                                        <li><CrossIcon /> Too dense and difficult to navigate</li>
-                                        <li><CrossIcon /> Unable to easily see patterns and habits</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="reflection" className="problem-section">
-                        <span className="section-label">REFLECTION</span>
-                        <p className="overview-title">What would I have done different?</p>
-                        <div className="reflection-grid">
-                            <div className="reflection-col">
-                                <h3 className="reflection-heading reflection-heading--cursive">shift my priorities.</h3>
-                                <p className="section-body">I would focus less on the unrealistic ties to the prompt and focus more on the <strong>impact</strong> it has on the users.</p>
-                            </div>
-                            <div className="reflection-col">
-                                <h3 className="reflection-heading reflection-heading--cursive">More low-fidelity prototypes.</h3>
-                                <p className="section-body">I would create different <strong>solutions</strong> to the problem, taking advantage of others' <strong>feedback.</strong></p>
-                            </div>
-                            <div className="reflection-col">
-                                <h3 className="reflection-heading reflection-heading--cursive">Accessibility.</h3>
-                                <p className="section-body">An essential factor that is often overlooked to implement aesthetics. I would recreate certain parts of Relish to allow for <strong>more accessible usage</strong>, such as increasing the size of each meal on the calendars.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </main>
             </div>
         </div>

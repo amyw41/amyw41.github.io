@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import '../App.css'
 import useScrollReveal from '../hooks/useScrollReveal'
 import relishMain from '../assets/relish-main.png'
@@ -14,8 +15,8 @@ import roughSketch from '../assets/rough-sketch.png'
 import relishListSketch from '../assets/relish-list-sketch.jpg'
 import relishCalendarSketch from '../assets/relish-calendar-sketch.jpg'
 import personaBen from '../assets/persona-ben.png'
-import personaAlex from '../assets/persona-alex.png'
-import personaCam from '../assets/persona-cam.png'
+import personaAlex from '../assets/persona-cam.png'
+import personaCam from '../assets/persona-alex.png'
 
 const sectionsData = [
     { id: 'overview', title: 'Overview' },
@@ -144,6 +145,9 @@ function Relish() {
 
             <div className="case-study-container">
                 <aside className="case-study-sidebar">
+                    <Link to="/" className="sidebar-back">
+                        <span className="back-arrow">←</span> HOME
+                    </Link>
                     <nav className="sidebar-nav">
                         <ul>
                             {sectionsData.map((section) => (
@@ -192,32 +196,32 @@ function Relish() {
                                 Thus, we were able to characterize our app-users as:
                             </p>
 
-                             <div className="persona-grid">
-                                 <div className="persona-card">
-                                     <div className="persona-icon-wrapper">
-                                         <img src={personaAlex} alt="Alex" className="persona-img-circle" />
-                                     </div>
-                                     <h4 className="persona-name">Alex</h4>
-                                     <span className="persona-category">The Busy, Stressed Uni Student</span>
-                                     <p className="persona-quote">"I struggle to eat accountably and can never follow my diet."</p>
-                                 </div>
-                                 <div className="persona-card">
-                                     <div className="persona-icon-wrapper">
-                                         <img src={personaBen} alt="Ben" className="persona-img-circle" />
-                                     </div>
-                                     <h4 className="persona-name">Ben</h4>
-                                     <span className="persona-category">The Absent Minded Worker</span>
-                                     <p className="persona-quote">"I keep forgetting to eat at work."</p>
-                                 </div>
-                                 <div className="persona-card">
-                                     <div className="persona-icon-wrapper">
-                                         <img src={personaCam} alt="Cam" className="persona-img-circle" />
-                                     </div>
-                                     <h4 className="persona-name">Cam</h4>
-                                     <span className="persona-category">The Lonely Eater</span>
-                                     <p className="persona-quote">"I feel lonely when I eat and it isn't fun."</p>
-                                 </div>
-                             </div>
+                            <div className="persona-grid">
+                                <div className="persona-card">
+                                    <div className="persona-icon-wrapper">
+                                        <img src={personaAlex} alt="Alex" className="persona-img-circle" />
+                                    </div>
+                                    <h4 className="persona-name">Alex</h4>
+                                    <span className="persona-category">The Busy, Stressed Uni Student</span>
+                                    <p className="persona-quote">"I struggle to eat accountably and can never follow my diet."</p>
+                                </div>
+                                <div className="persona-card">
+                                    <div className="persona-icon-wrapper">
+                                        <img src={personaBen} alt="Ben" className="persona-img-circle" />
+                                    </div>
+                                    <h4 className="persona-name">Ben</h4>
+                                    <span className="persona-category">The Absent Minded Worker</span>
+                                    <p className="persona-quote">"I keep forgetting to eat at work."</p>
+                                </div>
+                                <div className="persona-card">
+                                    <div className="persona-icon-wrapper">
+                                        <img src={personaCam} alt="Cam" className="persona-img-circle" />
+                                    </div>
+                                    <h4 className="persona-name">Cam</h4>
+                                    <span className="persona-category">The Lonely Eater</span>
+                                    <p className="persona-quote">"I feel lonely when I eat and it isn't fun."</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -288,13 +292,13 @@ function Relish() {
                                     <div className="comp-img-wrapper">
                                         <img src={bereal1} alt="BeReal Profile" className="comp-img" />
                                     </div>
-                                    <span className="comp-card-label">BEREAL: USER PROFILE & HISTORY</span>
+                                    <span className="comp-card-label">USER PROFILE & HISTORY</span>
                                 </div>
                                 <div className="comp-card">
                                     <div className="comp-img-wrapper">
                                         <img src={bereal2} alt="BeReal Calendar" className="comp-img" />
                                     </div>
-                                    <span className="comp-card-label">BEREAL: MONTHLY CALENDAR VIEW</span>
+                                    <span className="comp-card-label">MONTHLY CALENDAR VIEW</span>
                                 </div>
                             </div>
                             <div className="comp-text-content">

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import './App.css'
+import './App.css' // Updated play page
 import CursorCircle from './components/CursorCircle'
 import Taskbar from './components/Taskbar'
 import Home from './pages/Home'
