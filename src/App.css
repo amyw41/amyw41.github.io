@@ -86,14 +86,14 @@ img {
 
 .cursor-circle.cursor-project {
   width: 165px;
-  height: 38px;
+  height: 34px;
   background-color: #111;
   border-color: #111;
   transform: translate(-12px, -50%);
   justify-content: center;
 }
 
-.project-wip .project-preview-square::after {
+/* .project-wip .project-preview-square::after {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -124,7 +124,7 @@ img {
 
 .project-wip {
   cursor: default !important;
-}
+} */
 
 .cursor-text {
   font-family: 'Raleway', sans-serif;
@@ -268,6 +268,7 @@ img {
     opacity: 0;
     clip-path: inset(0 0 100% 0);
   }
+
   to {
     opacity: 1;
     clip-path: inset(0 0 0 0);
@@ -337,15 +338,29 @@ img {
 }
 
 .project-preview-square-first {
-  background: #ddeeff;
+  background: radial-gradient(ellipse 80% 70% at 70% 30%,
+      #daeef8 0%,
+      #c8e4f4 40%,
+      #b5d9f0 75%,
+      #a3ceeb 100%);
 }
 
 .project-preview-square-second {
-  background: #a3b5a2;
+  background: linear-gradient(135deg,
+      #cddccc 0%,
+      #bccebb 30%,
+      #acc0ab 60%,
+      #9db39c 100%);
+  border-color: #acc0ab;
 }
 
 .project-preview-square-third {
-  background: #ffe2c3;
+  background: conic-gradient(from 200deg at 30% 65%,
+      #fde8cc,
+      #fcd9b4,
+      #fde0c0,
+      #feeedd,
+      #fde8cc);
 }
 
 .project-preview-square-third .project-side-img {
@@ -353,7 +368,11 @@ img {
 }
 
 .project-preview-square-fourth {
-  background: #ffe1e7;
+  background: radial-gradient(circle at 25% 75%,
+      #fce4e9 0%,
+      #f9d3da 35%,
+      #f5c3cc 65%,
+      #f0b4be 100%);
 }
 
 .project-side-by-side-container {
@@ -2572,6 +2591,70 @@ body.relish-page {
   }
 }
 
+.before-after-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+/* Line down the middle */
+.before-after-grid::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #d4d4d4;
+  transform: translateX(-50%);
+}
+
+.comparison-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.comparison-label.before { color: #888; }
+.comparison-label.after { color: #3d80fd; }
+
+.comparison-img-box {
+  background: #0a0a0a;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #333;
+  margin-bottom: 1.5rem;
+  aspect-ratio: 5 / 4;
+}
+
+.comparison-img-box .comparison-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.section-body.small {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .before-after-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .before-after-grid::after {
+    display: none; /* Hide line on mobile */
+  }
+}
+
 /* Cybersea Specific Styles */
 .cybersea-hero-video-container {
   width: 85%;
@@ -2931,7 +3014,7 @@ body.relish-page {
 }
 
 .wip-blur-wrapper {
-  filter: blur(8px);
+  /* filter: blur(8px); */
   pointer-events: none;
   user-select: none;
   opacity: 0.6;

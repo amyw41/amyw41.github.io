@@ -20,6 +20,12 @@ import cyberseaModel from '../assets/cybersea-model.png'
 import cyberseaHero from '../assets/cybersea-hero-new.png'
 import cybersea_button_ex_1 from '../assets/cybersea-button-ex-1.png'
 import cybersea_button_ex_2 from '../assets/cybersea-button-ex-2.png'
+import cyberseaBeforeDropdown from '../assets/cybersea-before-dropdown.png'
+import cyberseaAfterDropdown from '../assets/cybersea-after-dropdown.png'
+import cyberseaBeforePanel from '../assets/cybersea-before-panel.png'
+import cyberseaAfterPanel from '../assets/cybersea-after-panel.png'
+import cyberseaBeforePanel2 from '../assets/cybersea-before-panel-2.png'
+import cyberseaAfterPanel2 from '../assets/cybersea-after-panel-2.png'
 
 const sectionsData = [
     { id: 'overview', title: 'Overview' },
@@ -342,41 +348,75 @@ function Cybersea() {
                         </div>
                     </div>
 
-                    <div className="wip-container">
-                        <div className="wip-overlay">
-                            <div className="wip-message">The rest of the case study is currently a work in progress!</div>
-                        </div>
-                        <div className="wip-blur-wrapper">
-                            <div id="design-process" className="problem-section">
-                                <span className="section-label">DESIGN PROCESS</span>
-                                {/* Content removed */}
-                            </div>
-                            <div id="rough-draft" className="problem-section">
-                                <span className="section-label">ROUGH DRAFT</span>
-                                {/* Placeholder for new contents */}
-                            </div>
+                    <div id="design-process" className="problem-section">
+                        <span className="section-label">DESIGN PROCESS</span>
+                        <h2 className="overview-title">Iterating on Visual Hierarchy</h2>
 
-                            <div id="results" className="problem-section">
-                                <span className="section-label">RESULTS</span>
-                                {/* Content removed */}
-                            </div>
-                            <div id="reflection" className="problem-section">
-                                <span className="section-label">REFLECTION</span>
-                                <p className="overview-title">What would I have done different?</p>
-                                <div className="reflection-grid">
-                                    <div className="reflection-col">
-                                        <h3 className="reflection-heading reflection-heading--cursive">Shift my priorities.</h3>
-                                        <p className="section-body">I would focus less on the unrealistic ties to the prompt and focus more on the <strong>impact</strong> it has on the users.</p>
+                        <div className="ui-example-container">
+                            <h3 className="comp-sub-title">01 Dropdown Menu</h3>
+                            <div className="before-after-grid">
+                                <div className="comparison-col">
+                                    <span className="comparison-label before">BEFORE</span>
+                                    <div className="comparison-img-box">
+                                        <img src={cyberseaBeforeDropdown} alt="Before dropdown" className="comparison-img" />
                                     </div>
-                                    <div className="reflection-col">
-                                        <h3 className="reflection-heading reflection-heading--cursive">More low-fidelity prototypes.</h3>
-                                        <p className="section-body">I would create different <strong>solutions</strong> to the problem, taking advantage of others' <strong>feedback.</strong></p>
-                                    </div>
-                                    <div className="reflection-col">
-                                        <h3 className="reflection-heading reflection-heading--cursive">Accessibility.</h3>
-                                        <p className="section-body">An essential factor that is often overlooked to implement aesthetics. I would recreate certain parts of Relish to allow for <strong>more accessible usage</strong>, such as increasing the size of each meal on the calendars.</p>
-                                    </div>
+                                    <p className="section-body small">Dense, dark background with heavy blue selection bars made it hard to scan.</p>
                                 </div>
+                                <div className="comparison-col">
+                                    <span className="comparison-label after">AFTER</span>
+                                    <div className="comparison-img-box">
+                                        <img src={cyberseaAfterDropdown} alt="After dropdown" className="comparison-img" />
+                                    </div>
+                                    <p className="section-body small">Cleaned up the spacing and removed the heavy fills for a more lightweight, tactical feel.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="ui-example-container">
+                            <h3 className="comp-sub-title">02 Action Panels</h3>
+                            <div className="before-after-grid">
+                                <div className="comparison-col">
+                                    <span className="comparison-label before">BEFORE</span>
+                                    <div className="comparison-img-box">
+                                        <img src={cyberseaBeforePanel} alt="Before panel" className="comparison-img" />
+                                    </div>
+                                    <p className="section-body small">Too many solid blue blocks competing for attention.</p>
+                                </div>
+                                <div className="comparison-col">
+                                    <span className="comparison-label after">AFTER</span>
+                                    <div className="comparison-img-box">
+                                        <img src={cyberseaAfterPanel} alt="After panel" className="comparison-img" />
+                                    </div>
+                                    <p className="section-body small">Introduced outlines and simplified icons to emphasize the primary "AI Analysis" action.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rough-draft" className="problem-section">
+                        <span className="section-label">ROUGH DRAFT</span>
+                        {/* Placeholder for new contents */}
+                    </div>
+
+                    <div id="results" className="problem-section">
+                        <span className="section-label">RESULTS</span>
+                        {/* Content removed */}
+                    </div>
+                    <div id="reflection" className="problem-section">
+                        <span className="section-label">REFLECTION</span>
+                        <p className="overview-title">What would I have done different?</p>
+                        <div className="reflection-grid">
+                            <div className="reflection-col">
+                                <h3 className="reflection-heading reflection-heading--cursive">Shift my priorities.</h3>
+                                <p className="section-body">I would focus less on the unrealistic ties to the prompt and focus more on the <strong>impact</strong> it has on the users.</p>
+                            </div>
+                            <div className="reflection-col">
+                                <h3 className="reflection-heading reflection-heading--cursive">More low-fidelity prototypes.</h3>
+                                <p className="section-body">I would create different <strong>solutions</strong> to the problem, taking advantage of others' <strong>feedback.</strong></p>
+                            </div>
+                            <div className="reflection-col">
+                                <h3 className="reflection-heading reflection-heading--cursive">Accessibility.</h3>
+                                <p className="section-body">An essential factor that is often overlooked to implement aesthetics. I would recreate certain parts of Relish to allow for <strong>more accessible usage</strong>, such as increasing the size of each meal on the calendars.</p>
                             </div>
                         </div>
                     </div>
