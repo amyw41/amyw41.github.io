@@ -365,7 +365,7 @@ function Cybersea() {
                                 <p className="overview-title">What would I have done different?</p>
                                 <div className="reflection-grid">
                                     <div className="reflection-col">
-                                        <h3 className="reflection-heading reflection-heading--cursive">shift my priorities.</h3>
+                                        <h3 className="reflection-heading reflection-heading--cursive">Shift my priorities.</h3>
                                         <p className="section-body">I would focus less on the unrealistic ties to the prompt and focus more on the <strong>impact</strong> it has on the users.</p>
                                     </div>
                                     <div className="reflection-col">

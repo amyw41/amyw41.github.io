@@ -12,6 +12,7 @@ import bereal2 from '../assets/bereal-2.jpg'
 import beli1 from '../assets/beli-1.jpg'
 import beli2 from '../assets/beli-2.jpg'
 import roughSketch from '../assets/rough-sketch.png'
+import relishUserFlow from '../assets/relish-user-flow.png'
 import relishListSketch from '../assets/relish-list-sketch.jpg'
 import relishCalendarSketch from '../assets/relish-calendar-sketch.jpg'
 import personaBen from '../assets/persona-ben.png'
@@ -363,7 +364,9 @@ function Relish() {
                     <div id="rough-draft" className="problem-section">
                         <span className="section-label">ROUGH DRAFT</span>
                         <p className="overview-title">Designing & iterating quickly</p>
-                        <p className="comp-sub-title">a) Rough sketches</p>
+                        <p className="comp-sub-title">a) User flow</p>
+                        <img src={relishUserFlow} alt="Relish User Flow" className="rough-sketch-img" />
+                        <p className="comp-sub-title">b) Rough sketches</p>
                         <img src={roughSketch} alt="Rough Sketch of Relish app screens" className="rough-sketch-img" />
                         <span className="section-label" style={{ marginTop: '5rem' }}>DESIGN CHOICES</span>
                         <p className="comp-sub-title" style={{ marginTop: '1rem' }}>a) Calendar vs. List View</p>
@@ -397,21 +400,19 @@ function Relish() {
                         <p className="overview-title">What would I have done different?</p>
                         <div className="reflection-grid">
                             <div className="reflection-col">
-                                <h3 className="reflection-heading reflection-heading--cursive">shift my priorities.</h3>
+                                <h3 className="reflection-heading reflection-heading--cursive">Shift my priorities.</h3>
                                 <p className="section-body">I would focus less on the unrealistic ties to the prompt and focus more on the <strong>impact</strong> it has on the users.</p>
-                            </div>
-                            <div className="reflection-col">
-                                <h3 className="reflection-heading reflection-heading--cursive">More low-fidelity prototypes.</h3>
-                                <p className="section-body">I would create different <strong>solutions</strong> to the problem, taking advantage of others' <strong>feedback.</strong></p>
                             </div>
                             <div className="reflection-col">
                                 <h3 className="reflection-heading reflection-heading--cursive">Accessibility.</h3>
                                 <p className="section-body">An essential factor that is often overlooked to implement aesthetics. I would recreate certain parts of Relish to allow for <strong>more accessible usage</strong>, such as increasing the size of each meal on the calendars.</p>
                             </div>
+                            <div className="reflection-col">
+                                <h3 className="reflection-heading reflection-heading--cursive">More low-fidelity prototypes.</h3>
+                                <p className="section-body">I would create different <strong>solutions</strong> to the problem, taking advantage of others' <strong>feedback.</strong></p>
+                            </div>
                         </div>
                     </div>
-
-
                 </main>
             </div>
         </div>
