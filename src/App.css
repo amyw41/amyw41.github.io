@@ -24,7 +24,7 @@ img {
 
 ::-moz-selection {
   background-color: rgba(17, 17, 17, 0.3);
-  color: #fff;
+  color: #000000;
 }
 
 .footer ::selection {
@@ -38,7 +38,7 @@ img {
 }
 
 .page-fade-in {
-  animation: pageFadeIn 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation: pageFadeIn 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
 @keyframes pageFadeIn {
@@ -136,8 +136,6 @@ img {
   opacity: 0;
   transform: translateY(4px);
   transition: opacity 0.25s ease, transform 0.25s ease;
-  user-select: none;
-  -webkit-user-select: none;
 }
 
 .cursor-circle.cursor-project .cursor-text {
@@ -238,7 +236,7 @@ img {
 .load-reveal {
   opacity: 0;
   transform: translateY(30px);
-  animation: loadReveal 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation: loadReveal 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
 @keyframes loadReveal {
@@ -278,15 +276,15 @@ img {
 }
 
 .stagger-1 {
-  animation-delay: 0.1s;
+  animation-delay: 0.05s;
 }
 
 .stagger-2 {
-  animation-delay: 0.3s;
+  animation-delay: 0.15s;
 }
 
 .stagger-3 {
-  animation-delay: 0.55s;
+  animation-delay: 0.25s;
 }
 
 .project-preview-square {
@@ -786,35 +784,35 @@ body {
 
 .page-container>* {
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .page-container>*:nth-child(1) {
-  animation-delay: 0.1s;
+  animation-delay: 0.05s;
 }
 
 .page-container>*:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 
 .page-container>*:nth-child(3) {
-  animation-delay: 0.3s;
+  animation-delay: 0.15s;
 }
 
 .page-container>*:nth-child(4) {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 
 .page-container>*:nth-child(5) {
-  animation-delay: 0.5s;
+  animation-delay: 0.25s;
 }
 
 .page-container>*:nth-child(6) {
-  animation-delay: 0.6s;
+  animation-delay: 0.3s;
 }
 
 .page-container>*:nth-child(7) {
-  animation-delay: 0.7s;
+  animation-delay: 0.35s;
 }
 
 /* ===== About page static gradient ===== */
