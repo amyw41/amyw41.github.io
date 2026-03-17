@@ -3,7 +3,7 @@ function About() {
     <>
       <div className="about-gradient" aria-hidden="true"></div>
       <section className="page-container">
-        <h1 className="about-title">hi, I'm amy!</h1>
+        <h1 className="about-title">Hi, I'm Amy!</h1>
         <p className="about-description">I'm a Management Engineering student at Waterloo <span style={{ whiteSpace: 'nowrap' }}>࣪⊹ 𑣲₍ ᐢ. .ᐢ₎˖ °⋆</span></p>
         <p className="about-description">I love analyzing ordinary things & finding the beauty within - which is why I pursued design! Currently, I'm exploring how aesthetics and functionality come together to create *delightful* experiences.</p>
         <p className="about-description">In my free time, I…

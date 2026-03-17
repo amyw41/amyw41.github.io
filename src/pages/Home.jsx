@@ -50,7 +50,7 @@ function Home() {
       path += ` S ${cp3x} 120, ${endX_Up} 120`
     }
 
-    const textBase = "see my work! "
+    const textBase = "view my work! "
     const textRepeats = Math.ceil(totalViewBoxWidth / 40)
     const text = textBase.repeat(textRepeats)
 
