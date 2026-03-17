@@ -855,8 +855,8 @@ body {
   width: 1200px;
   height: 550px;
   background: radial-gradient(ellipse 70% 58% at 50% 50%,
-      rgba(0, 102, 204, 0.35) 0%,
-      rgba(0, 163, 255, 0.1) 40%,
+      rgba(0, 102, 204, 0.15) 0%,
+      rgba(0, 163, 255, 0.04) 40%,
       transparent 80%);
   pointer-events: none;
   z-index: 0;
