@@ -77,6 +77,20 @@ img {
   justify-content: center;
   overflow: hidden;
   white-space: nowrap;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.cursor-circle::selection,
+.cursor-circle *::selection {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.cursor-circle::-moz-selection,
+.cursor-circle *::-moz-selection {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .cursor-circle.cursor-hover {
