@@ -18,22 +18,22 @@ img {
 }
 
 ::selection {
-  background-color: #111;
+  background-color: rgba(17, 17, 17, 0.4);
   color: #fff;
 }
 
 ::-moz-selection {
-  background-color: #111;
+  background-color: rgba(17, 17, 17, 0.4);
   color: #fff;
 }
 
 .footer ::selection {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.4);
   color: #111;
 }
 
 .footer ::-moz-selection {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.4);
   color: #111;
 }
 
