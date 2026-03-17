@@ -21,31 +21,46 @@ function Play() {
           {/* Col 1: woongki on top, yuri below */}
           <div className="play-item">
             <img src={woongki} alt="Woongki" className="play-art-img" />
-            <p className="play-caption">2023 AHOF Cha Woongki</p>
+            <div className="play-caption">
+              <span>AHOF Cha Woongki</span>
+              <span>2023</span>
+            </div>
           </div>
 
           {/* Col 2: zaizai */}
           <div className="play-item">
             <img src={zaizai} alt="Zaizai" className="play-art-img" />
-            <p className="play-caption">2023 Niu Zaizai</p>
+            <div className="play-caption">
+              <span>Niu Zaizai</span>
+              <span>2023</span>
+            </div>
           </div>
 
           {/* Col 3: chihen on top, minase below — wrapped to keep in same column */}
           <div className="play-col-stack">
             <div className="play-item">
               <img src={chihen} alt="Chihen" className="play-art-img" />
-              <p className="play-caption">WIP - 2026 AHOF Chihen</p>
+              <div className="play-caption">
+                <span>WIP - AHOF Chihen</span>
+                <span>2026</span>
+              </div>
             </div>
             <div className="play-item">
               <img src={minase} alt="Minase" className="play-art-img" />
-              <p className="play-caption">WIP - 2026 Junsei Motojima</p>
+              <div className="play-caption">
+                <span>WIP - Junsei Motojima</span>
+                <span>2026</span>
+              </div>
             </div>
           </div>
 
           {/* Col 1 continued: yuri */}
           <div className="play-item">
             <img src={yuri} alt="Yuri" className="play-art-img" />
-            <p className="play-caption">2025 Jo Yuri (Player 222)</p>
+            <div className="play-caption">
+              <span>Jo Yuri (Player 222)</span>
+              <span>2025</span>
+            </div>
           </div>
         </div>
       </section>

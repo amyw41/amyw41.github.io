@@ -3063,6 +3063,17 @@ body.relish-page {
 }
 
 /* ===== Play Gallery Masonry ===== */
+.play-container {
+  max-width: none;
+  margin-right: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .play-container {
+    margin-right: 1.5rem;
+  }
+}
+
 .play-gallery-grid {
   columns: 3;
   column-gap: 2rem;
@@ -3091,8 +3102,9 @@ body.relish-page {
   font-weight: 500;
   color: #777;
   margin: 0;
-  text-align: left;
   letter-spacing: 0.02em;
+  display: flex;
+  justify-content: space-between;
 }
 
 .play-col-stack {
