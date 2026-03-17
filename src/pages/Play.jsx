@@ -18,48 +18,52 @@ function Play() {
         <h1 className="about-title">In my free time, I dabble in a little art.</h1>
 
         <div className="play-gallery-grid" style={{ marginTop: '2rem', position: 'relative', zIndex: 1 }}>
-          {/* Col 1: woongki on top, yuri below */}
-          <div className="play-item">
-            <img src={woongki} alt="Woongki" className="play-art-img" />
-            <div className="play-caption">
-              <span>AHOF - Cha Woongki</span>
-              <span>2023</span>
-            </div>
-          </div>
-
-          {/* Col 2: zaizai */}
-          <div className="play-item">
-            <img src={zaizai} alt="Zaizai" className="play-art-img" />
-            <div className="play-caption">
-              <span>Niu Zaizai</span>
-              <span>2023</span>
-            </div>
-          </div>
-
-          {/* Col 3: chihen on top, minase below — wrapped to keep in same column */}
-          <div className="play-col-stack">
+          {/* Column 1 */}
+          <div className="play-gallery-col">
             <div className="play-item">
-              <img src={chihen} alt="Chihen" className="play-art-img" />
+              <img src={woongki} alt="Woongki" className="play-art-img" />
               <div className="play-caption">
-                <span>[WIP] AHOF - Chihen</span>
-                <span>2026</span>
+                <span>AHOF - Cha Woongki</span>
+                <span>2023</span>
               </div>
             </div>
             <div className="play-item">
-              <img src={minase} alt="Minase" className="play-art-img" />
+              <img src={yuri} alt="Yuri" className="play-art-img" />
               <div className="play-caption">
-                <span>[WIP] Junsei Motojima</span>
-                <span>2026</span>
+                <span>Squid Game - Jo Yuri (Player 222)</span>
+                <span>2025</span>
               </div>
             </div>
           </div>
 
-          {/* Col 1 continued: yuri */}
-          <div className="play-item">
-            <img src={yuri} alt="Yuri" className="play-art-img" />
-            <div className="play-caption">
-              <span>Squid Game - Jo Yuri (Player 222)</span>
-              <span>2025</span>
+          {/* Column 2 */}
+          <div className="play-gallery-col">
+            <div className="play-item">
+              <img src={zaizai} alt="Zaizai" className="play-art-img" />
+              <div className="play-caption">
+                <span>Niu Zaizai</span>
+                <span>2023</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Column 3 */}
+          <div className="play-gallery-col">
+            <div className="play-col-stack">
+              <div className="play-item">
+                <img src={chihen} alt="Chihen" className="play-art-img" />
+                <div className="play-caption">
+                  <span>[WIP] AHOF - Chihen</span>
+                  <span>2026</span>
+                </div>
+              </div>
+              <div className="play-item">
+                <img src={minase} alt="Minase" className="play-art-img" />
+                <div className="play-caption">
+                  <span>[WIP] Junsei Motojima</span>
+                  <span>2026</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
