@@ -361,7 +361,9 @@ function Cybersea() {
                                         <img src={cyberseaBeforeDropdown} alt="Before dropdown" className="comparison-img" />
                                     </div>
                                     <ul className="comparison-bullets">
-                                        <li>Dense, dark background with heavy blue selection bars made it hard to scan.</li>
+                                        <li>Dropdown menu, making it difficult to see all options</li>
+                                        <li>Too much empty space around the page</li>
+                                        <li>Red selection box made navigation less clear</li>
                                     </ul>
                                 </div>
                                 <div className="comparison-col">
@@ -370,7 +372,8 @@ function Cybersea() {
                                         <img src={cyberseaAfterDropdown} alt="After dropdown" className="comparison-img" />
                                     </div>
                                     <ul className="comparison-bullets">
-                                        <li>Cleaned up the spacing and removed the heavy fills for a more lightweight, tactical feel.</li>
+                                        <li>Simpler and easier on the eyes</li>
+                                        <li>Lists all options out, allowing user to scan the page faster</li>
                                     </ul>
                                 </div>
                             </div>
@@ -385,7 +388,7 @@ function Cybersea() {
                                         <img src={cyberseaBeforePanel} alt="Before panel" className="comparison-img" />
                                     </div>
                                     <ul className="comparison-bullets">
-                                        <li>Too many solid blue blocks competing for attention.</li>
+                                        <li>Button hierarchy is unclear as both boxes are the same color</li>
                                     </ul>
                                 </div>
                                 <div className="comparison-col">
@@ -394,7 +397,7 @@ function Cybersea() {
                                         <img src={cyberseaAfterPanel} alt="After panel" className="comparison-img" />
                                     </div>
                                     <ul className="comparison-bullets">
-                                        <li>Introduced outlines and simplified icons to emphasize the primary "AI Analysis" action.</li>
+                                        <li>Highlights the primary section by differentiating the button colors</li>
                                     </ul>
                                 </div>
                             </div>

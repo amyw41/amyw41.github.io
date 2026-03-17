@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 import '../App.css'
-import art1 from '../assets/play-art-1.jpg'
-import art2 from '../assets/play-art-2.jpg'
-import art3 from '../assets/play-art-3.jpg'
-import art4 from '../assets/play-art-4.jpg'
-import art5 from '../assets/play-art-5.jpg'
+import woongki from '../assets/art-woongki.jpg'
+import zaizai from '../assets/art-zaizai.jpg'
+import yuri from '../assets/art-yuri.jpg'
+import chihen from '../assets/art-chihen.jpg'
+import minase from '../assets/art-minase.jpg'
 
 function Play() {
   useEffect(() => {
@@ -12,19 +12,45 @@ function Play() {
   }, [])
 
   return (
-    <div className="project-detail-page page-fade-in" style={{ padding: '8vw 8vw' }}>
+    <>
+      <div className="play-gradient" aria-hidden="true"></div>
+      <section className="page-container play-container">
+        <h1 className="about-title">In my free time, I dabble in a little art.</h1>
 
-      <div className="play-gallery-grid" style={{ marginTop: '0' }}>
-        <img src={art2} alt="Cow print sketch" className="play-art-img" />
-        <img src={art3} alt="Pencil portrait sketch" className="play-art-img" />
-        <img src={art4} alt="Camera and mask girl" className="play-art-img" />
-        <img src={art1} alt="Profile painting" className="play-art-img" />
-        <img src={art5} alt="Profile pencil sketch" className="play-art-img" />
-      </div>
+        <div className="play-gallery-grid" style={{ marginTop: '2rem', position: 'relative', zIndex: 1 }}>
+          {/* Col 1: woongki on top, yuri below */}
+          <div className="play-item">
+            <img src={woongki} alt="Woongki" className="play-art-img" />
+            <p className="play-caption">2023 AHOF Cha Woongki</p>
+          </div>
 
-    </div>
+          {/* Col 2: zaizai */}
+          <div className="play-item">
+            <img src={zaizai} alt="Zaizai" className="play-art-img" />
+            <p className="play-caption">2023 Niu Zaizai</p>
+          </div>
+
+          {/* Col 3: chihen on top, minase below — wrapped to keep in same column */}
+          <div className="play-col-stack">
+            <div className="play-item">
+              <img src={chihen} alt="Chihen" className="play-art-img" />
+              <p className="play-caption">WIP - 2026 AHOF Chihen</p>
+            </div>
+            <div className="play-item">
+              <img src={minase} alt="Minase" className="play-art-img" />
+              <p className="play-caption">WIP - 2026 Junsei Motojima</p>
+            </div>
+          </div>
+
+          {/* Col 1 continued: yuri */}
+          <div className="play-item">
+            <img src={yuri} alt="Yuri" className="play-art-img" />
+            <p className="play-caption">2025 Jo Yuri (Player 222)</p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 
 export default Play;
-

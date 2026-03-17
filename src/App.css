@@ -755,7 +755,7 @@ body {
 }
 
 .taskbar a:hover {
-  color: #ff9b9b;
+  color: #959595;
 }
 
 /* ===== Page Container ===== */
@@ -2127,7 +2127,7 @@ body.relish-page {
   font-weight: 500;
   color: #1a1a1a;
   margin-top: 3.5rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .problem-title {
@@ -2154,8 +2154,14 @@ body.relish-page {
   background-color: #f0f2f5;
   border: 1.5px solid #e1e1e1;
   border-radius: 8px;
-  padding: 2rem;
+  padding: 1.2rem 4.5rem 2.5rem 4.5rem;
+  /* Decreased top padding, increased side padding */
   width: 100%;
+}
+
+.ui-example-container .comp-sub-title {
+  margin-top: 0;
+  /* Remove top margin when inside the box to decrease top space */
 }
 
 .ui-example-row {
@@ -3060,8 +3066,8 @@ body.relish-page {
 .play-gallery-grid {
   columns: 3;
   column-gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
 
@@ -3071,6 +3077,31 @@ body.relish-page {
   border-radius: 0;
   filter: none;
   display: block;
+  margin-bottom: 0.8rem;
+}
+
+.play-item {
+  break-inside: avoid;
+  margin-bottom: 2rem;
+}
+
+.play-caption {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #777;
+  margin: 0;
+  text-align: left;
+  letter-spacing: 0.02em;
+}
+
+.play-col-stack {
+  break-inside: avoid;
+  display: inline-block;
+  width: 100%;
+}
+
+.play-col-stack .play-item {
   margin-bottom: 2rem;
 }
 
