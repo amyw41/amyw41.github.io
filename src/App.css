@@ -1080,6 +1080,28 @@ body {
     text-align: center;
   }
 
+  .cybersea-hero-container {
+    padding: 3rem 1.5rem 2rem 1.5rem;
+    align-items: center;
+  }
+
+  .cybersea-hero-content {
+    align-items: center;
+  }
+
+  .cybersea-title {
+    text-align: center;
+  }
+
+  .cybersea-subtitle {
+    text-align: center;
+  }
+
+  .cybersea-hero-video-container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
   .relish-hero-container .project-side-by-side-container {
     justify-content: center;
   }
@@ -1201,6 +1223,28 @@ body {
 
   .relish-subtitle {
     text-align: center;
+  }
+
+  .cybersea-hero-container {
+    padding: 1.5rem 1rem;
+    align-items: center;
+  }
+
+  .cybersea-hero-content {
+    align-items: center;
+  }
+
+  .cybersea-title {
+    text-align: center;
+  }
+
+  .cybersea-subtitle {
+    text-align: center;
+  }
+
+  .cybersea-hero-video-container {
+    width: 100%;
+    margin-top: 1rem;
   }
 
   .relish-hero-container .project-side-by-side-container {
@@ -2677,22 +2721,23 @@ body.relish-page {
 }
 
 /* Cybersea Specific Styles */
+/* Cybersea Specific Styles */
 .cybersea-hero-container {
   width: 100%;
   max-width: 1300px;
-  padding: 1rem 1.5rem 2rem 1.5rem;
+  padding: 1rem 4rem 2rem 4rem;
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  align-items: flex-end;
+  gap: 2.5rem;
 }
 
 .cybersea-hero-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -2700,11 +2745,11 @@ body.relish-page {
 
 .cybersea-title {
   font-family: 'Editorial New', serif;
-  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-size: clamp(4rem, 8vw, 6.5rem);
   font-weight: 100;
   margin: 0;
   color: #1a1a1a;
-  text-align: center;
+  text-align: right;
   line-height: 0.85;
 }
 
@@ -2712,14 +2757,14 @@ body.relish-page {
   font-family: 'Raleway', sans-serif;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: #777;
-  text-align: center;
+  text-align: right;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
 .cybersea-hero-video-container {
-  width: 100%;
-  margin-top: 0;
+  width: 85%;
+  margin-top: -1.2rem;
   overflow: hidden;
   border-radius: clamp(14px, 2.2vw, 32px);
   box-shadow:
