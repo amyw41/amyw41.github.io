@@ -849,17 +849,19 @@ body {
 /* ===== Play page static gradient ===== */
 .play-gradient {
   position: absolute;
-  left: 55%;
-  top: 250px;
-  transform: translate(-50%, -50%);
-  width: 900px;
-  height: 550px;
-  background: radial-gradient(ellipse 60% 58% at 50% 50%,
-      rgba(0, 102, 204, 0.35) 0%,
-      rgba(0, 163, 255, 0.1) 40%,
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: clamp(600px, 80vw, 1000px);
+  z-index: -1;
+  --play-gradient-width: 90vw;
+  --play-gradient-height: 40vw;
+  background: radial-gradient(ellipse var(--play-gradient-width) var(--play-gradient-height) at 65% 25%,
+      rgba(170, 130, 255, 0.35) 0%,
+      rgba(170, 130, 255, 0.1) 40%,
+      rgba(170, 130, 255, 0.03) 60%,
       transparent 80%);
   pointer-events: none;
-  z-index: 0;
   opacity: 0;
   animation: aboutGradientFadeIn 1.2s ease-out 0.2s forwards;
 }
