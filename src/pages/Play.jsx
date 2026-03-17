@@ -28,10 +28,10 @@ function Play() {
               </div>
             </div>
             <div className="play-item">
-              <img src={yuri} alt="Yuri" className="play-art-img" />
+              <img src={zaizai} alt="Zaizai" className="play-art-img" />
               <div className="play-caption">
-                <span>Squid Game - Jo Yuri (Player 222)</span>
-                <span>2025</span>
+                <span>Niu Zaizai</span>
+                <span>2023</span>
               </div>
             </div>
           </div>
@@ -39,10 +39,10 @@ function Play() {
           {/* Column 2 */}
           <div className="play-gallery-col">
             <div className="play-item">
-              <img src={zaizai} alt="Zaizai" className="play-art-img" />
+              <img src={yuri} alt="Yuri" className="play-art-img" />
               <div className="play-caption">
-                <span>Niu Zaizai</span>
-                <span>2023</span>
+                <span>Squid Game - Jo Yuri (Player 222)</span>
+                <span>2025</span>
               </div>
             </div>
           </div>
