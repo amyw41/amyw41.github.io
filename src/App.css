@@ -1072,7 +1072,7 @@ body {
   }
 
   .footer-left {
-    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-size: clamp(2.3rem, 4vw, 3rem);
   }
 
   .relish-hero-container {
@@ -1200,7 +1200,7 @@ body {
   }
 
   .footer-left {
-    font-size: clamp(1.2rem, 5vw, 2rem);
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
     margin-bottom: 2rem;
     text-align: right;
   }
@@ -1649,7 +1649,7 @@ body.relish-page {
   font-family: 'Raleway', sans-serif;
   font-size: 1.3rem;
   font-weight: 500;
-  color: #888;
+  color: #535353;
   letter-spacing: 0.1em;
   margin-bottom: 0.8rem;
 }
