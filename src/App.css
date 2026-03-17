@@ -2677,20 +2677,56 @@ body.relish-page {
 }
 
 /* Cybersea Specific Styles */
+.cybersea-hero-container {
+  width: 100%;
+  max-width: 1300px;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cybersea-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cybersea-title {
+  font-family: 'Editorial New', serif;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 100;
+  margin: 0;
+  color: #1a1a1a;
+  text-align: center;
+  line-height: 0.85;
+}
+
+.cybersea-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #777;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
 .cybersea-hero-video-container {
-  width: 85%;
-  margin-top: -1.2rem;
-  /* Significantly decrease spacing with caption */
+  width: 100%;
+  margin-top: 0;
   overflow: hidden;
   border-radius: clamp(14px, 2.2vw, 32px);
-  /* Matched Relish radius */
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.15),
     0 0 0 1px rgba(255, 255, 255, 0.1);
   background: transparent;
-  /* Removed black background so white border pops */
   border: clamp(5px, 0.9vw, 14px) solid rgba(255, 255, 255, 0.22);
-  /* Matched Relish border */
   box-sizing: border-box;
 }
 
@@ -2699,7 +2735,6 @@ body.relish-page {
   height: auto;
   display: block;
   margin-bottom: -6.6%;
-  /* Precise crop */
   transform: scale(1.005);
 }
 

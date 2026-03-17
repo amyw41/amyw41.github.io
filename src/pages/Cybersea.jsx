@@ -107,10 +107,10 @@ function Cybersea() {
     return (
         <div className="project-detail-page relish-page-container page-fade-in">
             <div className="cybersea-background-gradient"></div>
-            <div className="relish-hero-container">
-                <div className="relish-hero-content">
-                    <h1 className="relish-title load-reveal stagger-1">CyberSea</h1>
-                    <p className="relish-subtitle load-reveal stagger-2">A real-time Arctic strategy simulator designed <br className="mobile-break" />to simplify military data.</p>
+            <div className="cybersea-hero-container">
+                <div className="cybersea-hero-content">
+                    <h1 className="cybersea-title load-reveal stagger-1">CyberSea</h1>
+                    <p className="cybersea-subtitle load-reveal stagger-2">A real-time Arctic strategy simulator designed <br className="mobile-break" />to simplify military data.</p>
                     <div className="cybersea-hero-video-container load-reveal stagger-3">
                         <img src={cyberseaDemo} alt="Cybersea Demo" className="cybersea-hero-video" />
                     </div>
