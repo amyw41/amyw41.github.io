@@ -1,0 +1,648 @@
+commit b45743cc4d3859bc6c6554a1d6f00f24c9f021f4
+Author: Amy Wang <amysonothere@gmail.com>
+Date:   Fri Mar 13 14:22:29 2026 -0400
+
+    update
+
+diff --git a/src/App.css b/src/App.css
+index 427ff46..06c1156 100644
+--- a/src/App.css
++++ b/src/App.css
+@@ -86,14 +86,14 @@ img {
+ 
+ .cursor-circle.cursor-project {
+   width: 165px;
+-  height: 38px;
++  height: 34px;
+   background-color: #111;
+   border-color: #111;
+   transform: translate(-12px, -50%);
+   justify-content: center;
+ }
+ 
+-.project-wip .project-preview-square::after {
++/* .project-wip .project-preview-square::after {
+   background-color: rgba(0, 0, 0, 0.3);
+ }
+ 
+@@ -124,7 +124,7 @@ img {
+ 
+ .project-wip {
+   cursor: default !important;
+-}
++} */
+ 
+ .cursor-text {
+   font-family: 'Raleway', sans-serif;
+@@ -268,6 +268,7 @@ img {
+     opacity: 0;
+     clip-path: inset(0 0 100% 0);
+   }
++
+   to {
+     opacity: 1;
+     clip-path: inset(0 0 0 0);
+@@ -337,15 +338,29 @@ img {
+ }
+ 
+ .project-preview-square-first {
+-  background: #ddeeff;
++  background: radial-gradient(ellipse 80% 70% at 70% 30%,
++      #daeef8 0%,
++      #c8e4f4 40%,
++      #b5d9f0 75%,
++      #a3ceeb 100%);
+ }
+ 
+ .project-preview-square-second {
+-  background: #a3b5a2;
++  background: linear-gradient(135deg,
++      #cddccc 0%,
++      #bccebb 30%,
++      #acc0ab 60%,
++      #9db39c 100%);
++  border-color: #acc0ab;
+ }
+ 
+ .project-preview-square-third {
+-  background: #ffe2c3;
++  background: conic-gradient(from 200deg at 30% 65%,
++      #fde8cc,
++      #fcd9b4,
++      #fde0c0,
++      #feeedd,
++      #fde8cc);
+ }
+ 
+ .project-preview-square-third .project-side-img {
+@@ -353,7 +368,11 @@ img {
+ }
+ 
+ .project-preview-square-fourth {
+-  background: #ffe1e7;
++  background: radial-gradient(circle at 25% 75%,
++      #fce4e9 0%,
++      #f9d3da 35%,
++      #f5c3cc 65%,
++      #f0b4be 100%);
+ }
+ 
+ .project-side-by-side-container {
+@@ -2572,6 +2591,70 @@ body.relish-page {
+   }
+ }
+ 
++.before-after-grid {
++  display: grid;
++  grid-template-columns: 1fr 1fr;
++  gap: 4rem;
++  margin-top: 1.5rem;
++  position: relative;
++}
++
++/* Line down the middle */
++.before-after-grid::after {
++  content: '';
++  position: absolute;
++  top: 0;
++  bottom: 0;
++  left: 50%;
++  width: 1px;
++  background-color: #d4d4d4;
++  transform: translateX(-50%);
++}
++
++.comparison-label {
++  font-family: 'Raleway', sans-serif;
++  font-size: 0.8rem;
++  font-weight: 700;
++  letter-spacing: 0.1em;
++  margin-bottom: 1.5rem;
++  display: block;
++}
++
++.comparison-label.before { color: #888; }
++.comparison-label.after { color: #3d80fd; }
++
++.comparison-img-box {
++  background: #0a0a0a;
++  border-radius: 6px;
++  overflow: hidden;
++  border: 1px solid #333;
++  margin-bottom: 1.5rem;
++  aspect-ratio: 5 / 4;
++}
++
++.comparison-img-box .comparison-img {
++  width: 100%;
++  height: 100%;
++  object-fit: cover;
++  object-position: center top;
++  display: block;
++}
++
++.section-body.small {
++  font-size: 1rem;
++  line-height: 1.5;
++}
++
++@media (max-width: 768px) {
++  .before-after-grid {
++    grid-template-columns: 1fr;
++    gap: 3rem;
++  }
++  .before-after-grid::after {
++    display: none; /* Hide line on mobile */
++  }
++}
++
+ /* Cybersea Specific Styles */
+ .cybersea-hero-video-container {
+   width: 85%;
+@@ -2931,7 +3014,7 @@ body.relish-page {
+ }
+ 
+ .wip-blur-wrapper {
+-  filter: blur(8px);
++  /* filter: blur(8px); */
+   pointer-events: none;
+   user-select: none;
+   opacity: 0.6;
+
+commit dfd316dac6be1271becc1ea036541bb4dadf64e5
+Author: Amy Wang <amysonothere@gmail.com>
+Date:   Fri Mar 13 10:44:49 2026 -0400
+
+    fixed portfolio
+
+diff --git a/src/App.css b/src/App.css
+index a0ed038..427ff46 100644
+--- a/src/App.css
++++ b/src/App.css
+@@ -1664,7 +1664,7 @@ body.relish-page {
+ .reflection-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+-  gap: 3rem 4rem;
++  gap: 2rem 4rem;
+   margin-top: 2.5rem;
+ }
+ 
+
+commit fcc7bafb04c98602d6b2f6a2ed35f3e2ed5ed5dd
+Author: Amy Wang <amysonothere@gmail.com>
+Date:   Fri Mar 13 01:11:36 2026 -0400
+
+    updaget
+
+diff --git a/src/App.css b/src/App.css
+index 5d190aa..a0ed038 100644
+--- a/src/App.css
++++ b/src/App.css
+@@ -110,7 +110,7 @@ img {
+   color: white;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 700;
+-  font-size: 1.2rem;
++  font-size: 1.6rem;
+   z-index: 2;
+   opacity: 0;
+   transition: opacity 0.4s ease;
+@@ -246,6 +246,34 @@ img {
+   }
+ }
+ 
++.fade-reveal {
++  opacity: 0;
++  animation: fadeReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
++}
++
++@keyframes fadeReveal {
++  to {
++    opacity: 1;
++  }
++}
++
++.wipe-reveal {
++  opacity: 0;
++  clip-path: inset(0 0 100% 0);
++  animation: wipeReveal 1.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
++}
++
++@keyframes wipeReveal {
++  from {
++    opacity: 0;
++    clip-path: inset(0 0 100% 0);
++  }
++  to {
++    opacity: 1;
++    clip-path: inset(0 0 0 0);
++  }
++}
++
+ .stagger-1 {
+   animation-delay: 0.1s;
+ }
+@@ -652,6 +680,17 @@ body {
+   white-space: nowrap;
+ }
+ 
++.play-title {
++  font-family: 'Editorial New', serif;
++  font-size: clamp(2rem, 4.5vw, 3.5rem);
++  font-weight: 400;
++  color: var(--text);
++  letter-spacing: -0.01em;
++  white-space: normal;
++  line-height: 1.1;
++  margin: 0;
++}
++
+ .desc-group {
+   display: flex;
+   flex-direction: column;
+@@ -693,11 +732,11 @@ body {
+   color: var(--text);
+   text-decoration: none;
+   cursor: pointer;
+-  transition: opacity 0.2s ease;
++  transition: all 0.2s ease;
+ }
+ 
+ .taskbar a:hover {
+-  opacity: 0.7;
++  color: #ff9b9b;
+ }
+ 
+ /* ===== Page Container ===== */
+@@ -1399,17 +1438,27 @@ body.relish-page {
+ 
+ .sidebar-back {
+   font-family: 'Raleway', sans-serif;
+-  font-size: 0.95rem;
+-  font-weight: 600;
++  font-size: 0.9rem;
++  font-weight: 500;
+   color: #888;
+   margin-bottom: 2.5rem;
+   cursor: pointer;
+-  letter-spacing: 0.05em;
+-  transition: color 0.2s ease;
++  letter-spacing: 0.08em;
++  transition: all 0.2s ease;
++  display: flex;
++  align-items: center;
++  gap: 0.8rem;
++  text-decoration: none;
++  text-transform: uppercase;
+ }
+ 
+ .sidebar-back:hover {
+-  color: #1a1a1a;
++  color: #ff9b9b;
++}
++
++.sidebar-back .back-arrow {
++  font-size: 1.1rem;
++  font-weight: 400;
+ }
+ 
+ .sidebar-nav ul {
+@@ -1418,11 +1467,48 @@ body.relish-page {
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+-  gap: 1.2rem;
+ }
+ 
+ .sidebar-nav li {
+-  margin: 0;
++  margin: 0 0 1.2rem 0;
++  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
++}
++
++.sidebar-nav li.nested-nav-item {
++  margin-left: 1.2rem;
++  position: relative;
++  max-height: 0;
++  opacity: 0;
++  visibility: hidden;
++  overflow: hidden;
++  margin-bottom: 0;
++}
++
++.sidebar-nav li.nested-nav-item.expanded {
++  max-height: 40px;
++  opacity: 1;
++  visibility: visible;
++  margin-bottom: 1.2rem;
++}
++
++.sidebar-nav li.nested-nav-item::before {
++  content: '';
++  position: absolute;
++  left: -0.8rem;
++  top: -1.2rem;
++  height: calc(100% + 1.2rem);
++  width: 1px;
++  background-color: #d8d8d8;
++}
++
++.sidebar-nav li.nested-nav-item::after {
++  content: '';
++  position: absolute;
++  left: -0.8rem;
++  top: 50%;
++  width: 0.4rem;
++  height: 1px;
++  background-color: #d8d8d8;
+ }
+ 
+ .sidebar-button {
+@@ -1827,6 +1913,10 @@ body.relish-page {
+     box-sizing: border-box;
+   }
+ 
++  .sidebar-nav .nested-nav-item {
++    display: none !important;
++  }
++
+   .sidebar-nav {
+     pointer-events: auto;
+     background: rgba(255, 255, 255, 0.75);
+@@ -2021,6 +2111,116 @@ body.relish-page {
+   margin-bottom: 1.2rem;
+ }
+ 
++.problem-title {
++  font-family: 'Editorial New', serif;
++  font-style: italic;
++  font-size: clamp(1.8rem, 3vw, 3rem);
++  font-weight: 500;
++  color: #1a1a1a;
++  margin-top: 0;
++  margin-bottom: 0.5rem;
++}
++
++.problem-description {
++  font-family: 'Raleway', sans-serif;
++  font-size: clamp(1.1rem, 1.5vw, 1.5rem);
++  color: #666;
++  font-style: italic;
++  line-height: 1.6;
++  margin-bottom: 2rem;
++}
++
++.ui-example-container {
++  margin-top: 3rem;
++  background-color: #f0f2f5;
++  border: 1.5px solid #e1e1e1;
++  border-radius: 8px;
++  padding: 2rem;
++  width: 100%;
++}
++
++.ui-example-row {
++  display: flex;
++  align-items: center;
++  padding: 1.5rem 0;
++  gap: 2.5rem;
++}
++
++.ui-example-row:not(:last-child) {
++  border-bottom: 1px solid #eeeeee;
++}
++
++.ui-example-img-wrapper {
++  flex: 0 0 320px;
++  height: 100px;
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  overflow: hidden;
++  border-radius: 8px;
++  background: #0a0a0a;
++  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
++}
++
++.ui-example-img {
++  width: 100%;
++  height: 100%;
++  object-fit: cover;
++}
++
++.ui-example-label {
++  font-family: 'Raleway', sans-serif;
++  font-size: 1.2rem;
++  font-style: italic;
++  color: #666;
++  font-weight: 500;
++  flex: 1;
++}
++
++.color-palette-pill {
++  display: inline-flex;
++  background: white;
++  border: 1px solid #dcdcdc;
++  border-radius: 100px;
++  overflow: hidden;
++  height: 42px;
++}
++
++.color-segment {
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  width: 42px;
++  height: 100%;
++}
++
++.color-segment:not(:last-child) {
++  border-right: 1px solid #e1e1e1;
++}
++
++.color-dot {
++  width: 18px;
++  height: 18px;
++  border-radius: 50%;
++  border: 1px solid rgba(0, 0, 0, 0.1);
++}
++
++@media (max-width: 768px) {
++  .ui-example-row {
++    flex-direction: column;
++    align-items: flex-start;
++    gap: 1.5rem;
++    padding: 2rem 0;
++  }
++
++  .ui-example-img-wrapper {
++    flex: 0 0 auto;
++    width: 100%;
++    height: auto;
++    aspect-ratio: 2 / 1;
++  }
++}
++
+ /* Solution Layout V2 - Full Width Stack */
+ .solution-main-heading {
+   margin-bottom: 1.5rem !important;
+@@ -2494,7 +2694,7 @@ body.relish-page {
+ .user-list-icon {
+   width: 100px;
+   height: 100px;
+-  background: linear-gradient(135deg, #eee, #ddd);
++  background: transparent;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+@@ -2638,4 +2838,148 @@ body.relish-page {
+   font-weight: 400;
+   line-height: 1.4;
+   margin: 0;
++}
++
++/* ===== Results Section ===== */
++.results-grid {
++  display: grid;
++  grid-template-columns: repeat(4, 1fr);
++  gap: 1.5rem;
++  margin-top: 2rem;
++  margin-bottom: 3rem;
++}
++
++.result-item {
++  background: white;
++  border: 1px solid var(--border-color);
++  border-radius: 12px;
++  padding: 1.5rem;
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++  text-align: center;
++  transition: transform 0.3s ease;
++}
++
++.result-item:hover {
++  transform: translateY(-5px);
++}
++
++.result-number {
++  font-family: 'Editorial New', serif;
++  font-size: 2.5rem;
++  font-weight: 500;
++  color: #1a1a1a;
++  margin-bottom: 0.5rem;
++}
++
++.result-icon {
++  font-size: 2rem;
++  margin-bottom: 0.5rem;
++  height: 2.5rem;
++  display: flex;
++  align-items: center;
++}
++
++.result-label {
++  font-family: 'Raleway', sans-serif;
++  font-size: 0.95rem;
++  font-weight: 600;
++  color: #888;
++  text-transform: uppercase;
++  letter-spacing: 0.05em;
++  line-height: 1.3;
++}
++
++.judges-callout {
++  background: #f9f9f9;
++  border-radius: 16px;
++  padding: 2.5rem;
++  border-left: 4px solid #1a1a1a;
++  position: relative;
++}
++
++.judges-quote {
++  font-family: 'Raleway', sans-serif;
++  font-size: 1.25rem;
++  font-weight: 400;
++  line-height: 1.6;
++  color: #333;
++  font-style: italic;
++}
++
++@media (max-width: 900px) {
++  .results-grid {
++    grid-template-columns: repeat(2, 1fr);
++  }
++}
++
++@media (max-width: 480px) {
++  .results-grid {
++    grid-template-columns: 1fr;
++  }
++
++  .judges-callout {
++    padding: 1.5rem;
++  }
++}
++
++/* ===== WIP Section ===== */
++.wip-container {
++  position: relative;
++  margin-top: 2rem;
++}
++
++.wip-blur-wrapper {
++  filter: blur(8px);
++  pointer-events: none;
++  user-select: none;
++  opacity: 0.6;
++  mask-image: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.8) 20%, transparent 90%);
++  -webkit-mask-image: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.8) 20%, transparent 90%);
++}
++
++.wip-overlay {
++  position: absolute;
++  top: 50px;
++  left: 50%;
++  transform: translateX(-50%);
++  z-index: 20;
++  text-align: center;
++  width: 100%;
++}
++
++.wip-message {
++  font-family: 'Editorial New', serif;
++  font-size: 2.2rem;
++  font-style: italic;
++  color: #1a1a1a;
++  padding: 2rem;
++  display: inline-block;
++}
++
++/* ===== Play Gallery Masonry ===== */
++.play-gallery-grid {
++  columns: 3;
++  column-gap: 2rem;
++  max-width: 1200px;
++  margin: 0 auto;
++}
++
++
++.play-art-img {
++  width: 100%;
++  height: auto;
++  border-radius: 0;
++  filter: none;
++  display: block;
++  margin-bottom: 2rem;
++}
++
++@media (max-width: 768px) {
++  .play-gallery-grid {
++    columns: 1;
++    column-gap: 0;
++  }
++
+ }
+\ No newline at end of file

@@ -360,14 +360,18 @@ function Cybersea() {
                                     <div className="comparison-img-box">
                                         <img src={cyberseaBeforeDropdown} alt="Before dropdown" className="comparison-img" />
                                     </div>
-                                    <p className="section-body small">Dense, dark background with heavy blue selection bars made it hard to scan.</p>
+                                    <ul className="comparison-bullets">
+                                        <li>Dense, dark background with heavy blue selection bars made it hard to scan.</li>
+                                    </ul>
                                 </div>
                                 <div className="comparison-col">
                                     <span className="comparison-label after">AFTER</span>
                                     <div className="comparison-img-box">
                                         <img src={cyberseaAfterDropdown} alt="After dropdown" className="comparison-img" />
                                     </div>
-                                    <p className="section-body small">Cleaned up the spacing and removed the heavy fills for a more lightweight, tactical feel.</p>
+                                    <ul className="comparison-bullets">
+                                        <li>Cleaned up the spacing and removed the heavy fills for a more lightweight, tactical feel.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -380,14 +384,18 @@ function Cybersea() {
                                     <div className="comparison-img-box">
                                         <img src={cyberseaBeforePanel} alt="Before panel" className="comparison-img" />
                                     </div>
-                                    <p className="section-body small">Too many solid blue blocks competing for attention.</p>
+                                    <ul className="comparison-bullets">
+                                        <li>Too many solid blue blocks competing for attention.</li>
+                                    </ul>
                                 </div>
                                 <div className="comparison-col">
                                     <span className="comparison-label after">AFTER</span>
                                     <div className="comparison-img-box">
                                         <img src={cyberseaAfterPanel} alt="After panel" className="comparison-img" />
                                     </div>
-                                    <p className="section-body small">Introduced outlines and simplified icons to emphasize the primary "AI Analysis" action.</p>
+                                    <ul className="comparison-bullets">
+                                        <li>Introduced outlines and simplified icons to emphasize the primary "AI Analysis" action.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
