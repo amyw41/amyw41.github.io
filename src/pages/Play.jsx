@@ -22,7 +22,7 @@ function Play() {
           <div className="play-item">
             <img src={woongki} alt="Woongki" className="play-art-img" />
             <div className="play-caption">
-              <span>AHOF Cha Woongki</span>
+              <span>AHOF - Cha Woongki</span>
               <span>2023</span>
             </div>
           </div>
@@ -41,14 +41,14 @@ function Play() {
             <div className="play-item">
               <img src={chihen} alt="Chihen" className="play-art-img" />
               <div className="play-caption">
-                <span>WIP - AHOF Chihen</span>
+                <span>[WIP] AHOF - Chihen</span>
                 <span>2026</span>
               </div>
             </div>
             <div className="play-item">
               <img src={minase} alt="Minase" className="play-art-img" />
               <div className="play-caption">
-                <span>WIP - Junsei Motojima</span>
+                <span>[WIP] Junsei Motojima</span>
                 <span>2026</span>
               </div>
             </div>
@@ -58,7 +58,7 @@ function Play() {
           <div className="play-item">
             <img src={yuri} alt="Yuri" className="play-art-img" />
             <div className="play-caption">
-              <span>Jo Yuri (Player 222)</span>
+              <span>Squid Game - Jo Yuri (Player 222)</span>
               <span>2025</span>
             </div>
           </div>
