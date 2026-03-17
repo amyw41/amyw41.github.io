@@ -2724,23 +2724,23 @@ body.relish-page {
 /* Cybersea Specific Styles */
 .cybersea-hero-container {
   width: 100%;
-  max-width: 1400px;
-  padding: 1rem 1rem 2rem 1rem;
+  max-width: 1500px;
+  padding: 1rem 1vw 2rem 2rem;
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   gap: 2.5rem;
 }
 
 .cybersea-hero-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1300px;
+  margin: 0;
 }
 
 .cybersea-title {
@@ -2749,7 +2749,7 @@ body.relish-page {
   font-weight: 100;
   margin: 0;
   color: #1a1a1a;
-  text-align: center;
+  text-align: right;
   line-height: 0.85;
 }
 
@@ -2757,7 +2757,7 @@ body.relish-page {
   font-family: 'Raleway', sans-serif;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: #777;
-  text-align: center;
+  text-align: right;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
