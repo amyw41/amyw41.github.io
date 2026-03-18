@@ -2582,6 +2582,38 @@ body.relish-page {
   height: auto;
 }
 
+.rejection-box {
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  background: transparent;
+  margin-top: 1rem;
+}
+
+.rejection-box-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1a1a1a !important;
+  margin-bottom: 0.4rem;
+}
+
+.rejection-box-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.rejection-box-list li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: #444;
+}
+
 /* Comparison Layout */
 .comparison-title {
   font-family: 'Raleway', sans-serif;

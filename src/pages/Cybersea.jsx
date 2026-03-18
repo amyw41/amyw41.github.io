@@ -26,6 +26,8 @@ import cyberseaBeforePanel from '../assets/cybersea-before-panel.png'
 import cyberseaAfterPanel from '../assets/cybersea-after-panel.png'
 import cyberseaBeforePanel2 from '../assets/cybersea-before-panel-2.png'
 import cyberseaAfterPanel2 from '../assets/cybersea-after-panel-2.png'
+import cyberseaRough1 from '../assets/cybersea-rough-1-new.png'
+import cyberseaRough2 from '../assets/cybersea-rough-2.png'
 
 const sectionsData = [
     { id: 'overview', title: 'Overview' },
@@ -406,7 +408,42 @@ function Cybersea() {
 
                     <div id="rough-draft" className="problem-section">
                         <span className="section-label">ROUGH DRAFT</span>
-                        {/* Placeholder for new contents */}
+                        <h2 className="overview-title">Early Concept Exploration</h2>
+
+                        <div className="comp-section-row" style={{ alignItems: 'stretch', marginTop: '3rem', marginBottom: '3.5rem' }}>
+                            <div style={{ flex: 1, minWidth: 0 }}>
+                                <img src={cyberseaRough2} alt="Rough sketch of the interface panels" className="rough-sketch-img" style={{ borderRadius: '4px', height: '100%', objectFit: 'cover', marginTop: 0 }} />
+                            </div>
+                            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                                <h3 className="comp-sub-title" style={{ marginTop: 0, marginBottom: '0.5rem' }}>01 Globe</h3>
+                                <p className="section-body" style={{ marginBottom: '1.2rem' }}>
+                                    We explored the idea of using a globe to represent the impact of our project <b>on the world</b>.
+                                </p>
+                                <div className="rejection-box">
+                                    <p className="rejection-box-title">
+                                        Why we didn’t choose it:
+                                    </p>
+                                    <ul className="rejection-box-list">
+                                        <li>Felt too abstract and less connected to user tasks</li>
+                                        <li>Interaction was less clear beyond basic rotation</li>
+                                        <li>Made it harder to focus on specific, actionable insights</li>
+                                        <li>Ultimately felt more like a generic data visualization rather than a unique product experience</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="comp-section-row" style={{ alignItems: 'stretch', marginTop: 0, marginBottom: 0 }}>
+                            <div style={{ flex: 1, minWidth: 0 }}>
+                                <img src={cyberseaRough1} alt="Rough sketch of the title and central globe" className="rough-sketch-img" style={{ borderRadius: '4px', height: '100%', objectFit: 'cover', marginTop: 0 }} />
+                            </div>
+                            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                                <h3 className="comp-sub-title" style={{ marginTop: 0, marginBottom: '0.5rem' }}>02 Mesh boat</h3>
+                                <p className="section-body" style={{ marginBottom: 0 }}>
+                                    Using a boat as the key focus of our project allowed our project to have more focus, and the user to have a more delightful experience.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="results" className="problem-section">
