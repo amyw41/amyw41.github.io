@@ -180,8 +180,16 @@ function Cybersea() {
 
                 <main className="case-study-content">
                     <div id="overview" className="problem-section">
-                        <span className="section-label">OUR PROMPT</span>
-                        <h2 className="overview-title">The Thales Challenge:</h2>
+                        <span className="section-label">OVERVIEW</span>
+                        <h2 className="overview-title">Navigating Complexity in Arctic Data</h2>
+                        <p className="section-body">
+                            Professionals exploring Arctic-related data often face fragmented and complex datasets, making it difficult to quickly understand key insights and leading to dangerous delays in their work.
+                        </p>
+                        <p className="section-body">
+                            As the lead designer on the team, my job was to simplify the way users navigate and interpret Arctic data by reducing cognitive load and creating a more intuitive structure for exploring complex data.
+                        </p>
+
+                        <h2 className="overview-title">Prompt: The Thales Challenge:</h2>
 
                         <div className="timeline-container">
                             <div className="timeline-point">
@@ -211,6 +219,12 @@ function Cybersea() {
                                 </div>
                                 <div className="user-timeline-wrapper">
                                     <div className="user-timeline-item">
+                                        <p className="section-body">
+                                            Professionals are required to analyze data on the daily. Currently, they struggle to quickly interpret the complex data they are faced with, delaying analysis and decisions regarding the Arctic.
+                                        </p>
+                                        <p className="section-body">
+                                            Our job was to address this by simplifying the way users may interact with and navigate data.
+                                        </p>
                                         <h5 className="user-timeline-title">a) Needs</h5>
                                         <ul className="section-list" style={{ marginBottom: 0, marginTop: '0.5rem', paddingLeft: '1.2rem' }}>
                                             <li>Easy-to-use interface for quick, high-stakes decisions.</li>
@@ -239,6 +253,8 @@ function Cybersea() {
                                         <div className="user-solution-text-container">
                                             <span className="user-solution-label">Our Approach</span>
                                             <span className="user-solution-desc">An interactive globe visual + data dashboard to keep info organized.</span>
+                                            <span className="user-solution-label">Result</span>
+                                            <span className="user-solution-desc">The content is grouped in a clean manner, creating a clear information hierarchy.</span>
                                         </div>
                                     </div>
 
@@ -315,6 +331,9 @@ function Cybersea() {
                                 </div>
                             </div>
                         </div>
+                        <p className="section-body">
+                            I considered grouping all Arctic topics into one interface, but it increased information density and made scanning difficult. Separating content into clearer categories supported faster comprehension.
+                        </p>
                     </div>
 
                     <div id="solution" className="problem-section">
