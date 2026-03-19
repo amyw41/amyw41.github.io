@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
 import useScrollReveal from '../hooks/useScrollReveal'
+import useImagesLoaded from '../hooks/useImagesLoaded'
 import relishMain from '../assets/relish-main.png'
 import relishForm from '../assets/relish-form.png'
 import relishCalendar from '../assets/relish-calendar.png'
@@ -59,6 +60,9 @@ const CrossIcon = () => (
 function Cybersea() {
     const [activeSection, setActiveSection] = useState('overview');
 
+    // Gate entrance animations until the hero image is loaded
+    const heroLoaded = useImagesLoaded([cyberseaDemo]);
+
     // Reveal refs for different sections
     const metadataRef = useScrollReveal(0);
 
@@ -107,7 +111,7 @@ function Cybersea() {
     };
 
     return (
-        <div className="project-detail-page relish-page-container page-fade-in">
+        <div className={`project-detail-page relish-page-container${heroLoaded ? ' page-fade-in' : ''}`} style={heroLoaded ? {} : { opacity: 0 }}>
             <div className="cybersea-background-gradient"></div>
             <div className="cybersea-hero-container">
                 <div className="cybersea-hero-content">
@@ -190,8 +194,8 @@ function Cybersea() {
                                 </p>
                             </div>
                             <div className="timeline-point" style={{ marginTop: '3rem' }}>
-                                <h3 className="section-subtitle" style={{ fontStyle: 'italic', fontWeight: '700', fontSize: '1.3rem', color: '#1a1a1a', marginBottom: '0.8rem' }}>TLDR:</h3>
-                                <p className="section-body" style={{ color: '#1a1a1a', fontWeight: '400', fontStyle: 'italic', fontSize: '1.3rem', marginTop: '0' }}>
+                                <h3 className="section-subtitle" style={{ fontFamily: 'Raleway', fontStyle: 'italic', fontWeight: '700', fontSize: '1.3rem', color: '#1a1a1a', marginBottom: '0.8rem' }}>TLDR:</h3>
+                                <p className="section-body" style={{ fontFamily: 'Raleway', color: '#1a1a1a', fontWeight: '400', fontStyle: 'italic', fontSize: '1.3rem', marginTop: '0' }}>
                                     Design a Real-Time Strategy simulator where trade routes are modelled to combat the <b>constantly changing conditions</b> of the Arctic sea.
                                 </p>
                             </div>

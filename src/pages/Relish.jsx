@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
 import useScrollReveal from '../hooks/useScrollReveal'
+import useImagesLoaded from '../hooks/useImagesLoaded'
 import relishMain from '../assets/relish-main.png'
 import relishForm from '../assets/relish-form.png'
 import relishCalendar from '../assets/relish-calendar.png'
@@ -51,6 +52,9 @@ const CrossIcon = () => (
 function Relish() {
     const [activeSection, setActiveSection] = useState('overview');
 
+    // Gate entrance animations until all hero images are loaded
+    const heroLoaded = useImagesLoaded([relishMain, relishForm, relishCalendar]);
+
     // Reveal refs for different sections
     const metadataRef = useScrollReveal(0);
 
@@ -99,7 +103,7 @@ function Relish() {
     };
 
     return (
-        <div className="project-detail-page relish-page-container page-fade-in">
+        <div className={`project-detail-page relish-page-container${heroLoaded ? ' page-fade-in' : ''}`} style={heroLoaded ? {} : { opacity: 0 }}>
             <div className="relish-background-gradient"></div>
             <div className="relish-hero-container">
                 <div className="relish-hero-content">
