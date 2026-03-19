@@ -2190,7 +2190,6 @@ body.relish-page {
 
 .problem-title {
   font-family: 'Editorial New', serif;
-  font-style: italic;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 500;
   color: #1a1a1a;

@@ -180,26 +180,18 @@ function Cybersea() {
 
                 <main className="case-study-content">
                     <div id="overview" className="problem-section">
-                        <span className="section-label">OVERVIEW</span>
-                        <h2 className="overview-title">Navigating Complexity in Arctic Data</h2>
-                        <p className="section-body">
-                            Professionals exploring Arctic-related data often face fragmented and complex datasets, making it difficult to quickly understand key insights and leading to dangerous delays in their work.
-                        </p>
-                        <p className="section-body">
-                            As the lead designer on the team, my job was to simplify the way users navigate and interpret Arctic data by reducing cognitive load and creating a more intuitive structure for exploring complex data.
-                        </p>
+                        <span className="section-label">OUR PROMPT</span>
+                        <h2 className="overview-title">The Thales Challenge:</h2>
 
-                        <h2 className="overview-title">Prompt: The Thales Challenge:</h2>
-
-                        <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '2.5rem', marginTop: '1.5rem', width: '100%' }}>
-                            <div>
+                        <div className="timeline-container" style={{ marginTop: '2.5rem' }}>
+                            <div className="timeline-point">
                                 <p className="section-body">
                                     Design and build a Real-Time Strategy (RTS) simulator that models trade route patrol and natural resource protection operations in the Canadian Arctic. This should enable leadership teams to identify the most sustainable strategies for resource utilization.
                                 </p>
                             </div>
-                            <div style={{ marginTop: '3rem' }}>
-                                <h3 className="section-subtitle" style={{ fontFamily: 'Raleway', fontStyle: 'italic', fontWeight: '700', fontSize: '1.3rem', color: '#1a1a1a', marginBottom: '0.8rem', marginTop: 0 }}>TLDR:</h3>
-                                <p className="section-body" style={{ fontFamily: 'Raleway', color: '#1a1a1a', fontWeight: '400', fontStyle: 'italic', fontSize: '1.3rem', marginTop: '0' }}>
+                            <div className="timeline-point" style={{ marginTop: '3rem' }}>
+                                <h3 className="section-subtitle" style={{ fontStyle: 'italic', fontWeight: '700', fontSize: '1.3rem', color: '#1a1a1a', marginBottom: '0.8rem' }}>TLDR:</h3>
+                                <p className="section-body" style={{ color: '#1a1a1a', fontWeight: '400', fontStyle: 'italic', fontSize: '1.3rem', marginTop: '0' }}>
                                     Design a Real-Time Strategy simulator where trade routes are modelled to combat the <b>constantly changing conditions</b> of the Arctic sea.
                                 </p>
                             </div>
@@ -326,11 +318,9 @@ function Cybersea() {
                                         <p className="problem-description" style={{ marginTop: '0.5rem' }}>How can we <b>maximize clarity</b> without compromising visual design?</p>
                                     </div>
                                     <div style={{ flex: 1 }}>
-                                        <div>
-                                            <p className="section-body"><b>1.</b> Hackathons require projects to look <b>as unique</b> and <b>aesthetically pleasing</b> as possible.</p>
-                                        </div>
-                                        <div style={{ marginTop: '2rem' }}>
-                                            <p className="section-body"><b>2.</b> We need to find a balance between <b>data density</b> and <b>readability</b>.</p>
+                                        <div className="section-list">
+                                            <li>Hackathons require projects to look <b>as unique</b> and <b>aesthetically pleasing</b> as possible, even at the cost of accessibility or function.</li>
+                                            <li>We need to find a balance between <b>data density</b> and <b>readability</b>.</li>
                                         </div>
                                     </div>
                                 </div>
