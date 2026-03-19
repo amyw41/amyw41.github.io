@@ -191,15 +191,15 @@ function Cybersea() {
 
                         <h2 className="overview-title">Prompt: The Thales Challenge:</h2>
 
-                        <div className="timeline-container">
-                            <div className="timeline-point">
+                        <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '2.5rem', marginTop: '1.5rem', width: '100%' }}>
+                            <div>
                                 <p className="section-body">
                                     Design and build a Real-Time Strategy (RTS) simulator that models trade route patrol and natural resource protection operations in the Canadian Arctic. This should enable leadership teams to identify the most sustainable strategies for resource utilization.
                                 </p>
                             </div>
-                            <div className="timeline-point" style={{ marginTop: '3rem' }}>
-                                <h3 className="section-subtitle" style={{ fontStyle: 'italic', fontWeight: '700', fontSize: '1.3rem', color: '#1a1a1a', marginBottom: '0.8rem' }}>TLDR:</h3>
-                                <p className="section-body" style={{ color: '#1a1a1a', fontWeight: '400', fontStyle: 'italic', fontSize: '1.3rem', marginTop: '0' }}>
+                            <div style={{ marginTop: '3rem' }}>
+                                <h3 className="section-subtitle" style={{ fontFamily: 'Raleway', fontStyle: 'italic', fontWeight: '700', fontSize: '1.3rem', color: '#1a1a1a', marginBottom: '0.8rem', marginTop: 0 }}>TLDR:</h3>
+                                <p className="section-body" style={{ fontFamily: 'Raleway', color: '#1a1a1a', fontWeight: '400', fontStyle: 'italic', fontSize: '1.3rem', marginTop: '0' }}>
                                     Design a Real-Time Strategy simulator where trade routes are modelled to combat the <b>constantly changing conditions</b> of the Arctic sea.
                                 </p>
                             </div>
@@ -269,6 +269,9 @@ function Cybersea() {
                                     <h4 className="user-list-title">The Every Day User</h4>
                                 </div>
                                 <div className="user-timeline-wrapper">
+                                    <p className="section-body">
+                                        Without the proper tools, the average person cannot easily access or interpret data regarding the Arctic. We aimed to allow for Arctic information to be more accessible, drawing in the user so they would be inclined to learn more.
+                                    </p>
                                     <div className="user-timeline-item">
                                         <h5 className="user-timeline-title">a) Needs</h5>
                                         <ul className="section-list" style={{ marginBottom: 0, marginTop: '0.5rem', paddingLeft: '1.2rem' }}>
@@ -315,30 +318,33 @@ function Cybersea() {
 
                     <div id="problem-1" className="problem-section">
                         <span className="section-label">DESIGN CHALLENGE</span>
-                        <div className="comp-section-row" style={{ alignItems: 'flex-start', marginTop: '1.5rem' }}>
-                            <div style={{ flex: 1 }}>
-                                <h3 className="problem-title">PROBLEM #1:</h3>
-                                <p className="problem-description">How can we <b>maximize clarity</b> without compromising visual design?</p>
-                            </div>
-                            <div style={{ flex: 1 }}>
-                                <div className="timeline-container" style={{ marginTop: 0 }}>
-                                    <div className="timeline-point">
-                                        <p className="section-body">Hackathons require projects to look <b>as unique</b> and <b>aesthetically pleasing</b> as possible.</p>
+                        <div className="timeline-container timeline-container-dark" style={{ marginTop: '1.5rem' }}>
+                            <div>
+                                <div className="comp-section-row" style={{ alignItems: 'flex-start', margin: 0 }}>
+                                    <div style={{ flex: 1 }}>
+                                        <h3 className="problem-title">PROBLEM #1:</h3>
+                                        <p className="problem-description" style={{ marginTop: '0.5rem' }}>How can we <b>maximize clarity</b> without compromising visual design?</p>
                                     </div>
-                                    <div className="timeline-point" style={{ marginTop: '2rem' }}>
-                                        <p className="section-body">We need to find a balance between <b>data density</b> and <b>readability</b>.</p>
+                                    <div style={{ flex: 1 }}>
+                                        <div>
+                                            <p className="section-body"><b>1.</b> Hackathons require projects to look <b>as unique</b> and <b>aesthetically pleasing</b> as possible.</p>
+                                        </div>
+                                        <div style={{ marginTop: '2rem' }}>
+                                            <p className="section-body"><b>2.</b> We need to find a balance between <b>data density</b> and <b>readability</b>.</p>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <p className="section-body">
+                                    I considered grouping all Arctic topics into one interface, but it increased information density and made scanning difficult. Separating content into clearer categories supported faster comprehension.
+                                </p>
                             </div>
                         </div>
-                        <p className="section-body">
-                            I considered grouping all Arctic topics into one interface, but it increased information density and made scanning difficult. Separating content into clearer categories supported faster comprehension.
-                        </p>
                     </div>
 
                     <div id="solution" className="problem-section">
                         <span className="section-label">SOLUTION</span>
-                        <p className="section-body">We introduced a distinctive visual style through subtle animations and thoughtful use of empty space, ensuring the interface felt engaging without compromising clarity.</p>
+                        <p className="section-body">We introduced a distinctive visual style through <b>subtle animations</b> and <b>thoughtful use of empty space</b>, ensuring the interface felt <b>engaging</b> without compromising clarity.</p>
 
                         <div className="ui-example-container" style={{ marginTop: '3rem' }}>
                             <p className="comp-sub-title" style={{ marginTop: 0, marginBottom: '2rem' }}>a) Buttons</p>
@@ -374,7 +380,7 @@ function Cybersea() {
                         <h2 className="overview-title">Iterating on Visual Hierarchy</h2>
 
                         <div className="ui-example-container">
-                            <h3 className="comp-sub-title">01 Dropdown Menu</h3>
+                            <h3 className="comp-sub-title">01 Selection Menu</h3>
                             <div className="before-after-grid">
                                 <div className="comparison-col">
                                     <span className="comparison-label before">BEFORE</span>
@@ -382,9 +388,9 @@ function Cybersea() {
                                         <img src={cyberseaBeforeDropdown} alt="Before dropdown" className="comparison-img" />
                                     </div>
                                     <ul className="comparison-bullets">
-                                        <li>Dropdown menu, making it difficult to see all options</li>
-                                        <li>Too much empty space around the page</li>
-                                        <li>Red selection box made navigation less clear</li>
+                                        <li>Dropdown interaction limits visibility of available options, increasing interaction cost</li>
+                                        <li>Weak information hierarchy makes it difficult to quickly scan and compare items</li>
+                                        <li>The red selection indicator created visual noise and did not clearly communicate the active state.</li>
                                     </ul>
                                 </div>
                                 <div className="comparison-col">
@@ -393,8 +399,9 @@ function Cybersea() {
                                         <img src={cyberseaAfterDropdown} alt="After dropdown" className="comparison-img" />
                                     </div>
                                     <ul className="comparison-bullets">
-                                        <li>Simpler and easier on the eyes</li>
-                                        <li>Lists all options out, allowing user to scan the page faster</li>
+                                        <li>Replaced dropdown with an expanded list to improve scannability and reduce interaction friction</li>
+                                        <li>Reduced unnecessary spacing to create a more balanced layout and stronger visual structure.</li>
+                                        <li>Introduced a clearer selection state and hover feedback to improve wayfinding and interaction clarity.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -409,7 +416,8 @@ function Cybersea() {
                                         <img src={cyberseaBeforePanel} alt="Before panel" className="comparison-img" />
                                     </div>
                                     <ul className="comparison-bullets">
-                                        <li>Button hierarchy is unclear as both boxes are the same color</li>
+                                        <li>Lack of clear visual hierarchy between primary and secondary actions</li>
+                                        <li>Weak visual hierarchy caused the interface to feel visually flat and reduced the discoverability of key functionality.</li>
                                     </ul>
                                 </div>
                                 <div className="comparison-col">
@@ -418,6 +426,7 @@ function Cybersea() {
                                         <img src={cyberseaAfterPanel} alt="After panel" className="comparison-img" />
                                     </div>
                                     <ul className="comparison-bullets">
+                                        <li>Introduced distinct styling to establish clear action hierarchy</li>
                                         <li>Highlights the primary section by differentiating the button colors</li>
                                     </ul>
                                 </div>
@@ -443,9 +452,7 @@ function Cybersea() {
                                         Why we didn’t choose it:
                                     </p>
                                     <ul className="rejection-box-list">
-                                        <li>Felt too abstract and less connected to user tasks</li>
-                                        <li>Interaction was less clear beyond basic rotation</li>
-                                        <li>Made it harder to focus on specific, actionable insights</li>
+                                        <li>Felt too abstract and less connected to user goals</li>
                                         <li>Ultimately felt more like a generic data visualization rather than a unique product experience</li>
                                     </ul>
                                 </div>
@@ -488,8 +495,8 @@ function Cybersea() {
                         </div>
                     </div>
                 </main>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
 

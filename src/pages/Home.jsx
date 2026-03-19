@@ -128,7 +128,20 @@ function Home() {
       </section>
       <section id="work" className="projects-container">
         <div className="project-preview-row">
-          <Link to="/projects/relish" className="project-preview-box reveal-item" ref={box1Ref}>
+          <Link to="/projects/cybersea" className="project-preview-box reveal-item" ref={box1Ref}>
+            <div className="project-preview-square project-preview-square-first">
+              <img src={cyberseaImg} alt="Cybersea Project UI" className="project-img" />
+            </div>
+            <div className="project-preview-info">
+              <span className="project-preview-title">3D mesh playground & cool ocean visuals</span>
+              <div className="project-preview-meta">
+                <span className="project-preview-tag">Product Design</span>
+                <span className="project-preview-tag">Hackathon</span>
+              </div>
+            </div>
+            <div className="project-preview-subtitle">1ST OVERALL @ UOTTAHACKS • 2026</div>
+          </Link>
+          <Link to="/projects/relish" className="project-preview-box reveal-item" ref={box2Ref}>
             <div className="project-preview-square project-preview-square-second">
               <div className="project-side-by-side-container">
                 <img src={relishMain} alt="Relish Main" className="project-side-img" />
@@ -145,19 +158,6 @@ function Home() {
               </div>
             </div>
             <div className="project-preview-subtitle">FIGMA MAKE-A-THON • 2025</div>
-          </Link>
-          <Link to="/projects/cybersea" className="project-preview-box reveal-item" ref={box2Ref}>
-            <div className="project-preview-square project-preview-square-first">
-              <img src={cyberseaImg} alt="Cybersea Project UI" className="project-img" />
-            </div>
-            <div className="project-preview-info">
-              <span className="project-preview-title">3D mesh playground & cool ocean visuals</span>
-              <div className="project-preview-meta">
-                <span className="project-preview-tag">Product Design</span>
-                <span className="project-preview-tag">Hackathon</span>
-              </div>
-            </div>
-            <div className="project-preview-subtitle">1ST OVERALL @ UOTTAHACKS • 2026</div>
           </Link>
         </div>
 
