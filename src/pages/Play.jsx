@@ -15,7 +15,7 @@ function Play() {
     <>
       <div className="play-gradient" aria-hidden="true"></div>
       <section className="page-container play-container">
-        <h1 className="about-title">In my free time, I dabble in a little art.</h1>
+        <h1 className="about-title">In my free time, I dabble in a bit of art.</h1>
 
         <div className="play-gallery-grid" style={{ marginTop: '2rem', position: 'relative', zIndex: 1 }}>
           {/* Column 1 */}

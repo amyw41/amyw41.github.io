@@ -2200,7 +2200,7 @@ body.relish-page {
 .problem-description {
   font-family: 'Raleway', sans-serif;
   font-size: clamp(1.1rem, 1.5vw, 1.5rem);
-  color: #666;
+  color: #000000;
   font-style: italic;
   line-height: 1.6;
   margin-bottom: 2rem;
