@@ -86,7 +86,7 @@ function Home() {
             <div className="desc-line align-desc">
               <span className="arrow">→</span>
               <span className="desc-text">
-                product designer who cares too much about how things <i>feel</i> to use.
+                product designer who cares way too much about how things <i>feel</i>.
               </span>
             </div>
             <div className="desc-line align-desc">
@@ -165,7 +165,7 @@ function Home() {
               </div>
             </div>
             <div className="project-preview-info">
-              <span className="project-preview-title">Amazon through a UX lense</span>
+              <span className="project-preview-title">Amazon through a UX lens</span>
               <div className="project-preview-meta">
                 <span className="project-preview-tag">UX Research</span>
                 <span className="project-preview-tag">UX Design</span>

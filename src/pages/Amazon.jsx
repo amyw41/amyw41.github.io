@@ -8,7 +8,7 @@ function Amazon() {
                 <span className="back-arrow">←</span> HOME
             </Link>
             <section className="project-hero">
-                <h1 className="project-title load-reveal stagger-1">Amazon through a UX lense</h1>
+                <h1 className="project-title load-reveal stagger-1">Amazon through a UX lens</h1>
                 <div className="project-meta-info load-reveal stagger-2">
                     <span className="project-tag">UX Research</span>
                     <span className="project-tag">UX Design</span>
