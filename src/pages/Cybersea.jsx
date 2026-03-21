@@ -60,8 +60,8 @@ const CrossIcon = () => (
 function Cybersea() {
     const [activeSection, setActiveSection] = useState('overview');
 
-    // Gate entrance animations until the hero image is loaded
-    const heroLoaded = useImagesLoaded([cyberseaDemo]);
+    // Gate entrance animations implicitly without waiting for the large gif
+    const heroLoaded = useImagesLoaded([]);
 
     // Reveal refs for different sections
     const metadataRef = useScrollReveal(0);
