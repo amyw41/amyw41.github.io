@@ -107,8 +107,8 @@ img {
   justify-content: center;
 }
 
-/* .project-wip .project-preview-square::after {
-  background-color: rgba(0, 0, 0, 0.3);
+.project-wip .project-preview-square::after {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .project-wip .project-preview-square:hover::after {
@@ -116,14 +116,14 @@ img {
 }
 
 .project-wip .project-preview-square::before {
-  content: "WORK IN PROGRESS!";
+  content: "work in progress!";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   font-family: 'Raleway', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.6rem;
   z-index: 2;
   opacity: 0;
@@ -138,7 +138,7 @@ img {
 
 .project-wip {
   cursor: default !important;
-} */
+}
 
 .cursor-text {
   font-family: 'Raleway', sans-serif;
