@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
-import useScrollReveal from '../hooks/useScrollReveal'
 import cyberseaImg from '../assets/cybersea_new.png'
 import relishMain from '../assets/relish-main.png'
 import relishForm from '../assets/relish-form.png'
@@ -14,11 +13,6 @@ function Home() {
   const wavyRef = useRef(null)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
-  // Refs for project boxes with staggered animation
-  const box1Ref = useScrollReveal(0)
-  const box2Ref = useScrollReveal(100)
-  const box3Ref = useScrollReveal(200)
-  const box4Ref = useScrollReveal(300)
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
@@ -92,7 +86,7 @@ function Home() {
             <div className="desc-line align-desc">
               <span className="arrow">→</span>
               <span className="desc-text">
-                is a product designer who uses <span className="desc-italic-bold">aesthetics</span> to drive<br className="mobile-break" /> <span className="desc-bold">functionality.</span>
+                product designer who cares too much about how things <i>feel</i> to use.
               </span>
             </div>
             <div className="desc-line align-desc">
@@ -128,7 +122,7 @@ function Home() {
       </section>
       <section id="work" className="projects-container">
         <div className="project-preview-row">
-          <Link to="/projects/cybersea" className="project-preview-box reveal-item" ref={box1Ref}>
+          <Link to="/projects/cybersea" className="project-preview-box">
             <div className="project-preview-square project-preview-square-first">
               <img src={cyberseaImg} alt="Cybersea Project UI" className="project-img" />
             </div>
@@ -141,7 +135,7 @@ function Home() {
             </div>
             <div className="project-preview-subtitle">1ST OVERALL @ UOTTAHACKS • 2026</div>
           </Link>
-          <Link to="/projects/relish" className="project-preview-box reveal-item" ref={box2Ref}>
+          <Link to="/projects/relish" className="project-preview-box">
             <div className="project-preview-square project-preview-square-second">
               <div className="project-side-by-side-container">
                 <img src={relishMain} alt="Relish Main" className="project-side-img" />
@@ -162,7 +156,7 @@ function Home() {
         </div>
 
         <div className="project-preview-row">
-          <Link to="/projects/amazon" className="project-preview-box reveal-item project-wip" ref={box3Ref} onClick={(e) => e.preventDefault()}>
+          <Link to="/projects/amazon" className="project-preview-box project-wip" onClick={(e) => e.preventDefault()}>
             <div className="project-preview-square project-preview-square-third">
               <div className="project-side-by-side-container">
                 <img src={amazon1} alt="Amazon 1" className="project-side-img" />
