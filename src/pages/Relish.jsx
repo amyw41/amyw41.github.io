@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
-import useScrollReveal from '../hooks/useScrollReveal'
-import useImagesLoaded from '../hooks/useImagesLoaded'
 import relishMain from '../assets/relish-main.png'
 import relishForm from '../assets/relish-form.png'
 import relishCalendar from '../assets/relish-calendar.png'
@@ -52,11 +50,6 @@ const CrossIcon = () => (
 function Relish() {
     const [activeSection, setActiveSection] = useState('overview');
 
-    // Gate entrance animations until all hero images are loaded
-    const heroLoaded = useImagesLoaded([relishMain, relishForm, relishCalendar]);
-
-    // Reveal refs for different sections
-    const metadataRef = useScrollReveal(0);
 
     useEffect(() => {
         const activeItem = document.querySelector('.sidebar-nav li.active');
@@ -103,13 +96,13 @@ function Relish() {
     };
 
     return (
-        <div className={`project-detail-page relish-page-container${heroLoaded ? ' page-fade-in' : ''}`} style={heroLoaded ? {} : { opacity: 0 }}>
+        <div className="project-detail-page relish-page-container">
             <div className="relish-background-gradient"></div>
             <div className="relish-hero-container">
                 <div className="relish-hero-content">
-                    <h1 className="relish-title load-reveal stagger-1">Relish</h1>
-                    <p className="relish-subtitle load-reveal stagger-2">A mobile app designed to make eating <br className="mobile-break" />more intentional and enjoyable.</p>
-                    <div className="project-side-by-side-container load-reveal stagger-3">
+                    <h1 className="relish-title">Relish</h1>
+                    <p className="relish-subtitle">A mobile app designed to make eating <br className="mobile-break" />more intentional and enjoyable.</p>
+                    <div className="project-side-by-side-container">
                         <img src={relishMain} alt="Relish Main" className="project-side-img" />
                         <img src={relishForm} alt="Relish Form" className="project-side-img" />
                         <img src={relishCalendar} alt="Relish Calendar" className="project-side-img" />
@@ -117,7 +110,7 @@ function Relish() {
                 </div>
             </div>
 
-            <div className="case-study-metadata-wrapper reveal-item" ref={metadataRef}>
+            <div className="case-study-metadata-wrapper">
                 <section className="metadata-row">
                     <div className="metadata-col">
                         <span className="metadata-label">TIMELINE</span>

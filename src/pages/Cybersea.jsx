@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
-import useScrollReveal from '../hooks/useScrollReveal'
-import useImagesLoaded from '../hooks/useImagesLoaded'
 import relishMain from '../assets/relish-main.png'
 import relishForm from '../assets/relish-form.png'
 import relishCalendar from '../assets/relish-calendar.png'
@@ -60,11 +58,6 @@ const CrossIcon = () => (
 function Cybersea() {
     const [activeSection, setActiveSection] = useState('overview');
 
-    // Gate entrance animations implicitly without waiting for the large gif
-    const heroLoaded = useImagesLoaded([]);
-
-    // Reveal refs for different sections
-    const metadataRef = useScrollReveal(0);
 
     useEffect(() => {
         const activeItem = document.querySelector('.sidebar-nav li.active');
@@ -111,19 +104,19 @@ function Cybersea() {
     };
 
     return (
-        <div className={`project-detail-page relish-page-container${heroLoaded ? ' page-fade-in' : ''}`} style={heroLoaded ? {} : { opacity: 0 }}>
+        <div className="project-detail-page relish-page-container">
             <div className="cybersea-background-gradient"></div>
             <div className="cybersea-hero-container">
                 <div className="cybersea-hero-content">
-                    <h1 className="cybersea-title load-reveal stagger-1">CyberSea</h1>
-                    <p className="cybersea-subtitle load-reveal stagger-2">A real-time Arctic strategy simulator designed <br className="mobile-break" />to simplify military data.</p>
-                    <div className="cybersea-hero-video-container load-reveal stagger-3">
+                    <h1 className="cybersea-title">CyberSea</h1>
+                    <p className="cybersea-subtitle">A real-time Arctic strategy simulator designed <br className="mobile-break" />to simplify military data.</p>
+                    <div className="cybersea-hero-video-container">
                         <img src={cyberseaDemo} alt="Cybersea Demo" className="cybersea-hero-video" />
                     </div>
                 </div>
             </div>
 
-            <div className="case-study-metadata-wrapper reveal-item" ref={metadataRef}>
+            <div className="case-study-metadata-wrapper">
                 <section className="metadata-row">
                     <div className="metadata-col">
                         <span className="metadata-label">TIMELINE</span>
