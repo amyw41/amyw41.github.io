@@ -27,6 +27,9 @@ import cyberseaBeforePanel2 from '../assets/cybersea-before-panel-2.png'
 import cyberseaAfterPanel2 from '../assets/cybersea-after-panel-2.png'
 import cyberseaRough1 from '../assets/cybersea-rough-1-new.png'
 import cyberseaRough2 from '../assets/cybersea-rough-2.png'
+import cyberseaMap from '../assets/cybersea-map.jpg'
+import cyberseaHeatmap from '../assets/cybersea-heatmap.png'
+import cyberseaMission from '../assets/cybersea-mission.jpg'
 
 const sectionsData = [
     { id: 'overview', title: 'Overview' },
@@ -177,20 +180,57 @@ function Cybersea() {
 
                 <main className="case-study-content">
                     <div id="overview" className="problem-section">
-                        <span className="section-label">OUR PROMPT</span>
+                        <span className="section-label">PROBLEM</span>
                         <h2 className="overview-title">The Thales Challenge:</h2>
 
-                        <div className="timeline-container" style={{ marginTop: '2.5rem' }}>
-                            <div className="timeline-point">
-                                <p className="section-body">
-                                    Design and build a Real-Time Strategy (RTS) simulator that models trade route patrol and natural resource protection operations in the Canadian Arctic. This should enable leadership teams to identify the most sustainable strategies for resource utilization.
-                                </p>
+                        <div>
+                            <p className="section-body">
+                                Planning patrol routes in the Arctic is challenging because conditions are always changing. Ice melts, weather shifts quickly, and trade routes move over time. There isn’t a simple way to see all of this information in one place. Because of this, <span className="cybersea-highlight">industry professionals rely on slow, manual planning that can take days to assess a single scenario, making it difficult to respond quickly in urgent situations.</span>
+                            </p>
+                            <h3 className="centered-header">
+                                Professionals currently need 3+ different views just to plan <i>one route</i>!
+                            </h3>
+                            <div className="problem-images-row">
+                                <div className="problem-image-wrapper">
+                                    <img src={cyberseaMap} alt="Current maps" className="problem-img" />
+                                    <p className="problem-caption">Map of Trade Routes</p>
+                                </div>
+                                <div className="problem-image-wrapper">
+                                    <img src={cyberseaHeatmap} alt="Weather conditions" className="problem-img" />
+                                    <p className="problem-caption">Heat Map</p>
+                                </div>
+                                <div className="problem-image-wrapper">
+                                    <img src={cyberseaMission} alt="Legacy UI" className="problem-img" />
+                                    <p className="problem-caption">Current, Confusing UI</p>
+                                </div>
                             </div>
-                            <div className="timeline-point" style={{ marginTop: '3rem' }}>
-                                <h3 className="section-subtitle" style={{ fontFamily: 'Raleway', fontStyle: 'italic', fontWeight: '700', fontSize: '1.3rem', color: '#1a1a1a', marginBottom: '0.8rem' }}>TLDR:</h3>
-                                <p className="section-body" style={{ fontFamily: 'Raleway', color: '#1a1a1a', fontWeight: '400', fontStyle: 'italic', fontSize: '1.3rem', marginTop: '0' }}>
-                                    Design a Real-Time Strategy simulator where trade routes are modelled to combat the <b>constantly changing conditions</b> of the Arctic sea.
-                                </p>
+
+                            <div className="flow-connector-wrapper">
+                                <div className="flow-line-long"></div>
+                                <div className="flow-box-center-new">
+                                    <h3 className="flow-text-bottom">Why does this matter?</h3>
+                                </div>
+                                <div className="flow-line-long"></div>
+                                <div className="flow-arrow"></div>
+                            </div>
+
+                            <p className="section-body" style={{ marginTop: '2rem', textAlign: 'left', color: '#000000', fontSize: '1.45rem' }}>
+                                Sending patrols is expensive and high-stakes... <span className="cybersea-highlight">one wrong decision</span> can lead to:
+                            </p>
+
+                            <div className="impact-columns">
+                                <div className="impact-col">
+                                    <h4>Wasted Resources:</h4>
+                                    <p>Up to <b>$500K–$3M</b> in wasted costs annually</p>
+                                </div>
+                                <div className="impact-col">
+                                    <h4>Inconsistency:</h4>
+                                    <p>Gaps in surveillance across <b>17+ key Arctic locations</b></p>
+                                </div>
+                                <div className="impact-col">
+                                    <h4>External Risks:</h4>
+                                    <p>Increased environmental and security risks</p>
+                                </div>
                             </div>
                         </div>
                     </div>
