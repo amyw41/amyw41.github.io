@@ -12,6 +12,7 @@ import Amazon from './pages/Amazon'
 import PlaceholderProject from './pages/PlaceholderProject'
 import ScrollToTop from './components/ScrollToTop'
 import Footer from './components/Footer'
+import PageLoader from './components/PageLoader'
 import { useState, useEffect } from 'react'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <ScrollToTop />
       <CursorCircle />
       <Taskbar />
+      <PageLoader />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Work />} />

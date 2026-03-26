@@ -12,15 +12,6 @@ import amazon3 from '../assets/amazon 3.png'
 function Home() {
   const wavyRef = useRef(null)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-  
-  const projectRefs = useRef([])
-
-  const addToRefs = (el) => {
-    if (el && !projectRefs.current.includes(el)) {
-      projectRefs.current.push(el)
-    }
-  }
-
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
@@ -81,42 +72,6 @@ function Home() {
     }
   }, [waveCycleWidth])
 
-  useEffect(() => {
-    let rafId;
-    const handleScroll = () => {
-      rafId = requestAnimationFrame(() => {
-        projectRefs.current.forEach((el) => {
-          if (!el) return
-          const rect = el.getBoundingClientRect()
-          const windowHeight = window.innerHeight
-          const centerY = windowHeight / 2
-          const elCenterY = rect.top + rect.height / 2
-          
-          const maxDist = windowHeight / 1.1
-          const dist = Math.abs(elCenterY - centerY)
-          const progress = Math.max(0, Math.min(1, dist / maxDist))
-          
-          const easeProgress = Math.pow(progress, 1.5)
-
-          const scale = 1 - (easeProgress * 0.12)
-          const translateY = easeProgress * 60
-
-          el.style.setProperty('--scroll-scale', scale)
-          el.style.setProperty('--scroll-ty', `${translateY}px`)
-        })
-      });
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    window.addEventListener('resize', handleScroll, { passive: true })
-    handleScroll()
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('resize', handleScroll)
-      cancelAnimationFrame(rafId)
-    }
-  }, [])
-
   return (
     <>
       <section className="hero-gradient-container">
@@ -166,7 +121,7 @@ function Home() {
       </section>
       <section id="work" className="projects-container">
         <div className="project-preview-row">
-          <Link to="/projects/cybersea" className="project-preview-box" ref={addToRefs}>
+          <Link to="/projects/cybersea" className="project-preview-box">
             <div className="project-preview-square project-preview-square-first">
               <img src={cyberseaImg} alt="Cybersea Project UI" className="project-img" />
             </div>
@@ -179,7 +134,7 @@ function Home() {
             </div>
             <div className="project-preview-subtitle">1ST OVERALL @ UOTTAHACKS • 2026</div>
           </Link>
-          <Link to="/projects/relish" className="project-preview-box" ref={addToRefs}>
+          <Link to="/projects/relish" className="project-preview-box">
             <div className="project-preview-square project-preview-square-second">
               <div className="project-side-by-side-container">
                 <img src={relishMain} alt="Relish Main" className="project-side-img" />
@@ -200,7 +155,7 @@ function Home() {
         </div>
 
         <div className="project-preview-row">
-          <Link to="/projects/amazon" className="project-preview-box project-wip" onClick={(e) => e.preventDefault()} ref={addToRefs}>
+          <Link to="/projects/amazon" className="project-preview-box project-wip" onClick={(e) => e.preventDefault()}>
             <div className="project-preview-square project-preview-square-third">
               <div className="project-side-by-side-container">
                 <img src={amazon1} alt="Amazon 1" className="project-side-img" />

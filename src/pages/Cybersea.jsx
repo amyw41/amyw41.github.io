@@ -60,7 +60,27 @@ const CrossIcon = () => (
 
 function Cybersea() {
     const [activeSection, setActiveSection] = useState('overview');
+    const [demoSrc, setDemoSrc] = useState(cyberseaDemo);
 
+    useEffect(() => {
+        let objectUrl = null;
+        const handleLoaderFinished = async () => {
+            try {
+                const res = await fetch(cyberseaDemo);
+                const blob = await res.blob();
+                objectUrl = URL.createObjectURL(blob);
+                setDemoSrc(objectUrl);
+            } catch (e) {
+                console.error("Failed to reset GIF", e);
+            }
+        };
+
+        window.addEventListener('loader-finished', handleLoaderFinished);
+        return () => {
+            window.removeEventListener('loader-finished', handleLoaderFinished);
+            if (objectUrl) URL.revokeObjectURL(objectUrl);
+        };
+    }, []);
 
     useEffect(() => {
         const activeItem = document.querySelector('.sidebar-nav li.active');
@@ -114,7 +134,7 @@ function Cybersea() {
                     <h1 className="cybersea-title">CyberSea</h1>
                     <p className="cybersea-subtitle">A real-time Arctic strategy simulator designed <br className="mobile-break" />to simplify military data.</p>
                     <div className="cybersea-hero-video-container">
-                        <img src={cyberseaDemo} alt="Cybersea Demo" className="cybersea-hero-video" />
+                        <img src={demoSrc} alt="Cybersea Demo" className="cybersea-hero-video" />
                     </div>
                 </div>
             </div>
