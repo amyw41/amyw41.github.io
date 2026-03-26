@@ -205,31 +205,24 @@ function Cybersea() {
                                 </div>
                             </div>
 
-                            <div className="flow-connector-wrapper">
-                                <div className="flow-line-long"></div>
-                                <div className="flow-box-center-new">
-                                    <h3 className="flow-text-bottom">Why does this matter?</h3>
-                                </div>
-                                <div className="flow-line-long"></div>
-                                <div className="flow-arrow"></div>
-                            </div>
-
-                            <p className="section-body" style={{ marginTop: '2rem', textAlign: 'left', color: '#000000', fontSize: '1.45rem' }}>
+                            <h2 className="overview-title" style={{ marginTop: '4rem' }}>Why does this matter?</h2>
+                            
+                            <p className="section-body">
                                 Sending patrols is expensive and high-stakes... <span className="cybersea-highlight">one wrong decision</span> can lead to:
                             </p>
 
                             <div className="impact-columns">
                                 <div className="impact-col">
                                     <h4>Wasted Resources:</h4>
-                                    <p>Up to <b>$500K–$3M</b> in wasted costs annually</p>
+                                    <p className="section-body">Up to <b>$500K–$3M</b> in wasted costs annually</p>
                                 </div>
                                 <div className="impact-col">
                                     <h4>Inconsistency:</h4>
-                                    <p>Gaps in surveillance across <b>17+ key Arctic locations</b></p>
+                                    <p className="section-body">Gaps in surveillance across <b>17+ key Arctic locations</b></p>
                                 </div>
                                 <div className="impact-col">
                                     <h4>External Risks:</h4>
-                                    <p>Increased environmental and security risks</p>
+                                    <p className="section-body">Increased environmental and security risks</p>
                                 </div>
                             </div>
                         </div>
