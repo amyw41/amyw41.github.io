@@ -1,4 +1,4 @@
-body,
+﻿body,
 html {
   cursor: none !important;
   background-color: #fff;
@@ -84,7 +84,9 @@ img {
 }
 
 @keyframes spinLoader {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Cursor circle effect */
@@ -1828,6 +1830,7 @@ body.relish-page {
 
   .impact-columns {
     flex-direction: column;
+    gap: 2rem;
   }
 }
 
@@ -3419,7 +3422,7 @@ body.relish-page {
 
 .impact-columns {
   display: flex;
-  gap: 3rem;
+  gap: 2.5rem;
   margin-top: 1.2rem;
   width: 100%;
 }
@@ -3427,6 +3430,8 @@ body.relish-page {
 .impact-col {
   flex: 1;
   text-align: left;
+  padding: 1.5rem;
+  border-radius: 4px;
 }
 
 .impact-col h4 {

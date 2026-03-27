@@ -226,12 +226,12 @@ function Cybersea() {
                             </div>
 
                             <h2 className="overview-title" style={{ marginTop: '4rem' }}>Why does this matter?</h2>
-                            
-                            <p className="section-body">
+
+                            <p className="section-body" style={{ marginBottom: '1.2rem' }}>
                                 Sending patrols is expensive and high-stakes... <span className="cybersea-highlight">one wrong decision</span> can lead to:
                             </p>
 
-                            <div className="impact-columns">
+                            <div className="impact-columns" style={{ marginTop: '0' }}>
                                 <div className="impact-col">
                                     <h4>Wasted Resources:</h4>
                                     <p className="section-body">Up to <b>$500K–$3M</b> in wasted costs annually</p>
@@ -245,6 +245,16 @@ function Cybersea() {
                                     <p className="section-body">Increased environmental and security risks</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div id="solution-overview" className="problem-section">
+                        <span className="section-label">SOLUTION</span>
+                        <h2 className="overview-title">3D Models & Real-Time Tracker</h2>
+                        <div>
+                            <p className="section-body">
+                                Design a unified, real-time strategy dashboard to reduce decision-making time from days to minutes.
+                            </p>
                         </div>
                     </div>
 
