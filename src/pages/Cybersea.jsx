@@ -251,10 +251,10 @@ function Cybersea() {
 
                     <div id="solution-overview" className="problem-section">
                         <span className="section-label">SOLUTION</span>
-                        <h2 className="overview-title">Simplify Arctic data into a live simulation, dashboard, and 3D models.</h2>
+                        <h2 className="overview-title">Simplify Arctic Data Into 3 Key Features:</h2>
                         <div>
                             <p className="section-body">
-                                We designed CyberSea, a web-app that makes Arctic data more accessible and engaging for users. Including 3 main features:
+                                We designed CyberSea, a web-app that makes Arctic data more accessible and engaging for users by simplifying it into:
                             </p>
                             <div className="feature-stack-wrapper">
                                 {/* Globe */}
@@ -264,7 +264,7 @@ function Cybersea() {
                                     </div>
                                     <div className="feature-stack-text-col">
                                         <h3 className="feature-stack-title">Interactive Map</h3>
-                                        <p className="section-body feature-stack-desc">It showcases the globe and the current live routes.</p>
+                                        <p className="section-body feature-stack-desc">A live globe visualizing ship routes and activity in the Arctic, with adjustable playback speed to view movements in real time or up to 10× faster.</p>
                                     </div>
                                 </div>
 
@@ -275,7 +275,7 @@ function Cybersea() {
                                     </div>
                                     <div className="feature-stack-text-col">
                                         <h3 className="feature-stack-title">Dashboard</h3>
-                                        <p className="section-body feature-stack-desc">[Sample text] Key metrics and timeline events at a glance.</p>
+                                        <p className="section-body feature-stack-desc">A dashboard showing key data such as weather, resources, and mission status for a clear overview.</p>
                                     </div>
                                 </div>
 
@@ -286,7 +286,7 @@ function Cybersea() {
                                     </div>
                                     <div className="feature-stack-text-col">
                                         <h3 className="feature-stack-title">3D Models</h3>
-                                        <p className="section-body feature-stack-desc">Users may go </p>
+                                        <p className="section-body feature-stack-desc">Detailed 3D models that break down each piece of equipment into its individual parts, with both solid and mesh views to show how it’s structured.</p>
                                     </div>
                                 </div>
                             </div>
@@ -298,7 +298,11 @@ function Cybersea() {
                         <h2 className="overview-title">Defining the User:</h2>
                         <div>
                             <p className="section-body">
-                                With the nature of Hackathon projects being to create something flashy and not necessarily practical, we had to ask: </p>
+                                We initially hoped to design a product for industry professionals, but soon realized it wouldn’t be feasible; it required a level of insight and depth we weren’t able to achieve with our time constraints. With that in mind, we made the choice to<span className="cybersea-highlight"> shift our target audience to the general public, curating to users who are curious about ocean data and the Arctic conditions.</span>
+                            </p>
+                            <p className="section-body">
+                                That being said, we still wanted to ensure CyberSea is advanced enough for professionals, and so we created personas:
+                            </p>
                         </div>
 
                         <div className="persona-column" style={{ paddingLeft: '0' }}>
@@ -307,16 +311,10 @@ function Cybersea() {
                                     <div className="persona-icon-wrapper user-list-icon" style={{ backgroundColor: '#eeeeee' }}>
                                         <UserIcon />
                                     </div>
-                                    <h4 className="user-list-title">Professionals <span style={{ color: '#888', fontStyle: 'italic', fontSize: '1.2rem', fontFamily: 'Raleway', fontWeight: '500', marginLeft: '0.5rem' }}>(The military, government, etc.)</span></h4>
+                                    <h4 className="user-list-title">Pat the Route Planner <span style={{ color: '#888', fontStyle: 'italic', fontSize: '1.2rem', fontFamily: 'Raleway', fontWeight: '500', marginLeft: '0.5rem' }}>(Works as a Maritime Route Planner)</span></h4>
                                 </div>
                                 <div className="user-timeline-wrapper">
                                     <div className="user-timeline-item">
-                                        <p className="section-body">
-                                            Professionals are required to analyze data on the daily. Currently, they struggle to quickly interpret the complex data they are faced with, delaying analysis and decisions regarding the Arctic.
-                                        </p>
-                                        <p className="section-body">
-                                            Our job was to address this by simplifying the way users may interact with and navigate data.
-                                        </p>
                                         <h5 className="user-timeline-title">a) Needs</h5>
                                         <ul className="section-list" style={{ marginBottom: 0, marginTop: '0.5rem', paddingLeft: '1.2rem' }}>
                                             <li>Easy-to-use interface for quick, high-stakes decisions.</li>
@@ -340,15 +338,6 @@ function Cybersea() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="user-solution-container">
-                                        <img src={cyberseaGlobe} alt="Globe visual" className="user-solution-img" />
-                                        <div className="user-solution-text-container">
-                                            <span className="user-solution-label">Our Approach</span>
-                                            <span className="user-solution-desc">An interactive globe visual + data dashboard to keep info organized.</span>
-                                            <span className="user-solution-label">Result</span>
-                                            <span className="user-solution-desc">The content is grouped in a clean manner, creating a clear information hierarchy.</span>
-                                        </div>
-                                    </div>
 
                                 </div>
                             </div>
@@ -358,12 +347,10 @@ function Cybersea() {
                                     <div className="persona-icon-wrapper user-list-icon" style={{ backgroundColor: '#eeeeee' }}>
                                         <UserIcon />
                                     </div>
-                                    <h4 className="user-list-title">The Every Day User</h4>
+                                    <h4 className="user-list-title">John the Avg. Citizen <span style={{ color: '#888', fontStyle: 'italic', fontSize: '1.2rem', fontFamily: 'Raleway', fontWeight: '500', marginLeft: '0.5rem' }}>(Checking CyberSea out for fun!)</span></h4>
+
                                 </div>
                                 <div className="user-timeline-wrapper">
-                                    <p className="section-body">
-                                        Without the proper tools, the average person cannot easily access or interpret data regarding the Arctic. We aimed to allow for Arctic information to be more accessible, drawing in the user so they would be inclined to learn more.
-                                    </p>
                                     <div className="user-timeline-item">
                                         <h5 className="user-timeline-title">a) Needs</h5>
                                         <ul className="section-list" style={{ marginBottom: 0, marginTop: '0.5rem', paddingLeft: '1.2rem' }}>
@@ -389,46 +376,32 @@ function Cybersea() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="user-solution-container">
-                                        <img src={cyberseaHero} alt="Hero dashboard" className="user-solution-img" />
-                                        <div className="user-solution-text-container">
-                                            <span className="user-solution-label">Our Approach</span>
-                                            <span className="user-solution-desc">A visually engaging interface with animated waves for delight!</span>
-                                        </div>
-                                    </div>
-                                    <div className="user-solution-container">
-                                        <img src={cyberseaModel} alt="Model visual" className="user-solution-img" />
-                                        <div className="user-solution-text-container">
-                                            <span className="user-solution-label">Our Approach</span>
-                                            <span className="user-solution-desc">AI generated descriptions for each model component.</span>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            <blockquote className="section-quote">
+                                Was reframing our audience worth it?
+                            </blockquote>
+                        </div>
+                        <p className="section-body">Shifting allowed us to reframe our minds and focus on a different but equally important problem: <span className="cybersea-highlight">How do we make complex Arctic data more accessible, engaging, and easy to understand?</span></p>
+                        <p className="section-body">We were able to focus on these 3 elements:</p>
+                        <ul className="section-list condensed">
+                            <li>Clarity over technical complexity</li>
+                            <li>Visual storytelling over dense data systems</li>
+                            <li>Interactivity that encourages exploration rather than precision planning</li>
+                        </ul>
                     </div>
 
                     <div id="problem-1" className="problem-section">
                         <span className="section-label">DESIGN CHALLENGE</span>
-                        <div className="timeline-container timeline-container-dark" style={{ marginTop: '1.5rem' }}>
-                            <div>
-                                <div className="comp-section-row" style={{ alignItems: 'flex-start', margin: 0 }}>
-                                    <div style={{ flex: 1 }}>
-                                        <h3 className="problem-title">PROBLEM #1:</h3>
-                                        <p className="problem-description" style={{ marginTop: '0.5rem' }}>How can we <b>maximize clarity</b> without compromising visual design?</p>
-                                    </div>
-                                    <div style={{ flex: 1 }}>
-                                        <div className="section-list">
-                                            <li>Hackathons require projects to look <b>as unique</b> and <b>aesthetically pleasing</b> as possible, even at the cost of accessibility or function.</li>
-                                            <li>We need to find a balance between <b>data density</b> and <b>readability</b>.</li>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <p className="section-body">
-                                    I considered grouping all Arctic topics into one interface, but it increased information density and made scanning difficult. Separating content into clearer categories supported faster comprehension.
-                                </p>
-                            </div>
+                        <div className="section-quote-container">
+                            <p className="section-body">
+                                Hackathons require projects to look <span className="cybersea-highlight">as unique and aesthetically pleasing as possible</span>, even at the cost of accessibility or function.
+                            </p>
+                            <blockquote className="section-quote">
+                                How do we balance the expectations of a Hackathon, while still maintaining purpose?
+                            </blockquote>
                         </div>
                     </div>
 
@@ -584,7 +557,7 @@ function Cybersea() {
                             </div>
                         </div>
                     </div>
-                </main>
+                </main >
             </div >
         </div >
     )
