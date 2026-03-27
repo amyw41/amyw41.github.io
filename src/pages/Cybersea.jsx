@@ -33,6 +33,7 @@ import cyberseaMission from '../assets/cybersea-mission.jpg'
 
 const sectionsData = [
     { id: 'overview', title: 'Overview' },
+    { id: 'solution-overview', title: 'Solution Overview' },
     { id: 'users', title: 'Users' },
     { id: 'problem-1', title: 'Design Challenge' },
     { id: 'solution', title: 'Solution', nested: true, parentId: 'problem-1' },
@@ -205,7 +206,7 @@ function Cybersea() {
 
                         <div>
                             <p className="section-body">
-                                Planning patrol routes in the Arctic is challenging because conditions are always changing. Ice melts, weather shifts quickly, and trade routes move over time. There isn’t a simple way to see all of this information in one place. Because of this, <span className="cybersea-highlight">industry professionals rely on slow, manual planning that can take days to assess a single scenario, making it difficult to respond quickly in urgent situations.</span>
+                                Planning patrol routes in the Arctic is challenging because conditions are always changing. Ice melts, weather shifts quickly, and trade routes move over time. There isn’t a simple way to see all of this information in one place. Because of this, <span className="cybersea-highlight">industry professionals rely on slow, manual planning that can take days to assess a single scenario, making rapid decision-making difficult and limiting accessibility for non-experts.</span>
                             </p>
                             <h3 className="centered-header">
                                 Professionals currently need 3+ different views just to plan <i>one route</i>!
@@ -228,21 +229,21 @@ function Cybersea() {
                             <h2 className="overview-title" style={{ marginTop: '4rem' }}>Why does this matter?</h2>
 
                             <p className="section-body" style={{ marginBottom: '1.2rem' }}>
-                                Sending patrols is expensive and high-stakes... <span className="cybersea-highlight">one wrong decision</span> can lead to:
+                                Understanding what happens in the Arctic isn’t just an industry concern... <span className="cybersea-highlight">it shapes global systems that affect everyday life.</span> Our goal is to increase awareness and make Arctic information accessible so that the every day user can access it.
                             </p>
 
                             <div className="impact-columns" style={{ marginTop: '0' }}>
                                 <div className="impact-col">
-                                    <h4>Wasted Resources:</h4>
-                                    <p className="section-body">Up to <b>$500K–$3M</b> in wasted costs annually</p>
+                                    <h4>12-15%</h4>
+                                    <p className="section-body">Of global shipping is impacted by Arctic trade routes.</p>
                                 </div>
                                 <div className="impact-col">
-                                    <h4>Inconsistency:</h4>
-                                    <p className="section-body">Gaps in surveillance across <b>17+ key Arctic locations</b></p>
+                                    <h4>80%+</h4>
+                                    <p className="section-body">of Arctic datasets require technical expertise to interpret.</p>
                                 </div>
                                 <div className="impact-col">
-                                    <h4>External Risks:</h4>
-                                    <p className="section-body">Increased environmental and security risks</p>
+                                    <h4>4x</h4>
+                                    <p className="section-body">Faster melting in the Arctic than the global average.</p>
                                 </div>
                             </div>
                         </div>
@@ -250,16 +251,55 @@ function Cybersea() {
 
                     <div id="solution-overview" className="problem-section">
                         <span className="section-label">SOLUTION</span>
-                        <h2 className="overview-title">3D Models & Real-Time Tracker</h2>
+                        <h2 className="overview-title">Simplify Arctic data into a live simulation, dashboard, and 3D models.</h2>
                         <div>
                             <p className="section-body">
-                                Design a unified, real-time strategy dashboard to reduce decision-making time from days to minutes.
+                                We designed CyberSea, a web-app that makes Arctic data more accessible and engaging for users. Including 3 main features:
                             </p>
+                            <div className="feature-stack-wrapper">
+                                {/* Globe */}
+                                <div className="feature-stack-row">
+                                    <div className="feature-stack-image-col">
+                                        <img src={cyberseaGlobe} alt="cybersea globe" className="problem-img feature-stack-img feature-stack-img--cropped-left" />
+                                    </div>
+                                    <div className="feature-stack-text-col">
+                                        <h3 className="feature-stack-title">Interactive Map</h3>
+                                        <p className="section-body feature-stack-desc">It showcases the globe and the current live routes.</p>
+                                    </div>
+                                </div>
+
+                                {/* Dashboard */}
+                                <div className="feature-stack-row">
+                                    <div className="feature-stack-image-col">
+                                        <img src={cyberseaGlobe} alt="cybersea dashboard" className="problem-img feature-stack-img feature-stack-img--cropped-right" />
+                                    </div>
+                                    <div className="feature-stack-text-col">
+                                        <h3 className="feature-stack-title">Dashboard</h3>
+                                        <p className="section-body feature-stack-desc">[Sample text] Key metrics and timeline events at a glance.</p>
+                                    </div>
+                                </div>
+
+                                {/* 3D Models */}
+                                <div className="feature-stack-row">
+                                    <div className="feature-stack-image-col">
+                                        <img src={cyberseaModel} alt="cybersea model" className="problem-img feature-stack-img" />
+                                    </div>
+                                    <div className="feature-stack-text-col">
+                                        <h3 className="feature-stack-title">3D Models</h3>
+                                        <p className="section-body feature-stack-desc">Users may go </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div id="users" className="problem-section">
-                        <span className="section-label">USERS</span>
+                        <span className="section-label">RESEARCH</span>
+                        <h2 className="overview-title">Defining the User:</h2>
+                        <div>
+                            <p className="section-body">
+                                With the nature of Hackathon projects being to create something flashy and not necessarily practical, we had to ask: </p>
+                        </div>
 
                         <div className="persona-column" style={{ paddingLeft: '0' }}>
                             <div className="user-list-card">

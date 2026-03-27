@@ -1,4 +1,4 @@
-﻿body,
+body,
 html {
   cursor: none !important;
   background-color: #fff;
@@ -3429,20 +3429,95 @@ body.relish-page {
 
 .impact-col {
   flex: 1;
-  text-align: left;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1.5rem;
   border-radius: 4px;
 }
 
 .impact-col h4 {
   font-family: "Editorial New", serif;
-  font-size: 1.7rem;
+  font-size: 3.2rem;
   font-weight: 500;
   color: #000000;
-  margin: 0 0 0.8rem 0;
-  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  line-height: 1.1;
 }
 
 .impact-col p {
   margin: 0;
+  font-weight: 400;
+  /* You can adjust boldness here */
+  color: #666666;
+  /* You can adjust color here */
+}
+
+/* Cybersea Feature Stack */
+.feature-stack-wrapper {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.feature-stack-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+}
+
+.feature-stack-image-col,
+.feature-stack-text-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.feature-stack-img {
+  border-radius: 6px;
+  width: 100%;
+  height: auto;
+}
+
+.feature-stack-img--cropped-left {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.feature-stack-img--cropped-right {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: right top;
+}
+
+.feature-stack-title {
+  font-family: "Editorial New", "PPEditorialNew", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  /* You can adjust boldness here (e.g., 600 or bold) */
+  color: #333333;
+  /* You can adjust text color here */
+  margin: 0 0 1rem 0;
+}
+
+.feature-stack-desc {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  /* You can adjust boldness here */
+  color: #666666;
+  /* You can adjust text color here */
+  max-width: 250px;
+  /* Condenses the paragraph width for an editorial look */
+}
+
+@media (max-width: 768px) {
+  .feature-stack-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
 }
