@@ -77,21 +77,23 @@ function Home() {
       <section className="hero-gradient-container">
         <div className="hero-gradients" aria-hidden="true">
           <div className="page-gradient"></div>
-          <div className="center-gradient"></div>
         </div>
         <main className="center-content">
-          <h1 className="name">amy wang</h1>
+          <h1 className="name">
+            amy wang
+            <div className="center-gradient"></div>
+          </h1>
           <div className="desc-group">
             <div className="desc-line align-desc">
               <span className="arrow">→</span>
               <span className="desc-text">
-                product designer who cares way too much about how things <i>feel</i>.
+                product designer who cares way too much<br className="mobile-break" /> about how things <i>feel</i>.
               </span>
             </div>
             <div className="desc-line align-desc">
               <span className="arrow">→</span>
               <span className="desc-text">
-                currently studying management engineering<br className="mobile-break" /> @ waterloo!
+                currently studying management<br className="mobile-break" /> engineering @ waterloo!
               </span>
             </div>
           </div>
