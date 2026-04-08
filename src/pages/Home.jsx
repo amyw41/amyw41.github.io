@@ -87,7 +87,7 @@ function Home() {
             <div className="desc-line align-desc">
               <span className="arrow">→</span>
               <span className="desc-text">
-                product designer who cares way too much<br className="mobile-break" /> about how things <i>feel</i>.
+                product designer who cares way too <br className="mobile-break" />much about how things <i>feel</i>.
               </span>
             </div>
             <div className="desc-line align-desc">
