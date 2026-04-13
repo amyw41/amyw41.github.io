@@ -238,7 +238,7 @@ function Cybersea() {
                                     <p className="section-body">Of global shipping is impacted by Arctic trade routes.</p>
                                 </div>
                                 <div className="impact-col">
-                                    <h4>80%+</h4>
+                                    <h4>80% +</h4>
                                     <p className="section-body">of Arctic datasets require technical expertise to interpret.</p>
                                 </div>
                                 <div className="impact-col">
@@ -264,7 +264,7 @@ function Cybersea() {
                                     </div>
                                     <div className="feature-stack-text-col">
                                         <h3 className="feature-stack-title">Interactive Map</h3>
-                                        <p className="section-body feature-stack-desc">A live globe visualizing ship routes and activity in the Arctic, with adjustable playback speed to view movements in real time or up to 10× faster.</p>
+                                        <p className="section-body feature-stack-desc">A live globe with real-time ship activity in the Arctic (playback in real time or up to 10× faster!)</p>
                                     </div>
                                 </div>
 
