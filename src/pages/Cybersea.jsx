@@ -305,13 +305,13 @@ function Cybersea() {
                             </p>
                         </div>
 
-                        <div className="persona-column" style={{ paddingLeft: '0' }}>
-                            <div className="user-list-card">
+                        <div className="persona-column" style={{ paddingLeft: '0', display: 'flex', flexDirection: 'row', gap: '1.5rem', alignItems: 'stretch' }}>
+                            <div className="user-list-card" style={{ flex: 1 }}>
                                 <div className="user-list-header">
                                     <div className="persona-icon-wrapper user-list-icon" style={{ backgroundColor: '#eeeeee' }}>
                                         <UserIcon />
                                     </div>
-                                    <h4 className="user-list-title">Pat the Route Planner <span style={{ color: '#888', fontStyle: 'italic', fontSize: '1.2rem', fontFamily: 'Raleway', fontWeight: '500', marginLeft: '0.5rem' }}>(Works as a Maritime Route Planner)</span></h4>
+                                    <h4 className="user-list-title">Pat<span style={{ display: 'block', color: '#888', fontStyle: 'italic', fontSize: '1.2rem', fontFamily: 'Raleway', fontWeight: '500', marginTop: '0.1rem' }}>(Maritime Route Planner)</span></h4>
                                 </div>
                                 <div className="user-timeline-wrapper">
                                     <div className="user-timeline-item">
@@ -342,12 +342,12 @@ function Cybersea() {
                                 </div>
                             </div>
 
-                            <div className="user-list-card">
+                            <div className="user-list-card" style={{ flex: 1 }}>
                                 <div className="user-list-header">
                                     <div className="persona-icon-wrapper user-list-icon" style={{ backgroundColor: '#eeeeee' }}>
                                         <UserIcon />
                                     </div>
-                                    <h4 className="user-list-title">John the Avg. Citizen <span style={{ color: '#888', fontStyle: 'italic', fontSize: '1.2rem', fontFamily: 'Raleway', fontWeight: '500', marginLeft: '0.5rem' }}>(Checking CyberSea out for fun!)</span></h4>
+                                    <h4 className="user-list-title">John<span style={{ display: 'block', color: '#888', fontStyle: 'italic', fontSize: '1.2rem', fontFamily: 'Raleway', fontWeight: '500', marginTop: '0.1rem' }}>(Checking CyberSea out for fun!)</span></h4>
 
                                 </div>
                                 <div className="user-timeline-wrapper">

@@ -2429,8 +2429,7 @@ body.relish-page {
   /* Reduced from 2.5rem */
   margin-top: 3rem;
   margin-bottom: 2rem;
-  padding-right: 6rem;
-  /* Increased right padding to constrain width */
+  padding-right: 0;
 }
 
 
@@ -2493,10 +2492,11 @@ body.relish-page {
 }
 
 .user-list-icon {
-  width: 75px;
-  /* Reduced from 100px */
-  height: 75px;
-  /* Reduced from 100px */
+  width: 65px;
+  height: 65px;
+  min-width: 65px;
+  min-height: 65px;
+  flex-shrink: 0;
   background: transparent;
   border-radius: 50%;
   display: flex;
@@ -2588,8 +2588,8 @@ body.relish-page {
 /* Callout Block Components */
 
 .callout-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   margin-top: 1.5rem;
   /* Reduced from 2rem */
   background-color: #fff;
@@ -2605,11 +2605,11 @@ body.relish-page {
   /* Reduced from 0.8rem */
   padding: 1.5rem;
   /* Reduced from 2rem */
-  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
 }
 
 .callout-block:last-child {
-  border-right: none;
+  border-bottom: none;
 }
 
 .callout-label {
@@ -3213,15 +3213,31 @@ body.relish-page {
   }
 
   .case-study-sidebar {
-    width: 100%;
+    width: fit-content;
+    max-width: 100%;
+    justify-self: center;
     position: sticky;
     bottom: 25px;
     align-self: end;
     z-index: 100;
-    pointer-events: none;
+    pointer-events: auto;
     display: flex;
-    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 100px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+  }
+
+  .sidebar-back {
+    margin-bottom: 0;
+    padding: 0 1.25rem 0 1.75rem;
+    white-space: nowrap;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
   }
 
   .sidebar-nav .nested-nav-item {
@@ -3230,19 +3246,10 @@ body.relish-page {
 
   .sidebar-nav {
     pointer-events: auto;
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 100px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
-    width: max-content;
-    max-width: 100%;
+    width: 100%;
     margin: 0;
     min-width: 0;
-    box-sizing: border-box;
     display: flex;
-    overflow: hidden;
   }
 
   .sidebar-nav ul {
