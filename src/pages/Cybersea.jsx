@@ -315,14 +315,14 @@ function Cybersea() {
                                 </div>
                                 <div className="user-timeline-wrapper">
                                     <div className="user-timeline-item">
-                                        <h5 className="user-timeline-title">a) Needs</h5>
+                                        <h5 className="user-timeline-title">Needs</h5>
                                         <ul className="section-list" style={{ marginBottom: 0, marginTop: '0.5rem', paddingLeft: '1.2rem' }}>
                                             <li>Easy-to-use interface for quick, high-stakes decisions.</li>
                                             <li>Accurate data that can easily be seen and implemented.</li>
                                         </ul>
                                     </div>
                                     <div className="user-timeline-item">
-                                        <h5 className="user-timeline-title">b) Constraint</h5>
+                                        <h5 className="user-timeline-title">Constraint</h5>
                                         <div className="callout-wrapper">
                                             <div className="callout-block">
                                                 <span className="callout-label">The Problem</span>
@@ -352,14 +352,14 @@ function Cybersea() {
                                 </div>
                                 <div className="user-timeline-wrapper">
                                     <div className="user-timeline-item">
-                                        <h5 className="user-timeline-title">a) Needs</h5>
+                                        <h5 className="user-timeline-title">Needs</h5>
                                         <ul className="section-list" style={{ marginBottom: 0, marginTop: '0.5rem', paddingLeft: '1.2rem' }}>
                                             <li>An intuitive interface that isn't overly technical.</li>
                                             <li>Real-time weather, ice thickness, and seasonal pattern monitoring.</li>
                                         </ul>
                                     </div>
                                     <div className="user-timeline-item">
-                                        <h5 className="user-timeline-title">b) Constraint</h5>
+                                        <h5 className="user-timeline-title">Constraint</h5>
                                         <div className="callout-wrapper">
                                             <div className="callout-block">
                                                 <span className="callout-label">The Problem</span>
@@ -395,13 +395,11 @@ function Cybersea() {
 
                     <div id="problem-1" className="problem-section">
                         <span className="section-label">DESIGN CHALLENGE</span>
+                        <h2 className="overview-title">Expectations at a Hackathon:</h2>
                         <div className="section-quote-container">
                             <p className="section-body">
                                 Hackathons require projects to look <span className="cybersea-highlight">as unique and aesthetically pleasing as possible</span>, even at the cost of accessibility or function.
                             </p>
-                            <blockquote className="section-quote">
-                                How do we balance the expectations of a Hackathon, while still maintaining purpose?
-                            </blockquote>
                         </div>
                     </div>
 

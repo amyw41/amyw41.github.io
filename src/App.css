@@ -2998,12 +2998,34 @@ body.relish-page {
 
 
 .section-quote-container {
-  margin: 1rem 0;
+  margin: 2rem 0;
+  background: #eef5fb;
+  border: 1px solid #b8d4e8;
+  border-left: 4px solid #6aaed6;
+  border-radius: 10px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 2px 12px rgba(100, 160, 210, 0.10);
+  position: relative;
+}
+
+.section-quote-container::before {
+  content: '"';
+  font-family: "Editorial New", serif;
+  font-size: 5rem;
+  color: #6aaed6;
+  opacity: 0.18;
+  position: absolute;
+  top: -0.5rem;
+  left: 1.2rem;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .section-quote-container .section-body {
   margin-top: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
+  color: #2a4a62;
+  font-style: italic;
 }
 
 .section-quote-intro {
